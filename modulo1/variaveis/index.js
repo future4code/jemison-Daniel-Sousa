@@ -61,6 +61,32 @@ console.log("Óla", nome , " você tem", idade , "anos", )
 
 // Questão 2
 
-prompt("Você gosta de ler?")
-prompt("Você gosta de JavaScript?")
-prompt("Você gosta de futebol?")
+
+let ler
+let programar
+let futebol
+
+ler = prompt("Você gosta de ler?")
+programar = prompt("Você gosta de programar?")
+futebol = prompt("Você gosta de futebol?")
+
+console.log("Voce gosta de ler?", ler)
+console.log("Você gosta de programar?", programar)
+console.log("Você gosta de fuebol?", futebol)
+
+// Questão 3
+
+let a = 10
+let b = 25
+let novoValor 
+
+novoValor = a
+a = b
+b = novoValor
+
+console.log("O novo valor de a é:", a);
+console.log("O novo Valor de b é:", b);
+
+//Desafio
+
+
