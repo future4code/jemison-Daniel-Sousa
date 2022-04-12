@@ -89,4 +89,17 @@ console.log("O novo Valor de b é:", b);
 
 //Desafio
 
+let numero1
+let numero2
+
+numero1 = prompt("Digite o primeiro numero:")
+numero2 = prompt("Digite o Segundo numero?")
+
+const x = (numero1) + (numero2)
+const y = (numero1*numero2)
+
+console.log("A Soma do 1° e o 2° é:", x)
+console.log("A multiplicacao do 1° e o 2° é:", y)
+
+
 
