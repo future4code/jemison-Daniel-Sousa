@@ -37,3 +37,30 @@ R = Nesse caso o Dev usou apenas letras para atribuir os nomes para as suas vari
 
 Nota: nesse caso o programa pretende calcular quanto o usuario ganha por hora. Fazendo a divisão de quanto ele ganha por dia e quantas horas ele trabalha por dia. */ 
 
+// Exercico de Escrita de código
+
+//Quetão 01
+
+let nome
+let idade
+
+console.log(typeof nome);
+console.log(typeof idade);
+
+//R: O navegador respondeu ao comando como UNDEFINED. Pois, não foi atriuido valor as variaeis
+
+nome = prompt("Qual o seu nome?")
+idade = prompt( "Qual sua idade?")
+
+console.log(typeof nome);
+console.log(typeof idade);
+
+// R: O Navegador respondeu ao comando como object. Pois, foi atribuido ao o valor de string logo após as respostas.
+
+console.log("Óla", nome , " você tem", idade , "anos", )
+
+// Questão 2
+
+prompt("Você gosta de ler?")
+prompt("Você gosta de JavaScript?")
+prompt("Você gosta de futebol?")
