@@ -41,7 +41,7 @@ Nota: nesse caso o programa pretende calcular quanto o usuario ganha por hora. F
 
 //Quetão 01
 
-let nome 
+let nome
 let idade
 
 console.log(typeof nome);
@@ -62,17 +62,17 @@ console.log("Óla", nome , " você tem", idade , "anos", )
 // Questão 2
 
 
-let ler
-let programar
-let futebol
+let gostaDeLer = "sim"
+let gostaDeProgramar = "sim"
+let gostaDeFutebol = "sim"
 
-ler = prompt("Você gosta de ler?")
-programar = prompt("Você gosta de programar?")
-futebol = prompt("Você gosta de futebol?")
+gostaDeLer = prompt("Você gosta de ler?", )
+gostaDeProgramar = prompt("Você gosta de programar?")
+gostaDeFutebol = prompt("Você gosta de futebol?", )
 
-console.log("Voce gosta de ler?", ler)
-console.log("Você gosta de programar?", programar)
-console.log("Você gosta de fuebol?", futebol)
+console.log("Voce gosta de ler?", gostaDeLer)
+console.log("Você gosta de programar?", gostaDeProgramar)
+console.log("Você gosta de fuebol?", gostaDeFutebol)
 
 // Questão 3
 
@@ -89,15 +89,17 @@ console.log("O novo Valor de b é:", b);
 
 //Desafio
 
-let numero1
-let numero2
+let numero1 
+let numero2 
 //const soma = ( numero1 + numero2)
 
 numero1 = prompt("Digite o primeiro numero:")
+numero1 = Number(numero1) //mudar para numberm, pois o prompt sempre vai reconhcer a string
 numero2 = prompt("Digite o Segundo numero:")
+numero2 = Number(numero2)
 
-const x = (numero1 + numero2)
-const y = (numero1*numero2)
+let x = (numero1 + numero2)
+let y = (numero1*numero2)
 
 console.log("A Soma do 1° e o 2° é:", x)
 console.log("A multiplicacao do 1° e o 2° é:", y)
