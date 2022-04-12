@@ -41,7 +41,7 @@ Nota: nesse caso o programa pretende calcular quanto o usuario ganha por hora. F
 
 //Quetão 01
 
-let nome
+let nome 
 let idade
 
 console.log(typeof nome);
@@ -91,11 +91,12 @@ console.log("O novo Valor de b é:", b);
 
 let numero1
 let numero2
+//const soma = ( numero1 + numero2)
 
 numero1 = prompt("Digite o primeiro numero:")
-numero2 = prompt("Digite o Segundo numero?")
+numero2 = prompt("Digite o Segundo numero:")
 
-const x = (numero1) + (numero2)
+const x = (numero1 + numero2)
 const y = (numero1*numero2)
 
 console.log("A Soma do 1° e o 2° é:", x)
