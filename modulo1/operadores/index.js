@@ -88,3 +88,43 @@ let segundoNumero = Number(prompt("Digite outro numero!"))*/
 // console.log("O primeiro numero é igual ao segundo?", numeroIgual)
 // console.log("O primeiro numero é divisível pelo segundo?", PrimeiroNumeroDivisao)
 // console.log("O segundo numero é divisível pelo primeiro?", SegundoNumeroDivisao)
+
+
+//Desafio
+//Questão 01
+
+// let fahrenheit = 77
+// let celsius1 = 80
+// let celsius2 = 30
+
+
+// let temperatura = Number(prompt("Digite a Temperatura em graus Celsius:"))
+
+// let transFahrenheitParaKelvin = (fahrenheit - 32) * (5/9) + 273.15
+// let transCelsiusParaFarenheit1 = celsius1*(9/5) + 32
+// let transCelsiusParaKelvin = celsius2 + 273.15
+// let transCelsiusParaFarenheit2 = celsius2*(9/5) + 32
+
+// console.log(transCelsiusParaKelvin, "K")
+// console.log(transCelsiusParaFarenheit1 , "°F")
+// console.log(transCelsiusParaKelvin , "K")
+// console.log(transCelsiusParaKelvin , "°F")
+
+//Questão 02
+
+// let resitenciaQuilowats = 280
+// const quilowatsHora = 0.05
+
+// //Letra A e B
+
+// let valorPagar = resitenciaQuilowats*quilowatsHora
+
+// //Desconto - Letra B
+// let desconto = (valorPagar*15)/100
+// let valorDesconto = valorPagar - desconto
+
+
+// console.log("Você consumiu", resitenciaQuilowats, "Quilowatts. Valor a ser pago:", valorPagar , "Com o desconto de 15% sua divida fica em apenas:", valorDesconto)
+
+
+
