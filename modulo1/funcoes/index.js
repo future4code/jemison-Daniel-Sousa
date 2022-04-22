@@ -99,3 +99,22 @@ const resultadoNumeros = (`Os numeros inseridos: ${primeiroNumero}, ${segundoNum
 `)
 
 console.log(resultadoNumeros) */
+
+//Desafios
+//1° Questão
+//A
+/*const numero = (num1) =>{
+    return num1
+}
+
+console.log(numero())*/
+
+//B
+
+//2° Questão
+
+// function teoremaDePitagoras (cateto1, cateto2){
+//     const hipotenusa = null
+//     const areaHipotenusa = (hipotenusa*hipotenusa) === (cateto1*cateto1)+ (cateto2 *cateto2)
+// }
+
