@@ -21,37 +21,37 @@ B - I) True
 
 // Questão 1 - A
 
-/*function mensagemUsuario (){
+function mensagemUsuario (){
     const fraseUsuario = "Eu sou Daniel, tenho 22 anos, moro em Timbiras-MA e sou estudante."
     return fraseUsuario
 }
-console.log(mensagemUsuario()) */
+console.log(mensagemUsuario()) 
 
 // Questão 1 -B
-/*function informacoesUsuario (nome, idade, cidade, profissao) {
+function informacoesUsuario (nome, idade, cidade, profissao) {
     const apresentacaoUsuario = `Eu sou ${nome}, tenho ${idade} anos, moro em ${cidade} e sou ${profissao}`
     return apresentacaoUsuario
 }
-console.log(informacoesUsuario("Daniel", 25,  "Timbiras", "estudante")) */
+console.log(informacoesUsuario("Daniel", 25,  "Timbiras", "estudante")) 
 
 // Questão 2
 // A)
-/*function somaDoisNumeros (num1, num2) {
+function somaDoisNumeros (num1, num2) {
     const soma = num1 + num2
     return soma
 }
-console.log(somaDoisNumeros())*/
+console.log(somaDoisNumeros())
 
 // B)
-/* function primeiroNumMaiorIgual (num1, num2){
+function primeiroNumMaiorIgual (num1, num2){
     const verificaPrimeiroNum = num1 >= num2
     return verificaPrimeiroNum
 }
-console.log(primeiroNumMaiorIgual()) */
+console.log(primeiroNumMaiorIgual()) 
 
 // C)
 
-/*function verificaNumPar (num1) {
+function verificaNumPar (num1) {
     const resultado = (num1% 2) === 0
     return resultado
 }
@@ -60,7 +60,7 @@ console.log(verificaNumPar()) */
 
 // D)
 
-/*const usuarioFrase = prompt("Digite uma frase:")
+ const usuarioFrase = prompt("Digite uma frase:")
 
  function fraseMaiuscula (texto) {
     return usuarioFrase.toUpperCase()
@@ -68,11 +68,11 @@ console.log(verificaNumPar()) */
  function tamanhoFrase (texto){
     return usuarioFrase.length;
  }
- console.log(`A sua frase ${usuarioFrase} , tem ${tamanhoFrase(usuarioFrase)} caracteres , e em em maiuscula é ${fraseMaiuscula(usuarioFrase)}`)*/
+ console.log(`A sua frase ${usuarioFrase} , tem ${tamanhoFrase(usuarioFrase)} caracteres , e em em maiuscula é ${fraseMaiuscula(usuarioFrase)}`)
 
  // Questão 3
 
-/*let primeiroNumero = Number(prompt("Digite um número qualquer"))
+let primeiroNumero = Number(prompt("Digite um número qualquer"))
 let segundoNumero = Number(prompt("Digite outro número qualquer:"))
 
 function somarNumeros(num1=primeiroNumero, num2=segundoNumero){
@@ -98,23 +98,36 @@ const resultadoNumeros = (`Os numeros inseridos: ${primeiroNumero}, ${segundoNum
  Divisão: ${dividirNumeros()}
 `)
 
-console.log(resultadoNumeros) */
+console.log(resultadoNumeros) 
 
 //Desafios
 //1° Questão
 //A
-/*const numero = (num1) =>{
+const numero = (num1) =>{
     return num1
 }
 
-console.log(numero())*/
+console.log(numero())
 
 //B
+const recebeValor = (num1, num2) =>{
+    return soma = num1 + num2
+}
+
+const recebeNumeo = numero(10);
+
+console.log(`${numero(10)}, ${recebeValor(5,5)} `)
+
+
 
 //2° Questão
+let valorCateto1 = Number(prompt("Digite  o valor do primeiro cateto:"))
+let valorCateto2 = Number(prompt("Digite  o valor do segundo cateto:"))
+function teoremaPitagoras (cateto1 = valorCateto1, cateto2 = valorCateto2){
+    const valorHipotesua = Math.hypot(cateto1, cateto2)
+    return valorHipotesua
+}
 
-// function teoremaDePitagoras (cateto1, cateto2){
-//     const hipotenusa = null
-//     const areaHipotenusa = (hipotenusa*hipotenusa) === (cateto1*cateto1)+ (cateto2 *cateto2)
-// }
+const resultadoHipot = (`O seu primeiro cateto é: ${valorCateto1}, e o segundo é: ${valorCateto2}. A hipotenusa desses dois catetos é: ${teoremaPitagoras()}`)
 
+console.log(resultadoHipot) 
