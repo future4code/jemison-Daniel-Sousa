@@ -66,4 +66,83 @@ console.log(minhaFuncao(pessoa, "altura")) */
 
  // --------------------Exercícios de escrita de código -------------------//
 
+ //Questão 01
+
+ /* const nomeApelidos ={
+     nome: "Daniel Silva",
+     apelidos: ["Nerd", "Danielzinho", "Lorinho"]
+ }
  
+ function imprirMensagem(nomeObjeto){
+     console.log(
+         `Eu Eu sou ${nomeObjeto.nome}, mas pode me chamar de: ${nomeObjeto.apelidos[0]}, ${nomeObjeto.apelidos[1]}, ${nomeObjeto.apelidos[2]} !`)
+   
+ }
+ imprirMensagem(nomeApelidos)
+
+const novaPesso = {...nomeApelidos, apelidos:["Denielzinho", "lorinho", "Nerd"]}
+
+imprirMensagem(novaPesso) */
+
+ 
+// Questão 02
+
+//A
+
+const primeiraPessoa ={
+    nome: "Daniel Da Silva De Sousa",
+    idade: 22 ,
+    profissao: "Auxiliar Administrativo"
+}
+const segundaPessoa ={
+    nome: "Andreane",
+    idade: 21 ,
+    profissao: "Recepcionista"
+}
+
+//B
+
+function recebeObjetos(nomeObjeto02) {
+    return [
+        nomeObjeto02.nome,
+        nomeObjeto02.nome.length,
+        nomeObjeto02.idade,
+        nomeObjeto02.profissao,
+        nomeObjeto02.profissao.length
+    ];
+}
+
+// console.log(recebeObjetos(segundaPessoa))
+
+// Questão 03
+//A
+const carrinho = []
+
+//B
+
+const primeiraFrtura ={
+    nome: "Maça",
+    disponivel: true
+}
+
+const segundaFrtura ={
+    nome: "Manga",
+    disponivel: false
+}
+
+const terceiraFrtura ={
+    nome: "Banana",
+    disponivel: true
+}
+
+//C
+
+function recebeFruta(fruta){
+    return carrinho.push(fruta)
+}
+
+recebeFruta(primeiraFrtura);
+recebeFruta(segundaFrtura);
+recebeFruta(terceiraFrtura);
+
+// console.log(carrinho)
