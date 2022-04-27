@@ -68,7 +68,7 @@ console.log(minhaFuncao(pessoa, "altura")) */
 
  //Questão 01
 
- /* const nomeApelidos ={
+ const nomeApelidos ={
      nome: "Daniel Silva",
      apelidos: ["Nerd", "Danielzinho", "Lorinho"]
  }
@@ -82,7 +82,7 @@ console.log(minhaFuncao(pessoa, "altura")) */
 
 const novaPesso = {...nomeApelidos, apelidos:["Denielzinho", "lorinho", "Nerd"]}
 
-imprirMensagem(novaPesso) */
+imprirMensagem(novaPesso)
 
  
 // Questão 02
@@ -112,7 +112,7 @@ function recebeObjetos(nomeObjeto02) {
     ];
 }
 
-// console.log(recebeObjetos(segundaPessoa))
+console.log(recebeObjetos(segundaPessoa))
 
 // Questão 03
 //A
@@ -120,17 +120,17 @@ const carrinho = []
 
 //B
 
-const primeiraFrtura ={
+const primeiraFruta ={
     nome: "Maça",
     disponivel: true
 }
 
-const segundaFrtura ={
+const segundaFruta ={
     nome: "Manga",
     disponivel: false
 }
 
-const terceiraFrtura ={
+const terceiraFruta ={
     nome: "Banana",
     disponivel: true
 }
@@ -141,8 +141,55 @@ function recebeFruta(fruta){
     return carrinho.push(fruta)
 }
 
-recebeFruta(primeiraFrtura);
-recebeFruta(segundaFrtura);
-recebeFruta(terceiraFrtura);
+recebeFruta(primeiraFruta);
+recebeFruta(segundaFruta);
+recebeFruta(terceiraFruta);
 
-// console.log(carrinho)
+console.log(carrinho)
+
+//Desafio
+
+//Questão 1
+let nome2 = prompt("Digite seu nome:");
+let idade2 = Number(prompt("Digite sua idade"));
+let profissao2 = prompt("Digite sua profissão")
+
+function pessoaInformacoes(){
+   return [nome2, idade2, profissao2]
+}
+
+const usuario = {
+    nome: pessoaInformacoes()[0],
+    idade: pessoaInformacoes()[1],
+    profissao2: pessoaInformacoes()[2],
+}
+
+// console.log(usuario)
+
+//Questão 2
+
+const primeiroFilme = {
+    nome: "Uma mente Brilhante",
+    lancamento: 2002
+}
+
+const segundoFilme = {
+    nome: "O jogo da Imitação",
+    lancamento: 2001
+}
+
+function compararFilmes(primeiroFilme, segundoFilme){
+    console.log(`O primeiro filme foi lançado antes do segundo? ${primeiroFilme.lancamento < segundoFilme.lancamento}`);
+
+    console.log(`O primeiro filme foi lançado no mesmo ano do segundo? ${primeiroFilme.lancamento === segundoFilme.lancamento}`)
+}
+
+console.log(compararFilmes(primeiroFilme, segundoFilme))
+
+// Questão 03
+
+function controleEstoque (frutas){
+    return ( frutas = {...frutas, controleEstoque: !frutas.controleEstoque});
+}
+
+console.log(controleEstoque(primeiraFruta))
