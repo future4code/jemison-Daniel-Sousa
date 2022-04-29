@@ -26,7 +26,7 @@
 //Questão 01
 
 //A/B
-//let idadeUsuario = Number(prompt("Digite sua idade:"))
+let idadeUsuario = Number(prompt("Digite sua idade:"))
 
 //C
 function podeDirigi(idadeUsuario){
@@ -37,10 +37,10 @@ function podeDirigi(idadeUsuario){
     }
 }
 
-// podeDirigi(idadeUsuario)
+podeDirigi(idadeUsuario)
 
 //Questão 02
-// let turnoAluno = prompt("Digite o turno que você estuda, use: M (matutino) , V (Vespertino) ou N (Noturno)" )
+let turnoAluno = prompt("Digite o turno que você estuda, use: M (matutino) , V (Vespertino) ou N (Noturno)" )
 
 function verificaTurmo (turnoAluno){
     if("M" === turnoAluno){
@@ -51,12 +51,12 @@ function verificaTurmo (turnoAluno){
         return "Boa Noite!";
 }
 
-// console.log(verificaTurmo(turnoAluno))
+console.log(verificaTurmo(turnoAluno))
 
 //Questão 03
-// let turnoAluno2 = prompt("Digite o turno que você estuda, use: M (matutino) , V (Vespertino) ou N (Noturno)" )
+let turnoAluno2 = prompt("Digite o turno que você estuda, use: M (matutino) , V (Vespertino) ou N (Noturno)" )
 
-/*switch(turnoAluno2){
+switch(turnoAluno2){
     case 'M':
         console.log("Bom dia")
         break
@@ -69,11 +69,11 @@ function verificaTurmo (turnoAluno){
     default:
         console.log("Por favor, Digite apenas as iniciais de cada turma!")
     break
-} */
+} 
 
 //Questão 04
 
-/* let qualGeneroFilme = prompt("Digite qual o gênero de filme que vão assistir?");
+let qualGeneroFilme = prompt("Digite qual o gênero de filme que vão assistir?");
 let precoIngresso = Number(prompt("Digite o preço do ingreço?"));
 
 let generoFilme = qualGeneroFilme === "fantasia";
@@ -86,12 +86,12 @@ function confirmaFilme (qualGeneroFilme, precoIngresso){
     }
 }
 
-console.log(confirmaFilme(qualGeneroFilme,precoIngresso))*/
+console.log(confirmaFilme(qualGeneroFilme,precoIngresso))
 
 
 //Desafio
 
-/* let qualGeneroFilme2 = prompt("Digite qual o gênero de filme que vão assistir?");
+let qualGeneroFilme2 = prompt("Digite qual o gênero de filme que vão assistir?");
 let precoIngresso2 = Number(prompt("Digite o preço do ingreço?"));
 let escolhaLanche = prompt("Qual o lanchinho que você quer:")
 
@@ -105,7 +105,7 @@ function confirmaFilme (qualGeneroFilme2, precoIngresso2){
     }
 }
 
-confirmaFilme(qualGeneroFilme2,precoIngresso2) */
+confirmaFilme(qualGeneroFilme2,precoIngresso2) 
 
 //Questao 2
 
@@ -115,3 +115,68 @@ let etapaJogo = prompt("Digite a Etapa do jogo:  SF indica semi-final; DT indica
 let categoriaJogo = Number(prompt("Digite a gategoria: 1, 2, 3 ou 4"));
 let quantidadeIngre = Number(prompt ("Digite a quantidade de ingressos:"))
 
+
+
+function etapaSfDtFi (etapaJogo, categoriaJogo){
+    if(etapaJogo === "SF" && categoriaJogo === 1){
+        return (valorIgresso = 1320)
+    } else if (etapaJogo === "SF" && categoriaJogo === 2){
+        return (valorIgresso = 880)
+    }else if (etapaJogo === "SF" && categoriaJogo === 3){
+        return (valorIgresso = 550)
+    } else if (etapaJogo === "SF" && categoriaJogo === 4){
+        return (valorIgresso = 220)
+    }else if (etapaJogo === "DT" && categoriaJogo === 1){
+        return (valorIgresso = 660)
+    }else if (etapaJogo === "DT" && categoriaJogo === 2){
+        return (valorIgresso = 440)
+    }else if (etapaJogo === "DT" && categoriaJogo === 3){
+        return (valorIgresso = 330)
+    }else if (etapaJogo === "DT" && categoriaJogo === 4){
+        return (valorIgresso = 330)
+    }else if (etapaJogo === "FI" && categoriaJogo === 1){
+        return (valorIgresso = 1980)
+    }else if (etapaJogo === "FI" && categoriaJogo === 2){
+        return (valorIgresso = 1320)
+    }else if (etapaJogo === "FI" && categoriaJogo === 3){
+        return (valorIgresso = 880)
+    }else if (etapaJogo === "FI" && categoriaJogo === 4){
+        return (valorIgresso = 330) 
+    }
+}
+
+
+let valorIgresso;
+let valorTotalIn = (etapaSfDtFi (etapaJogo, categoriaJogo) *quantidadeIngre) * 4.10
+let valorTotalDo = (etapaSfDtFi (etapaJogo, categoriaJogo) *quantidadeIngre)
+
+
+function imprimeComprovante(usuarioNome,tipoJogo,etapaJogo,categoriaJogo,quantidadeIngre){
+    if(tipoJogo === "IN"){
+        console.log(`
+        ---Dados da compra--- 
+        Nome do cliente:  ${usuarioNome} 
+        Tipo do jogo:  ${tipoJogo}
+        Etapa do jogo:  ${etapaJogo}
+        Categoria:  ${categoriaJogo}
+        Quantidade de Ingressos: ${quantidadeIngre}  
+         ---Valores--- 
+        Valor do ingresso:  ${etapaSfDtFi (etapaJogo, categoriaJogo)}
+        Valor total: ${valorTotalIn} 
+        `)
+    } else if(tipoJogo === "DO"){
+        console.log(`
+        ---Dados da compra--- 
+        Nome do cliente:  ${usuarioNome} 
+        Tipo do jogo:  ${tipoJogo}
+        Etapa do jogo:  ${etapaJogo}
+        Categoria:  ${categoriaJogo}
+        Quantidade de Ingressos: ${quantidadeIngre}  
+         ---Valores--- 
+        Valor do ingresso:  ${etapaSfDtFi (etapaJogo, categoriaJogo)}
+        Valor total: ${valorTotalDo}} 
+        `)
+    }
+}
+
+imprimeComprovante(usuarioNome,tipoJogo,etapaJogo,categoriaJogo,quantidadeIngre) */
