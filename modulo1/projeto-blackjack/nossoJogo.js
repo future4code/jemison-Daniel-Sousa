@@ -20,29 +20,30 @@ let jogadaPc = comprarCarta();
 let jogadaPc2 = comprarCarta();
 let valorDaJogadaPc = (jogadaPc.valor + jogadaPc2.valor) // Soma as duas cartas do pc
 
-let vencedor = valorDaJogadaUsuario > valorDaJogadaPc;
-let empate = valorDaJogadaUsuario === valorDaJogadaPc;
+let vencedor = valorDaJogadaUsuario > valorDaJogadaPc; // Se true usuario ganha, se false pc ganha
+let empate = valorDaJogadaUsuario === valorDaJogadaPc; // caso empate
 
-function inicioJogo (){
-   console.log("Boas vindas ao jogo de Blackjack!")
-   
-   if(confirm("Quer iniciar uma nova rodada?")) {
-   console.log(`Usuário - cartas: ${jogadaUsuario.texto}, ${jogadaUsuario2.texto} - pontuação ${valorDaJogadaUsuario}` );
-   console.log(`Computador - cartas: ${jogadaPc.texto}, ${jogadaPc2.texto} - pontuação ${valorDaJogadaPc}` );
-   }  else{
-      console.log("Fim de Jogo")
+
+//Inicio jogo
+ console.log("Boas vindas ao jogo de Blackjack!")
+
+function inicioJogo(){
+   if(confirm("Deseja iniciar uma nova rodada?")) {
+      // o que fazer se o usuário clicar "ok"
+      console.log(`Usuário - cartas: ${jogadaUsuario.texto}, ${jogadaUsuario2.texto} - pontuação ${valorDaJogadaUsuario}` );
+      console.log(`Computador - cartas: ${jogadaPc.texto}, ${jogadaPc2.texto} - pontuação ${valorDaJogadaPc}` );
+
+      if (vencedor === true){
+         console.log("Usuario ganhou")
+      }else if (vencedor === false){
+         console.log("Computador ganhou!")
+      }else if (empate === true){
+          console.log("Empate")
+      }
+   }
+   else {
+      console.log("O jogo acabou! Até mais")
    }
 }
 
-// function resultado(){
-//    if(vencedor === true){
-//       console.log("O usuário ganhou!")
-//    } if (vencedor === false) {
-//       console.log("Computador ganhou")
-//    } else (empate) 
-//       console.log("Empate")
-   
-// }
-
 inicioJogo()
-// resultado()
