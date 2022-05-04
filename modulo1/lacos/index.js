@@ -61,7 +61,39 @@ function saberNomePets(){
 // saberNomePets()
 
 
-//Questão 02
+//Questão 02 - Considere que você tenha acesso a um array  (chamado de 'array original') que é composto somente de números. Baseando-se nisso, crie uma função para cada um dos itens abaixo, realizando as operações pedidas:
+const arrayOriginal = [1,10,15,26,59,3,4,56,58,68]
+
+// a) Escreva um programa que imprime cada um dos valores do array original.
+
+function imprimeArrayOriginal (){
+   for( item of arrayOriginal){
+       console.log(item)
+   }
+    
+}
+// imprimeArrayOriginal()
+
+// b) Escreva um programa que imprime cada um dos valores do array original divididos por 10
+function didiviArrayPor10(){
+    for(item of arrayOriginal){
+     const dividindoItem = item/10
+     console.log(dividindoItem)
+    }  
+}
+
+// didiviArrayPor10()
 
 
 
+
+// c) Escreva um programa que crie um novo array contendo, somente, os números pares do array original e imprima esse novo array
+
+
+
+// d) Escreva um programa que crie um novo array contendo strings, da seguinte forma: "O elemento do índex i é: numero". Depois, imprima este novo array.
+
+
+
+
+// E) e) Escreva um programa que imprima no console o maior e o menor números contidos no array original
