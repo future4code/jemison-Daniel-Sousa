@@ -36,7 +36,7 @@ const nomePtes = pets.map(
         return nomePte.nome
     }
 )
-// console.log(nomePtes)
+//  console.log(nomePtes)
 
 //  1.B) Crie um novo array apenas com os cachorros salsicha
 
@@ -106,14 +106,61 @@ const nomePtes = pets.map(
         // console.log(nomeItens)
 // b) Crie um novo array que contenha um objeto com o nome e o preço de cada 
 // item, aplicando 5% de desconto em todos eles
+        const nomePreco = produtos.map(
+            (nomesPrecos) =>{
+                let calculaPorcetagem = nomesPrecos.preco - (nomesPrecos.preco*5)/100
+                
+                 return [nomesPrecos.nome , calculaPorcetagem]
 
-            const nomePreco = produtos.map(
-                (precoeNome) =>{
-                    return precoeNome.nome
-                   
+                
+            }
+        )
 
-                    
+// console.log(nomePreco)
+
+//C: Crie um novo array que contenha apenas os objetos da categoria Bebidas
+
+        const produtosCategorias = produtos.filter(
+            (nomeCategorias) =>{
+                return nomeCategorias.categoria === "Bebidas"
+            }
+        )
+
+// console.log(produtosCategorias)
+
+
+
+
+// D) Crie um novo array que contenha apenas os objetos da categoria Bebidas
+
+    //1°Passo, filtrar apenas os produtos que tenha Ypê
+        const produtosYpes = produtos.filter(
+            (apenasYpe) =>{
+                return apenasYpe.nome.includes("Ypê")
+            }
+        )
+
+     //2° passo criar o array apenas com esses nomes
+            const produtosYpesNomes = produtosYpes.map(
+                (item) => {
+                    return item.nome
                 }
             )
 
-            console.log(nomePreco)
+// console.log(produtosYpesNomes)
+
+//E)  Crie um novo array onde cada item é uma frase "Compre [NOME] por [PREÇO]". Esse array deve conter frases apenas dos itens cujo nome contenha a palavra "Ypê"
+
+        const ypeProdutos = produtos.filter(
+            (apenasYpe) =>{
+                return apenasYpe.nome.includes("Ypê")
+            }
+        )
+
+        const fraseYpesNomesPrecos = ypeProdutos.map(
+            (item) => {
+                return `Compre ${item.nome} por ${item.preco} `
+            }
+        )
+
+        // console.log(fraseYpesNomesPrecos)
