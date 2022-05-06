@@ -164,3 +164,49 @@ const nomePtes = pets.map(
         )
 
         // console.log(fraseYpesNomesPrecos)
+
+
+//--------------------------🏅Desafios-----------------------------
+
+//----------------------Questão 01---------------------------------
+
+//Dado o seguinte array de pokémons, realize as operações pedidas nos itens abaixo:
+
+                const pokemons = [
+                    { nome: "Bulbasaur", tipo: "grama" },
+                    { nome: "Bellsprout", tipo: "grama" },
+                    { nome: "Charmander", tipo: "fogo" },
+                    { nome: "Vulpix", tipo: "fogo" },
+                    { nome: "Squirtle", tipo: "água" },
+                    { nome: "Psyduck", tipo: "água" },
+                ]
+
+// A) Crie um novo array que contenha apenas o nome dos pokémons em ordem alfabética
+
+                const nomesPokemons = pokemons.map(
+                    (item) =>{
+                        return item.nome
+                        
+                    }
+                )
+// console.log(nomesPokemons.sort())
+
+// B)Crie um novo array apenas com os tipos dos pokémons, sem repetição
+
+// 1° Passo: filtra apenas os tipos dos pokemons
+             const filtraTiposPokemons = pokemons.map(
+                 (item)=>{
+                     return item.tipo
+                 }
+             )
+                 
+//2° Passo: Criar um novo array, usando o array filtraTiposPokemons como base, com os tipos sem repetir.
+      const naoRepetirTipos = filtraTiposPokemons.filter(
+          (item, itens) =>{
+              return filtraTiposPokemons.indexOf(item) === itens;
+          }
+      )
+    
+    console.log(naoRepetirTipos)
+
+    //Obs: pode parecer complicado. Porém, apenas comparem o meu item com o indice do array. Se  o tem for igual, apenas igual (==). Ele iria nos retorna a ordem desses itens. Porém, vale ressaltar que se usamos o operador logico com os três sinais de igualdade (===), iremos comparar tambem o tipo.
