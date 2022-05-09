@@ -46,4 +46,4 @@ function inicioJogo(){
    }
 }
 
-// inicioJogo()
+inicioJogo()
