@@ -5,36 +5,55 @@
 
 // EXERCÍCIO 01
 function retornaTamanhoArray(array) {
-   
+    return array.length;
 }
 
 // EXERCÍCIO 02
 function retornaArrayInvertido(array) {
-  
+  return array.reverse()
 }
 
 // EXERCÍCIO 03
+function ordenaNumeros( a, b){
+    return (a-b)
+}
 function retornaArrayOrdenado(array) {
-  
+   return array.sort(ordenaNumeros)
 }
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-  
+  const numberPares = array.filter((item) => item % 2 ===0)
+  return numberPares
 }
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
- 
+    const numberPares2 = array.filter((item) => item % 2 === 0 )
+    const paresElevados2 = numberPares2.map((item) => item ** 2 )
+
+    return paresElevados2
 }
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
-  
+  const numeroMaior = Math.max(...array)
+
+  return numeroMaior
 }
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
+     const numberMaior = math.max(num1, num2);
+     const numberMenor = Math.min(num1, num2);
+     const numberMaiorDivisivelMenor = numberMaior/numberMenor === 0;
+     const diferncaNumbers = (numberMaior - numberMenor) 
+
+     return{
+        maiorNumero: numberMaior,
+        maiorDivisivelPorMenor: numberMaiorDivisivelMenor,
+        diferenca: diferncaNumbers
+        }
 
 }
 
