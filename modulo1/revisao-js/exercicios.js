@@ -44,27 +44,36 @@ function retornaMaiorNumero(array) {
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
-     const numberMaior = math.max(num1, num2);
-     const numberMenor = Math.min(num1, num2);
-     const numberMaiorDivisivelMenor = numberMaior/numberMenor === 0;
-     const diferncaNumbers = (numberMaior - numberMenor) 
+  let maior = Math.max(num1, num2);
+  let menor = Math.min(num1, num2);
 
-     return{
-        maiorNumero: numberMaior,
-        maiorDivisivelPorMenor: numberMaiorDivisivelMenor,
-        diferenca: diferncaNumbers
-        }
+  let maiorDivisivelMeno = maior % menor === 0;
+  let diferenca = maior - menor
+
+   const impremeValores = {
+      maiorNumero: maior ,
+      maiorDivisivelPorMenor: maiorDivisivelMeno ,
+      diferenca: diferenca
+   }
+
+  return impremeValores
 
 }
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-   
+  
 }
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
-
+    if(ladoA === ladoB && ladoB === ladoC){
+      return "Equilátero"
+    } else if ((ladoA === ladoB)|| (ladoB === ladoC) || (ladoA === ladoC)){
+        return"Isósceles"
+    } else {
+        return "Escaleno"
+    }
 }
 
 // EXERCÍCIO 10
@@ -74,18 +83,26 @@ function retornaSegundoMaiorESegundoMenor(array) {
 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
-   
-}
+   const dadosFilme = (`Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores[0]}, ${filme.atores[1]}, ${filme.atores[2]}, ${filme.atores[3]}`)
 
+    return dadosFilme
+}
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
-   
+    const nomePessoa = {
+      ...pessoa, 
+      nome : "ANÔNIMO"
+  }
+
+  return nomePessoa
 }
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
    
+
 }
+
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
