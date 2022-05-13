@@ -68,6 +68,7 @@ function retornaNPrimeirosPares(n) {
     if(numeros % 2 === 0){
       pares.push(i)
     }
+    return pares
   }
 
 }
@@ -85,14 +86,18 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-  
+  const arrayOrdenado = retornaArrayOrdenado(array);
+  const segundoMenor = arrayOrdenado[1];
+  const segundoMaior = arrayOrdenado[arrayOrdenado.length -2]
+
+  return [ segundoMaior, segundoMenor]
+
 }
 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
-   const dadosFilme = (`Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores[0]}, ${filme.atores[1]}, ${filme.atores[2]}, ${filme.atores[3]}`)
-
-    return dadosFilme
+   
+  return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores[0]}, ${filme.atores[1]}, ${filme.atores[2]}, ${filme.atores[3]}`
 }
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
@@ -106,15 +111,31 @@ function retornaPessoaAnonimizada(pessoa) {
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
-   
+  let alturaMinina = 1.5;
+  let idadeMaior14 =  14;
+  let idadeMenor60 = 60
 
+  const autorizadas = pessoas.filter(
+    (pessoas) => {
+      return (pessoas.altura >= alturaMinina && pessoas.idade > idadeMaior14 && pessoas.idade <idadeMenor60)
+    })
+    return autorizadas
 }
 
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
-  
+  let alturaMinina = 1.5;
+  let idadeMaior14 =  14;
+  let idadeMenor60 = 60
+
+  const naoAutorizadas = pessoas.filter(
+    (pessoas) => {
+      return !(pessoas.altura >= alturaMinina && pessoas.idade > idadeMaior14 && pessoas.idade <idadeMenor60)
+    })
+    return naoAutorizadas
 }
+
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
