@@ -1,0 +1,23 @@
+//Resumo 7 passos fundamentais para a resolução de problemas 
+
+// 1° passo: Ter atenção no enunciado:
+Aqui arisco a dizer que é um dos principais passos, senão o mais importante. Acredito que toda a lógica para o desenvolvimento do programa/resolução dos problemas, pode ser encurtada com a compreensão do enunciado.
+
+//2°  Retira as informações importantes:
+Depois de uma boa compreensão ou o entendimento completo do enunciado,  reservar as informações que julgamos serem a mais importante  é de extrema importância.   Partindo desse precipício, podemos  ter algumas projeções de como resolver determinado problema. 
+
+// 3° Pensar em entradas  e saídas:
+Depois de retirar ás informações mais importantes, partimos para os inputs e outputs. Podemos aplicar os conhecimentos adquiridos e dar inicio ao código = “${Codigo.feio}”
+
+// 4° Fazer esquema visual :
+Essa parte pode nos ajudar a entender o comportamento das ações que queremos. Por isso, é uma boa ideia um fluxograma ou rabiscar um a folha. 
+
+// 5° Criar o código feio :
+Tento uma boa ideia dos inputs e outputs que devemos usar.  Podemos iniciar oque denominamos de um código sem brio. Não longe de dizermos que um código muito verboso  não é digno, obviamente se cumprir os requisitos.  Mas aqui, a ideia é saber se o código por maior que seja, funciona. 
+
+// 6° Refatorar :
+Nessa parte devemos anualizar o código da seguinte maneira: 
+    •	Essa solução é legível? ;
+    •	Pensando no futuro: o código me da  indícios que  não precisar de muitas mudanças? ;
+    •	E possível deixar o código menor? 
+    Partindo desse principio, podemos então pensar em outras soluções pra o problema. 
