@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -9,107 +10,100 @@ body{
 }
 header{
     display: flex;
-    justify-content: space-around;
-    background: white;
-    margin: 15px 80px 0 80px;
-    padding: 5px;
-    height: 30px;
-    border-radius: 15px;
-    
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgb(6, 6, 6);
+    padding: 20px;
+    margin: 5px 20px 0px 20px;
+    height: 50px;
+    border-radius: 50px;
+    background: rgb(8, 8, 8);
 }
 
+header img{
+    max-width: 250px;
+    max-height: 150px;
+}
+header img:hover{
+    color: blue;
+}
+
+
 header li{
-    display: inline;
+    display: inline-block;
 }
 header li a{
     font-size: 20px;
     text-decoration: none;
     text-align: center;
     padding: 10px;
-  
+    color: rgb(243, 243, 243);
+    border: 5px;
 }
 
 header li a:hover{
-    color: red;
-    background: black;
+    color:rgb(132, 132, 247);
     text-decoration: underline white;
+    font-size: 25px;
+    
 }
 
-#apresentacao{
-    color: white;
-    margin-top: 20px;
+.apresentacao{
+    padding: 50px;
+    margin-top: px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    cursor: pointer;
 }
-/* Css Main */
 
-main {
+/*Configuração Main*/
+
+main{
     color: white;
     display: flex;
     justify-content: center;
+    margin-top: 13%;
 }
-
 main h1{
-    align-items: flex-end;
-    margin-top: 15px;
-}
-.conteudo-apresentacao{
-    display: flex;
-    align-items:center ;
-    justify-content: space-evenly;
-    min-height: 80vh;
-    padding: 15px;
-    margin-top: 20px;
-
-}
-.container{
-    display: inline-flex;
+    font-size: 70px;
+    margin-right: 50px;
 }
 
-.container .estatico{
-    color: white;
-    font-size: 60px;
-    font-weight: 400;
+.container-apresentacao p{
+   font-size: 20px;
+}
+.container-apresentacao h1:hover{
+    cursor: pointer;
+    color:rgb(132, 132, 247);
 }
 
-.container .dinamico{
-    margin-left: 20px;
-    line-height: 90px;
-    height: 90px;
-    overflow: hidden;
+#banner-apresentacao img{
+    max-width: 200px;
+    
 }
 
-.dinaminco li{
-    color: red;
-    list-style: none;
-    font-size: 60px;
-    font-weight:500 ;
-}
-
-.dinaminco li span::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    border-left: 2px solid #fc6d6d;
-    animation: typing 1.5s steps(10) infinite;
-
-}
-
-.dinaminco li span{
-    position: relative;
-}
-
-@keyframes typing{
-    100%{
-        left: 100%;
-        margin: 0 -35px 0 35px;
-    }
-}
-
-/* Css Footer */
+/*Configuração Footer*/
 
 footer{
     display: flex;
     justify-content: center;
-    justify-items: center;
+    color: white;
+    margin-top: 10%;
+    background: rgb(8, 8, 8);
+}
+
+footer img{
+    max-width: 35px;
+    padding: 3px;
+    margin:5px;
+    
+}
+
+footer img:hover{
+    cursor: pointer;
+}
+
+footer li{
+    list-style: none;
+    display: inline-flex;
 }
