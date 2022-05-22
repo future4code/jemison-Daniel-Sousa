@@ -2,52 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Special Elite', monospace;
 }
 
 body{
     background: black;
+   
 }
-header{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background: rgb(6, 6, 6);
-    padding: 20px;
-    margin: 5px 20px 0px 20px;
-    height: 50px;
-    border-radius: 50px;
-    background: rgb(8, 8, 8);
-}
-
-header img{
-    max-width: 250px;
-    max-height: 150px;
-}
-header img:hover{
-    color: blue;
-}
-
-
-header li{
-    display: inline-block;
-}
-header li a{
-    font-size: 20px;
-    text-decoration: none;
-    text-align: center;
-    padding: 10px;
-    color: rgb(243, 243, 243);
-    border: 5px;
-}
-
-header li a:hover{
-    color:rgb(132, 132, 247);
-    text-decoration: underline white;
-    font-size: 25px;
-    
-}
-
 .apresentacao{
     padding: 50px;
     margin-top: px;
@@ -63,11 +24,44 @@ main{
     display: flex;
     justify-content: center;
     margin-top: 13%;
+    color: rgba(255,255,255, .75);
 }
-main h1{
+
+/*estilizacao nome*/
+
+.line{
+    margin-top: 10px;
     font-size: 70px;
-    margin-right: 50px;
+    color: rgba(255,255,255, .75);
+    border-right: 2px solid rgba(255,255,255, .75) ;
+    white-space: nowrap;
+    overflow: hidden;
 }
+
+.typing-animacao{
+    animation: LinkCursor 500ms infinite normal, tempo 4s steps(25) 1s normal;
+}
+
+@keyframes tempo {
+    from{ /*começa */
+        width: 0;
+    }
+    to{  /*Para */
+        width: 8em;
+       } 
+}
+
+@keyframes LinkCursor{
+   from{ /*começa */
+    border-right-color: rgba(255,255,255, .75);
+   }
+   to{  /*Para */
+    border-right-color: transparent;
+   } 
+}
+
+/*Fim estilizacao nome*/
+
 
 .container-apresentacao p{
    font-size: 20px;
@@ -80,30 +74,4 @@ main h1{
 #banner-apresentacao img{
     max-width: 200px;
     
-}
-
-/*Configuração Footer*/
-
-footer{
-    display: flex;
-    justify-content: center;
-    color: white;
-    margin-top: 10%;
-    background: rgb(8, 8, 8);
-}
-
-footer img{
-    max-width: 35px;
-    padding: 3px;
-    margin:5px;
-    
-}
-
-footer img:hover{
-    cursor: pointer;
-}
-
-footer li{
-    list-style: none;
-    display: inline-flex;
 }
