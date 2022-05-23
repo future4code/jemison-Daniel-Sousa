@@ -10,38 +10,26 @@ body{
     color: rgb(255, 255, 255);
 }
 
-.titulo-principal{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-main p{
-    padding: 10px 50px 0 50px;
-}
-.container-principal-contato{
-    display: flex;
-    padding: 10px;
-    margin-top: 5px;
-    margin-left: 300px;
-    width: 100px;
-}
-
-.formaulario-contato label{
-   
-    margin: 0 0 0 20px;
-    font-size: 25px;
-   
-}
-.formaulario-contato input{
-   
-    margin: 5px;
-    padding: 10px 25px;
-    width: 100;
+main{
+    width: 940px;
+    margin: 0 auto;
 }
 
 
-.botao-enviar{
-    background-color: rgb(132, 132, 247) ;
+.formaulario-contato form{
+    margin: 40px 0;
+    
+}
+
+.formaulario-contato form label{
+    display: block;
+    font-size: 30px;
+    margin: 10px;
+}
+
+.formaulario-contato form input{
+    display: block;
+    margin: 10px;
+    width: 300px;
+    height: 30px;
 }
