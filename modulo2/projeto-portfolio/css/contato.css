@@ -7,5 +7,31 @@
 }
 body{
     background: black;
-   
+    color: rgb(255, 255, 255);
+}
+
+.titulo-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.container-principal-contato{
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 10%;
+}
+
+.formaulario-contato label{
+    display: block;
+    margin: 0 0 0 20px;
+    font-size: 25px;
+    margin: 0 0 0 10px;
+}
+.formaulario-contato input{
+    display: block;
+    margin: 5px;
+    padding: 10px 25px;
+    width: 50%;
 }
