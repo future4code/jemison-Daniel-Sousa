@@ -16,22 +16,32 @@ body{
     align-items: center;
     margin-top: 20px;
 }
+
+main p{
+    padding: 10px 50px 0 50px;
+}
 .container-principal-contato{
-    display: block;
-    margin: 0 auto;
-    padding: 20px;
-    margin-top: 10%;
+    display: flex;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 300px;
+    width: 100px;
 }
 
 .formaulario-contato label{
-    display: block;
+   
     margin: 0 0 0 20px;
     font-size: 25px;
-    margin: 0 0 0 10px;
+   
 }
 .formaulario-contato input{
-    display: block;
+   
     margin: 5px;
     padding: 10px 25px;
-    width: 50%;
+    width: 100;
+}
+
+
+.botao-enviar{
+    background-color: rgb(132, 132, 247) ;
 }
