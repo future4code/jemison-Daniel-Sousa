@@ -7,5 +7,29 @@
 }
 body{
     background: black;
-   
+    color: rgb(255, 255, 255);
+    
+}
+
+.titulo-princial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    font-size: 50px;
+}
+
+.titulo-princial:hover{
+    cursor: pointer;
+    color:rgb(132, 132, 247);
+}
+
+.conteiner-sobre-mim{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+.conteiner-sobre-mim img{
+    max-width: 250px;
 }

@@ -1,0 +1,30 @@
+.line{
+    margin-top: 10px;
+    font-size: 70px;
+    color: rgba(255,255,255, .75);
+    border-right: 2px solid rgba(255,255,255, .75) ;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.typing-animacao{
+    animation: LinkCursor 500ms infinite normal, tempo 4s steps(25) 1s normal;
+}
+
+@keyframes tempo {
+    from{ /*começa */
+        width: 0;
+    }
+    to{  /*Para */
+        width: 8em;
+       } 
+}
+
+@keyframes LinkCursor{
+   from{ /*começa */
+    border-right-color: rgba(255,255,255, .75);
+   }
+   to{  /*Para */
+    border-right-color: transparent;
+   } 
+}
