@@ -1,69 +1,70 @@
 
+*{
+    margin: 0;
+    padding: 0;
+}
 
 body{
-   
-    margin: 0 auto;
-    background-color: #f6e0e0;
-    /* font-family: 'Special Elite', cursive; */
-    color: rgb(34, 2, 98);
+    background-color: rgb(213, 244, 244);
 }
 
-/* Estilização cabecalho */
-
-header{
-    border: 1px solid;
-    margin: 5px;
-}
-.cabecalho-paginas{
-    padding:5px;
-    text-align: center;
-}
-
-.cabecalho-paginas header{
-    padding: 5px;  
-}
-
-.cabecalho-paginas h1{
-    font-weight: bolder;
-    font-size: 35px;
-    font-family: 'Special Elite', cursive;
-
-}
-
-.cabecalho-paginas p{
-    font-size: 20px;
-    font-family: 'Special Elite', cursive;
-    font-weight: bolder;
-}
-.cabecalho-paginas a{
-    font-size: 20px;
-    text-decoration: none;
-    
-    
-}
-.cabecalho-paginas a:hover{
-    border: 1px solid black;
-    color: black;
-    background: #a2a1a1;
-}
 /* Estlização Main - conteudo principal */
-main{
-   margin: 10px; 
-}
-
-.conteudo-principal{
-    text-align: center;
-}
-
-.conteudo-principal{
-    font-size: 25px;
+.titulo-conteuo-principal{
     font-family: 'Special Elite', cursive;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.produtos {
+	width: 940px;
+	margin: 0 auto;
+	padding: 50px 0;
 }
 
-.vitrine-produtos img{
-    max-width: 300px;
-    border-radius: 30px;
-    margin: 10px;
+main img{
+    max-width: 250px;
+    border-radius: 40px;
+}
+
+.produtos li {
+	display: inline-block;
+	text-align: center;
+    font-family: 'Special Elite', cursive;
+	width: 30%;
+	vertical-align: top;
+	margin: 0 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	border: 2px solid #000000;
+	border-radius: 10px;
+}
+
+.produtos li:hover {
+	border-color: #C78C19;
+}
+
+.produtos li:active {
+	border-color: #088C19;	
+}
+
+.produtos li:hover h2 {
+	font-size: 34px;
+}
+
+.produtos h2 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.produto-descricao {
+	font-size: 18px;
+}
+
+.produto-preco {
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 10px;
 }
 
 
@@ -71,15 +72,15 @@ main{
 /* Final Estlização Main - conteudo principal */
 
 footer{
-  
+    width: 940px;
+    padding: 10px;
+    
 }
 
 footer p{
     font-size: 20px;
-    text-align: center;
+    margin-bottom: 10px;
 }
 footer img{
     max-width: 30px;
-   im
-    
 }
