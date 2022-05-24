@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(213, 244, 244);
+}
+
+/* Estilizaçõa Da Main */
+
+main h2{
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+}
+
+.conteu-principal img{
+    max-width: 200px;
+    border-radius: 30px;
+    margin: 20px;
+}
+
+.conteu-principal th{
+    font-size: 18px;
+   
+}

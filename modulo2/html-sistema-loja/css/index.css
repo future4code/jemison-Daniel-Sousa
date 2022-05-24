@@ -71,16 +71,3 @@ main img{
 
 /* Final Estlização Main - conteudo principal */
 
-footer{
-    width: 940px;
-    padding: 10px;
-    
-}
-
-footer p{
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-footer img{
-    max-width: 30px;
-}
