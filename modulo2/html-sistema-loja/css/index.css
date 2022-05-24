@@ -1,0 +1,85 @@
+
+
+body{
+   
+    margin: 0 auto;
+    background-color: #f6e0e0;
+    /* font-family: 'Special Elite', cursive; */
+    color: rgb(34, 2, 98);
+}
+
+/* Estilização cabecalho */
+
+header{
+    border: 1px solid;
+    margin: 5px;
+}
+.cabecalho-paginas{
+    padding:5px;
+    text-align: center;
+}
+
+.cabecalho-paginas header{
+    padding: 5px;  
+}
+
+.cabecalho-paginas h1{
+    font-weight: bolder;
+    font-size: 35px;
+    font-family: 'Special Elite', cursive;
+
+}
+
+.cabecalho-paginas p{
+    font-size: 20px;
+    font-family: 'Special Elite', cursive;
+    font-weight: bolder;
+}
+.cabecalho-paginas a{
+    font-size: 20px;
+    text-decoration: none;
+    
+    
+}
+.cabecalho-paginas a:hover{
+    border: 1px solid black;
+    color: black;
+    background: #a2a1a1;
+}
+/* Estlização Main - conteudo principal */
+main{
+   margin: 10px; 
+}
+
+.conteudo-principal{
+    text-align: center;
+}
+
+.conteudo-principal{
+    font-size: 25px;
+    font-family: 'Special Elite', cursive;
+}
+
+.vitrine-produtos img{
+    max-width: 300px;
+    border-radius: 30px;
+    margin: 10px;
+}
+
+
+
+/* Final Estlização Main - conteudo principal */
+
+footer{
+  
+}
+
+footer p{
+    font-size: 20px;
+    text-align: center;
+}
+footer img{
+    max-width: 30px;
+   im
+    
+}
