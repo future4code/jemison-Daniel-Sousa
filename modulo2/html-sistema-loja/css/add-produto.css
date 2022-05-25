@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(213, 244, 244);
+    font-family: 'Special Elite', cursive;
+}
+
+/* Estilizaçõa Da Main */
+
+main{
+    width: 940px;
+    margin: 0 auto;
+}
+main h2{
+    font-size: 30px;
+    text-align: center;
+
+}
+.conteudo-principal{
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
+    border: 1px solid;
+}
+
+.conteudo-principal form label, form legend {
+	display:block;
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+
+.conteudo-principal input{
+    padding: 10px;
+}
+
+.conteudo-principal button{
+    font-family: 'Special Elite', cursive;
+    font-weight: bolder;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(9, 9, 9);
+    color: rgba(255, 255, 255, 0.986);
+}
+
+.conteudo-principal button:hover{
+    color:#C78C19;
+    background: rgb(213, 244, 244);
+}

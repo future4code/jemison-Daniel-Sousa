@@ -1,0 +1,15 @@
+footer{
+    width: 940px;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 10px;
+    border-top: 1px solid;
+}
+
+footer p{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+footer img{
+    max-width: 30px;
+}
