@@ -5,43 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/img-rede-sociais/logo_site.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/cabecalho-paginas.css">
+    <link rel="stylesheet" href="css/footer-paginas.css">
+    <link rel="stylesheet" href="css/add-produto.css">
     <title>Adcionar Produto</title>
 </head>
 <body>
-    <header>
-        <p>Mercado Tech</p>
-    </header>
+    <header >
+        <div class="cabecalho-paginas">
+            <h1>Mercado Tech</em></h1>
+            <p>Pensou em Upgrade? <strong>Mercado Tech</strong> Resolve!</p>
+    
+            <nav class="menu-navegacao">
+                <a href="index.html">Página Inicial |</a>
+                <a href="ctrl-estoque.html">Controle de Estoque |</a>
+                <a href="add-produto.html">Adicionar Produto |</a>
+                <a href="funcionarios.html">Funcionários</a>
+            </nav> <!--Tag semantica de navegação-->
+        </div>
+     </header>
 
-    <nav>
-        <a href="index.html"> Página Inicial</a>
-        <a href="ctrl-estoque.html"> Controle de Estoque</a>
-        <a href="add-produto.html"> Adicionar Produto</a>
-        <a href="funcionarios.html"> Funcionários</a>
-    </nav>
+     <main>
+        <h2>Adcionar Produto</h2>
+        <div class="conteudo-principal">
+            <form action="">
+                <label for="Link-foto">Link para foto:</label>
+                <input type="url" name="link-foto" id="link-foto">
+                <br>
+                <label for="descricao">Descrição do produto</label>
+                <!-- Adicione o id apropriado para o input abaixo -->
+                <input type="text" id="descrição" name="descrição">
+                <br>
+                <label for="preco">Preço (em R$): </label>
+                <!-- Adicione o id apropriado e o type para receber números abaixo -->
+                <input type="number" id="preco" name="preço">
+                <br>
+                <!-- Preencha as propriedades necessárias para os elementos abaixo -->
+                <label for="quantidade"> Quantidade disponível</label>
+                <input type="number" id="quantidade" name="quantidade">
 
-    <h2>Adcionar Produto</h2>
-
-    <form action="">
-        <label for="Link-foto">Link para foto:</label>
-        <input type="url" name="link-foto" id="link-foto">
-        <br>
-        <label for="descricao">Descrição do produto</label>
-        <!-- Adicione o id apropriado para o input abaixo -->
-        <input type="text" id="descrição" name="descrição">
-        <br>
-        <label for="preco">Preço (em R$): </label>
-        <!-- Adicione o id apropriado e o type para receber números abaixo -->
-        <input type="number" id="preco" name="preço">
-        <br>
-        <!-- Preencha as propriedades necessárias para os elementos abaixo -->
-        <label for="quantidade"> Quantidade disponível</label>
-        <input type="number" id="quantidade" name="quantidade">
-
-        <br>
-        <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
-        <button type="submit"> Adicionar</button>
-    </form>
-
+                <br>
+                <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
+                <button type="submit"> Adicionar</button>
+            </form>
+        </div>
+    </main>
     <footer> <!--Tag semantica para rodape-->
         <p>Siga-nos nas redes sociais!</p>
         <img src="img/img-rede-sociais/facebook.png" alt="">
