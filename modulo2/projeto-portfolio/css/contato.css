@@ -11,25 +11,26 @@ body{
 }
 
 main{
-    width: 940px;
+    margin-top: 20px;
+}
+.titulo-principal{
+    text-align: center;
+    margin-top: 50px;
+    color:rgb(132, 132, 247);
+    font-size: 50px;
+}
+
+.label-padrao{
+    display: block;
     margin: 0 auto;
+    font-size: 20px;
+	padding: 10px;
+	width: 50%;
 }
 
-
-.formaulario-contato form{
-    margin: 40px 0;
-    
-}
-
-.formaulario-contato form label{
-    display: block;
-    font-size: 30px;
-    margin: 10px;
-}
-
-.formaulario-contato form input{
-    display: block;
-    margin: 10px;
-    width: 300px;
-    height: 30px;
+.input-padrao {
+	display: block;
+    margin: 0 auto;
+	padding: 10px;
+	width: 50%;   
 }
