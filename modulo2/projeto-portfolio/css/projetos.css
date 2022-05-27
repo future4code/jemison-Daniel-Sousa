@@ -10,6 +10,18 @@ body{
     color: rgb(255, 255, 255);
 }
 
+.titulo-princial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    font-size: 50px;
+}
+
+.titulo-princial:hover{
+    cursor: pointer;
+    color:rgb(132, 132, 247);
+}
 .projetos{
     width: 940px;
     margin: 0 auto;
@@ -40,7 +52,7 @@ body{
     color:rgb(132, 132, 247);
 }
 .projetos img{
-    max-width: 300px;
+    max-width: 250px;
     border-radius: 30%;
     margin: 10px;
 }
