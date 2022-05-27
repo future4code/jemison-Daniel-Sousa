@@ -7,5 +7,40 @@
 }
 body{
     background: black;
-   
+    color: rgb(255, 255, 255);
+}
+
+.projetos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+    
+}
+
+.projetos li{
+    display: inline-block;
+    text-align: center;
+    width: 45%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 20px;
+
+}
+
+.projetos li:hover{
+    border-color: rgb(132, 132, 247);
+    cursor: pointer;
+
+}
+.clique-aqui{
+    color:rgb(132, 132, 247);
+}
+.projetos img{
+    max-width: 300px;
+    border-radius: 30%;
+    margin: 10px;
 }
