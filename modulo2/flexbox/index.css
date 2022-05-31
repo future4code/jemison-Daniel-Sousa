@@ -36,3 +36,66 @@ header{
 }
 
 /* Fim Cabecalho */
+
+/* Inico main */
+
+#conteiner-principal{
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-principal{
+    width: 15%;
+    height: 85vh;
+    background-color: #f2d0e0;
+}
+
+.itens-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.item-01 > a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: black;
+}
+
+.icone-menu{
+    width: 15px;
+    margin-right: 10px;
+}
+
+
+.conteudo-principal{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 75%;
+    margin-top: 15px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    box-shadow: darkgray;
+}
+
+.imagem-card{
+    width: 300px;
+}
+/* Iniicio footer */
+
+footer{
+    background-color: mediumvioletred;
+    text-align: center;
+    padding: 15px;
+    font-weight: bolder;
+    font-size: 15px;
+}
