@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Special Elite', monospace;
+
+}
+body{
+    background: black;
+    color: rgb(255, 255, 255);
+}
+
+.titulo-princial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    font-size: 50px;
+}
+
+.titulo-princial:hover{
+    cursor: pointer;
+    color:rgb(132, 132, 247);
+}
+.projetos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+    
+}
+
+.projetos li{
+    display: inline-block;
+    text-align: center;
+    width: 45%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 20px;
+
+}
+
+.projetos li:hover{
+    border-color: rgb(132, 132, 247);
+    cursor: pointer;
+
+}
+.clique-aqui{
+    color:rgb(132, 132, 247);
+}
+.projetos img{
+    max-width: 250px;
+    border-radius: 30%;
+    margin: 10px;
+}

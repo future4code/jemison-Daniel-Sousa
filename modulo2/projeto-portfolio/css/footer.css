@@ -1,0 +1,25 @@
+/*Configuração Footer*/
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    background: black
+}
+
+footer img{
+    max-width: 35px;
+    padding: 3px;
+    margin:5px;
+    
+}
+
+footer img:hover{
+    cursor: pointer;
+}
+
+footer li{
+    list-style: none;
+    display: inline-flex;
+}

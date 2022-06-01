@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Special Elite', monospace;
+
+}
+body{
+    background: black;
+    color: rgb(255, 255, 255);
+   
+}
+
+.titulo-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    font-size: 50px;
+}
+
+.titulo-principal:hover{
+    cursor: pointer;
+    color:rgb(132, 132, 247);
+}
+
+main{
+    width: 100%;
+}
+.titulo-habilidade{
+    margin-left: 5%;
+    font-size: 25px;
+    font-weight: bolder;
+    color:rgb(132, 132, 247);
+}
+
+.habilidades{
+    margin-top: 20px;
+    margin-left: 7%;
+    font-size: 20px;
+}
+
+#habilidade-tecnica:hover{
+    cursor: pointer;
+    color:rgb(132, 132, 247);
+}
+
+.descricao-habilidades{
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 10%;
+    font-size: 20px;
+    
+}
+
+.descricao-habilidades h3{
+    color:rgb(132, 132, 247);
+}
+.descricao-habilidades p{
+ margin-top: 5px;
+ text-align: justify;
+}
+
+
+

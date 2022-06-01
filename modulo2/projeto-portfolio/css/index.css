@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Special Elite', monospace;
+}
+
+body{
+    background: black;
+   
+}
+.apresentacao{
+    padding: 50px;
+    margin-top: px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*Configuração Main*/
+
+main{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 13%;
+    color: rgb(255, 255, 255);
+}
+
+.container-apresentacao p{
+   font-size: 20px;
+}
+.container-apresentacao h1:hover{
+    cursor: pointer;
+    color:rgb(132, 132, 247);
+}
+
+#banner-apresentacao img{
+    max-width: 200px;
+    
+}
