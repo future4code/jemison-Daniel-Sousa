@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: mediumvioletred;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 
+    
+    
+}
+
+/* Inicio Cabecalho */
+.cabecalho{
+    display: flex;
+    align-items: center;
+    
+}
+
+.titulo-logo{
+    font-size: 30px;
+}
+.logo-cabecalho{
+    width: 25px;
+    margin-right: 10px;
+}
+
+.cabecalho-button > button{
+    padding: 5px;
+    font-weight: bolder;
+}
+
+/* Fim Cabecalho */
+
+
+
+/* Inicio conteúdo principal */
+.menu-principal{
+    width: 23%;
+    background-color:#f2d0e0 ;
+    display: flex;
+    flex-direction: column;
+}
+
+.itens-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 10px 1px 10px;
+    
+}
+
+.itens-menu a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    text-transform: uppercase;
+}
+
+.icones-menu{
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* Inicio galeria */
+
+aside{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 73%;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.card{
+    width: 15vw;
+    height: 50vh;
+    justify-content: center;
+    box-shadow: 3px 3px 3px darkgray;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+.texto-card{
+    padding: 10px;
+}
+.titulo-card{
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 5px;
+    font-size: 25px;
+}
+
+.decricao-card{
+    margin-top: 10px;
+    text-align: center;
+}
+.imagem-card{
+    width: 100%;
+}
+
+/* Fim conteúdo principal */
+
+/* Iniicio footer */
+footer{
+    background-color: mediumvioletred;
+    text-align: center;
+    padding: 15px;
+    font-weight: bolder;
+    font-size: 17px;
+}

@@ -1,0 +1,144 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    color: white;
+}
+
+/* .green-background {
+    background-color: green;
+    height: 50px;
+    width: 20%;
+
+}
+
+.yellow-background {
+    background-color: yellow;
+    width: 80%;
+}
+
+.pink-background {
+    background-color: fuchsia;
+}
+
+.blue-background {
+    background-color: blue;
+}
+
+.red-background {
+    background-color: red;
+}
+
+.lightgreen-background {
+    background-color: lightgreen;
+}
+
+.purple-background {
+    background-color: purple;
+} */
+
+
+/* Inicio flexbox */
+header{
+    height: 50px;
+    display: flex;
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.conteiner-verde{
+    background-color: rgb(14, 223, 14);
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteiner-amarelo{
+    background-color: rgb(237, 237, 9);
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+main{
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: center;
+}
+.conteiner-rosa{
+    background-color: rgb(250, 6, 185);
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* conteineres */
+
+.containrs{
+    display: flex;
+    width: 100%; 
+    
+
+}
+
+.conteiner-azul{
+    
+    background-color: blue;
+    width: 50%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.conteiner-galeria{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+   
+}
+
+.conteiner-branco{
+    background-color:white;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteiner-vermelho{
+    background-color: red;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteiner-verde2{
+    background-color: rgb(14, 223, 14);
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    background-color: rebeccapurple;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+
