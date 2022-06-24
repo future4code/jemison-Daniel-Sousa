@@ -3,6 +3,7 @@ import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
 import CardMedio from './components/CardMedio/CarMedio';
+import logo from './img/perfil.png'
 
 function App() {
   return (
@@ -10,9 +11,9 @@ function App() {
       <div className="page-section-container">
         <h2>Dados pessoais</h2>
         <CardGrande 
-          imagem="https://uploads-ssl.webflow.com/5d640f4558306be99cf47a0e/5dd57846babb597b77c6bb1d_PerfilFuture4_cor.png" 
-          nome="Astrodev" 
-          descricao="Oi, Daniel. Sou o chefe dos alunos da Labenu. Adoro pedir e-mails na sexta-feira e esperar os alunos responderem só para responder com uma bronca e dar mais trabalho para eles."
+          imagem={logo} 
+          nome="Daniel Da Silva De Sousa" 
+          descricao="Oi, Daniel Sousa. Sou estudante de Desenvolvimento Full Stack na Labenu e graduando em Analise e Desenvolvimento de Sistemas pelo Cruzeiro do Sul. Uma amante de desenvolvimento Web, você está diante de uma de um Dev em construção que vai abalar o mercado Front-end."
         />
         
         <ImagemButton 
@@ -21,28 +22,27 @@ function App() {
         />
       </div>
 
-      <div className="page-section-container">
-        <h2>Experiências profissionais</h2>
-        <CardGrande 
-          imagem="https://s3.amazonaws.com/future4.com.br/static/headf4-c492117ca2373dc85ca81bf715b3dc2a.png" 
-          nome="Labenu" 
-          descricao="Formando desenvolvedores para o mercado de trabalho!" 
+      <div className='page-contato'>
+        <CardMedio
+          imagem ="https://img.icons8.com/external-flat-icons-inmotus-design/67/000000/external-email-mail-box-flat-icons-inmotus-design-4.png"
+          titulo = "Email:"
+          descricao ="daniellsousa0614@gamil.com"
         />
-        
-        <CardGrande 
-          imagem="https://logodownload.org/wp-content/uploads/2019/03/nasa-logo-0-768x768.png" 
-          nome="NASA" 
-          descricao="Apontando defeitos." 
+        <CardMedio
+          imagem ="https://img.icons8.com/ios-filled/50/000000/order-delivered.png"
+          titulo = "Endereço:"
+          descricao ="Rua das flores, Centro - Timbiras-Ma"
         />
       </div>
 
-      <div className='page-contato'>
-        <CardMedio
-          imagem ="ola"
-        
-        
+      <div className="page-section-container">
+        <h2>Experiências profissionais</h2>
+        <CardGrande 
+          imagem="https://img.icons8.com/officel/100/000000/school-director-male-skin-type-3.png" 
+          nome="Diretor Administrativo" 
+          descricao="Atualemente trabalho como diretor administrativo de uma empresa em minha cidade!" 
         />
-
+        
       </div>
 
       <div className="page-section-container">
