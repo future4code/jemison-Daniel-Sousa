@@ -1,0 +1,20 @@
+.card-medio{
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    width: 550px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.card-medio p{
+    font-weight: bolder;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+
+.card-medio img {
+    width: 1.8rem;
+    margin-right: 5px;
+}
