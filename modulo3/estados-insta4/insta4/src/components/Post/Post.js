@@ -72,7 +72,7 @@ function Post(props){
     setNumeroComentarios(numeroComentarios + 1)
   } //  função abaixo recebe 2 estados, o primeiro setComentando(false) , com o seu  valor inicial false e outro estado (setNumeroComentario) que quando a função é chamada pelo evento o seu e valor inicial passa ser o o numero de comentários
 
-  let iconeCurtida
+    let iconeCurtida
 
     if(curtido) {
       iconeCurtida = iconeCoracaoPreto
