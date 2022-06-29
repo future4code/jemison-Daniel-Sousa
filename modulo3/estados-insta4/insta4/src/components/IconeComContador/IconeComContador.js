@@ -14,3 +14,4 @@ export function IconeComContador(props) {
 		<p>{props.valorContador}</p>
 	</IconContainer>
 }
+// Ira contar o numero de intereações do usuario! 

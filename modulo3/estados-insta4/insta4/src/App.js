@@ -12,11 +12,29 @@ function App() {
 return(
   <MainContainer>
            <Post
-            nomeUsuario={'paulinha'}
-            fotoUsuario={'https://picsum.photos/50/50'}
+            nomeUsuario={'Paulinha'}
+            fotoUsuario={'https://picsum.photos/30/50'}
             fotoPost={'https://picsum.photos/200/150'}
           />
-        </MainContainer>
+
+          <Post
+            nomeUsuario={'Daniel Sousa'}
+            fotoUsuario={'https://picsum.photos/20/50'}
+            fotoPost={'https://picsum.photos/180/150'}
+          />
+
+          <Post
+            nomeUsuario={'Andreane Cardoso'}
+            fotoUsuario={'https://picsum.photos/90/50'}
+            fotoPost={'https://picsum.photos/210/150'}
+          />
+
+          <Post
+            nomeUsuario={'Marlene Cavalcante'}
+            fotoUsuario={'https://picsum.photos/85/50'}
+            fotoPost={'https://picsum.photos/215/150'}
+          />
+   </MainContainer>
 )
 
 }

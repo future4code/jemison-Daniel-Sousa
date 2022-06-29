@@ -45,11 +45,19 @@ function Post(props){
   const [numeroCurtidas, setnumeroCurtidas] = useState (0)
   const [curtido, setCurtido] = useState(false)
   const [comentando, setComentando] = useState(false)
-  const [numeroComentarios, setNumeroComentarios] = useState(0)
+  const [numeroComentarios, setNumeroComentarios] = useState(false)
 
   const onClickCurtida = () => {
-    console.log('Curtiu!')
-  }
+    if(numeroCurtidas === 0){
+      console.log('Curtiu!')
+      setnumeroCurtidas(numeroCurtidas+1)
+      setCurtido(true)
+    }else{
+      setnumeroCurtidas(numeroCurtidas-1)
+      console.log('Descurtiu!')
+      setCurtido(false)
+    }
+  }// ao clicar no coração o numero de curtidas irá aumenatr
   
   const onClickComentario = () => {
     setComentando(!comentando)
@@ -57,12 +65,12 @@ function Post(props){
       componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario}/>
     }
     console.log(comentando)
-  }
+  }// se ao clicar no icone de comentario, aparecerá um novo elemento, que está sendo chamado no pelo componente comentario, esse elemento é um novo componente. 
   
   const aoEnviarComentario = () => {
     setComentando(false)
     setNumeroComentarios(numeroComentarios + 1)
-  }
+  } //  função abaixo recebe 2 estados, o primeiro setComentando(false) , com o seu  valor inicial false e outro estado (setNumeroComentario) que quando a função é chamada pelo evento o seu e valor inicial passa ser o o numero de comentários
 
   let iconeCurtida
 
@@ -92,7 +100,7 @@ function Post(props){
           icone={iconeCurtida}
           onClickIcone={onClickCurtida}
           valorContador={numeroCurtidas}
-        />
+        /> 
 
         <IconeComContador
           icone={iconeComentario}
