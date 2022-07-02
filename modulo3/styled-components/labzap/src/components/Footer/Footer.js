@@ -5,7 +5,7 @@ export function Footer(){
     return(
         <>
             <FooterEstilizado>
-                <p>  Coyright &copy Daniel Sousa - Turma Jemison, Labenu </p>     
+                <p>  Copyright © 2022 Daniel Sousa - Turma Jemison, Labenu </p>     
             </FooterEstilizado>
         </>
     )
