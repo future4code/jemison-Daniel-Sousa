@@ -10,7 +10,7 @@ import styled from "styled-components";
  export const Sidebar = styled.div `
     background-color:#fea859;
     width: 15%;
-    height:80vh;
+    height:82vh;
 
  `
 
