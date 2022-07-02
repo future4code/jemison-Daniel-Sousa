@@ -6,7 +6,7 @@ export const HeaderEstilizado = styled.div `
    flex-direction: row;
    justify-content: center;
    align-items: center;
-
+   height:10vh;
    border-bottom: 1px solid #e2e2e2;
 
 
