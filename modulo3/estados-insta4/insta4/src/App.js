@@ -48,19 +48,6 @@ const Form = styled.form`
 `
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 function App() {
   const [novoUsuario, setNovoUsuario]= useState("")
   const [novaFotoUsuario, setNovaFotoUsuario] = useState('https://picsum.photos/05/50')
@@ -73,26 +60,18 @@ function App() {
       fotoPost: 'https://picsum.photos/200/150'
     },
   
-    // {
-    //   nomeUsuario: "Daniel Sousa",
-    //   fotoUsuario:'https://picsum.photos/20/50',
-    //   fotoPost: 'https://picsum.photos/180/150'
-    // },
+     {
+        nomeUsuario: "Daniel Sousa",
+         fotoUsuario:'https://picsum.photos/20/50',
+         fotoPost: 'https://picsum.photos/180/150'
+     },
   
-    // {
-    //   nomeUsuario: "Andreane Cardoso",
-    //   fotoUsuario: 'https://picsum.photos/90/50',
-    //   fotoPost:'https://picsum.photos/210/150'
+       {
+        nomeUsuario: "Andreane Cardoso",
+        fotoUsuario: 'https://picsum.photos/90/50',
+        fotoPost:'https://picsum.photos/210/150'
+      },
   
-    // },
-  
-    // {
-    //   nomeUsuario:"Marlene Cavalcante",
-    //   fotoUsuario: 'https://picsum.photos/85/50',
-    //   fotoPost: 'https://picsum.photos/215/150'
-  
-    // }
-
   ])
 
   const handleNomeUsuario = (e) =>{
@@ -110,10 +89,17 @@ function App() {
   const addNovoPost =(e) =>{
     e.preventDefault();
 
-    const novoPos = {nomeUsuario:novoUsuario, fotoUsuario:novaFotoUsuario , fotoPost:postNovo }
+    const novoPos = {
+      nomeUsuario:novoUsuario, 
+      fotoUsuario:novaFotoUsuario , 
+      fotoPost:postNovo }
+
     const novaListaNovaPost = [...novaPostagem, novoPos];
     setNovaPostagem(novaListaNovaPost)
 
+    setNovoUsuario("");
+    setNovaFotoUsuario('https://picsum.photos/05/50');
+    setPostNovo('https://picsum.photos/210/150');
   }
 
 
@@ -130,7 +116,6 @@ function App() {
 
 return(
   <MainContainer>
-        {informacoesLista} 
         <Form>
           <label>Nome:</label>
           <input 
@@ -154,11 +139,9 @@ return(
             value={postNovo}
             onChange={handleNovoPost}
           /> 
-
-
            <button onClick={addNovoPost}>Adcionar</button> 
         </Form>
-        
+        {informacoesLista} 
    </MainContainer>
 )
 
