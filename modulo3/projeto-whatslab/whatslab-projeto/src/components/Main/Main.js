@@ -4,7 +4,7 @@ import {Sidebar,ContinerPrincipal,ConteudoPrincipal, } from './StyleMain'
 
 
 const Card = styled.section`
-    color: black;
+  color: black;
   display: flex;
   width: 20%;
   margin: 10px auto;
@@ -13,6 +13,7 @@ const Card = styled.section`
   border-radius: 10px;
 
   .destinatario{
+
     font-weight: bolder;
   }
   span{
@@ -20,13 +21,13 @@ const Card = styled.section`
   }
   
 `
+const Form = styled.form `
+  
 
- const Form = styled.form `
- 
- 
- 
- 
- `
+
+
+`
+
 
 export function Main (){
     const [novoDestinatario, setNovoDestinatario] = useState("");
@@ -85,7 +86,7 @@ export function Main (){
             <ConteudoPrincipal>
              
                 {bolaoMensagem}
-                <Form>
+                <Form >
                     <input
                         placeholder='Destinatario..'
                         value={novoDestinatario}

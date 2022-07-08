@@ -15,7 +15,7 @@ export const Sidebar = styled.section `
     padding:0.2rem;
 
     display:flex;
-    justify-content: center;
+    
 
 `
 
@@ -26,7 +26,8 @@ export const ConteudoPrincipal = styled.section `
     gap: 1rem;
 
     display:flex;
-    align-items: flex-end;
     flex-direction: column;
+    justify-content: flex-end;
+    
 `
 
