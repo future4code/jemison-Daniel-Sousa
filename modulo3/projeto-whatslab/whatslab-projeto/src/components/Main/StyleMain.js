@@ -4,7 +4,6 @@ import styled from "styled-components";
 export const ContinerPrincipal = styled.div `
     display: flex;
     height: 85vh;
-    
 
 
 `
@@ -28,6 +27,6 @@ export const ConteudoPrincipal = styled.section `
 
     display:flex;
     align-items: flex-end;
-
+    flex-direction: column;
 `
 

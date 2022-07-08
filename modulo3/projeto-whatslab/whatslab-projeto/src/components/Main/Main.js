@@ -6,18 +6,17 @@ import {Sidebar,ContinerPrincipal,ConteudoPrincipal, } from './StyleMain'
 const Card = styled.section`
     color: black;
   display: flex;
-  justify-content: space-between;
   width: 20%;
   margin: 10px auto;
   padding: 10px;
   border: 1px solid #000000;
   border-radius: 10px;
 
-  p{
-    color: black;
+  .destinatario{
+    font-weight: bolder;
   }
   span{
-    color: black;
+    color: white;
   }
   
 `
@@ -53,8 +52,11 @@ export function Main (){
       
         return(
             <Card key ={index}>
-                <p> {elemento.destinatario}</p>
-                <span>{elemento.conteudo}</span>
+                <p className='destinatario'>{elemento.destinatario} : 
+                    <span>{elemento.conteudo}</span>
+                
+                </p>
+                
             </Card>
         )
 
