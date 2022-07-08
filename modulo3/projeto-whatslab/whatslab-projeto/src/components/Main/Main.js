@@ -1,17 +1,23 @@
 import { useState } from 'react'
+import styled from 'styled-components';
 import {Sidebar,ContinerPrincipal,ConteudoPrincipal, } from './StyleMain'
 
 
+const Card = styled.section`
+    color: black;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+`
 
 export function Main (){
     const [destinatario, setDestinatario] = useState("");
     const [mensagem, setMensagem] = useState("")
-    const [novaMensagem, setNovaMensagem] = useState([
-        {
-            nome: "",
-            mensagem: "",
-        }
-
+    const [novaMensagem, setNovaMensagem] = useState([""
     ]);
       
     const handleDestinatario = (e) =>{
@@ -22,23 +28,50 @@ export function Main (){
         setMensagem(e.target.value)
     }
 
+    // const addNovaMensagem = (e) =>{
+    //     e.preventDefault();
 
-    const newMensagem =() =>{
+    //     const mensagem = {nome:destinatario, mensagem:mensagem}
+    //     const novaListaMensagem = [...novaMensagem, mensagem];
+    //     setNovaMensagem(novaListaMensagem)
+
+    //     setDestinatario("");
+    //     setMensagem("");
+
+    // }
+
+    const bolaoMensagem = novaMensagem.map((elemento, index) =>{
+      
+        const addNovaMensagem = (e) =>{
+            e.preventDefault();
+    
+            const mensagem = {nome:destinatario, mensagem:mensagem}
+            const novaListaMensagem = [...novaMensagem, mensagem];
+            setNovaMensagem(novaListaMensagem)
+    
+            setDestinatario("");
+            setMensagem("");
+    
+        }
+
         return(
-            <div key={index}>
-                <p></p>
-            </div>
-
+            <Card key ={index}>
+                <p> {elemento.nome}</p>
+                <span>{elemento.mensagem}</span>
+            </Card>
         )
-    }
+
+
+    })
 
     return (
         <ContinerPrincipal>
             <Sidebar> Sidebar</Sidebar>
             
             <ConteudoPrincipal>
+             {bolaoMensagem}
+
                 <form>
-                    <label>Destinatatio</label>
                     <input
                         placeholder='Destinatario..'
                         value={destinatario}
@@ -51,7 +84,7 @@ export function Main (){
                         onChange={handleMensagem}
                     />
 
-                    <button>Enviar</button>
+                    <button onClick={bolaoMensagem}>Enviar</button>
                 </form>
 
                 
