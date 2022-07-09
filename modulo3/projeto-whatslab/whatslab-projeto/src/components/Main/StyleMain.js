@@ -10,7 +10,7 @@ export const ContinerPrincipal = styled.div `
 
 export const Sidebar = styled.section `
     background-color:#f2ca85;
-    width: 25vw;
+    width: 20vw;
     border-right: 1px solid #d8d8ed;
     padding:0.2rem;
 
@@ -29,6 +29,8 @@ export const ConteudoPrincipal = styled.section `
     display:flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    
     
 `
 

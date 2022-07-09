@@ -6,19 +6,20 @@ import {Sidebar,ContinerPrincipal,ConteudoPrincipal, } from './StyleMain'
 const Card = styled.section`
   color: black;
   display: flex;
-  
-  width: 20%;
-  padding: 10px;
-  border: 1px solid #000000;
-  border-radius:10%;
-  
+  align-items:center;
+  width: 30vw;
+  height:4vh;
+  gap: 5px;
 
   .destinatario{
 
     font-weight: bolder;
+    font-size:1.3rem;
+    margin-right:10px;
   }
   .conteudo_mensagem{
-    color: white;
+    color: orange;
+    font-size:1.2rem;
   }
   
 `
@@ -76,10 +77,8 @@ export function Main (){
       
         return(
             <Card key ={index}>
-                <p className='destinatario'>{elemento.destinatario}: 
-                    <span className='conteudo_mensagem'>{elemento.conteudo}</span>
-                
-                </p>
+                <p className='destinatario'>{elemento.destinatario} :</p>
+                <span className='conteudo_mensagem'>{elemento.conteudo}</span>
                 
             </Card>
         )
@@ -99,6 +98,9 @@ export function Main (){
   
        setNovoDestinatario("");
        setNovaConversa("");
+          
+
+
    }
 
 
@@ -107,25 +109,27 @@ export function Main (){
             <Sidebar></Sidebar>
             
             <ConteudoPrincipal>
-                {bolaoMensagem}
-                <Form >
-                    <input className='input_destinatario'
-                        placeholder='Destinatario..'
-                        value={novoDestinatario}
-                        onChange={handleDestinatario}
-                    />
+                
+                    {bolaoMensagem}
+                    <Form >
+                        <input className='input_destinatario'
+                            placeholder='Destinatario..'
+                            value={novoDestinatario}
+                            onChange={handleDestinatario}
+                        />
 
-                    <input className='input_mensagem'
-                        placeholder='Digite sua mensagem...'
-                        value={novaConversa}
-                        onChange={handleMensagem}
-                    />
+                        <input className='input_mensagem'
+                            placeholder='Digite sua mensagem...'
+                            value={novaConversa}
+                            onChange={handleMensagem}
+                        />
 
-                    <button className='botao_enviar' onClick={addNovaMensagem}>Enviar</button>
-                </Form>
+                        <button className='botao_enviar' onClick={addNovaMensagem}>Enviar</button>
+                    </Form>
 
                 
             </ConteudoPrincipal>
+            <Sidebar></Sidebar>
         </ContinerPrincipal>
     )
 }
