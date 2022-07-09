@@ -6,25 +6,48 @@ import {Sidebar,ContinerPrincipal,ConteudoPrincipal, } from './StyleMain'
 const Card = styled.section`
   color: black;
   display: flex;
+  
   width: 20%;
-  margin: 10px auto;
   padding: 10px;
   border: 1px solid #000000;
-  border-radius: 10px;
+  border-radius:10%;
+  
 
   .destinatario{
 
     font-weight: bolder;
   }
-  span{
+  .conteudo_mensagem{
     color: white;
   }
   
 `
 const Form = styled.form `
-  
+  display: flex;
+  padding:10px;
+  gap: 10px;
 
+  .input_destinatario{
+    width: 15vw;
+    height:5vh;
+  }
 
+  .input_mensagem{
+    width: 45vw;
+    height:5vh;
+  }
+
+  .botao_enviar{
+    width:10vw;
+
+  }
+
+  .botao_enviar:hover{
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
 
 `
 
@@ -53,8 +76,8 @@ export function Main (){
       
         return(
             <Card key ={index}>
-                <p className='destinatario'>{elemento.destinatario} : 
-                    <span>{elemento.conteudo}</span>
+                <p className='destinatario'>{elemento.destinatario}: 
+                    <span className='conteudo_mensagem'>{elemento.conteudo}</span>
                 
                 </p>
                 
@@ -81,25 +104,24 @@ export function Main (){
 
     return (
         <ContinerPrincipal>
-            <Sidebar> Sidebar</Sidebar>
+            <Sidebar></Sidebar>
             
             <ConteudoPrincipal>
-             
                 {bolaoMensagem}
                 <Form >
-                    <input
+                    <input className='input_destinatario'
                         placeholder='Destinatario..'
                         value={novoDestinatario}
                         onChange={handleDestinatario}
                     />
 
-                    <input
+                    <input className='input_mensagem'
                         placeholder='Digite sua mensagem...'
                         value={novaConversa}
                         onChange={handleMensagem}
                     />
 
-                    <button onClick={addNovaMensagem}>Enviar</button>
+                    <button className='botao_enviar' onClick={addNovaMensagem}>Enviar</button>
                 </Form>
 
                 
