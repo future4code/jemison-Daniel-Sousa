@@ -17,13 +17,12 @@ export function Etapa1(){
                     <input></input>
 
                     <li>Qual sua escolaridade</li>
-                    <input type="text" list="faixa"></input>
-                    <datalist id="faixa">
-                        <option >Ensino Médio completo</option>
-                        <option >Cursando Ensino Médioo</option>
-                        <option >Ensino Superior completo</option>
-                        <option > Cursando Ensino Superior</option>
-                    </datalist>
+                    <select>
+                        <option value="valor1" >Ensino Médio completo</option>
+                        <option  value="valor2">Cursando Ensino Médioo</option>
+                        <option value="valor3">Ensino Superior completo</option>
+                        <option value="valor4" > Cursando Ensino Superior</option>
+                    </select>
                 </ol>
                 
             </form>
