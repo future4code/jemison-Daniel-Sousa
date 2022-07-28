@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { Axios } from "axios";
 import { useState, useEffect} from "react";
 
 
@@ -6,7 +6,8 @@ export function TelaDeCastro () {
   const [nomeCadastro, setNomeCadastro] = useState("")
   const [emailCadastro, setEmailCadastro] = useState("")
 
-  const [users, setUseres] = useState([]) // 1
+  const [users, setUseres] = useState([ 
+]) // 1
 
 
   //NomeCadastro
@@ -23,9 +24,9 @@ export function TelaDeCastro () {
   // 2
   const mapeaUseres = users.map((item, index) => {
     return(
-        <ul key={index}>
+        <li key={index}>
             {item.name}
-        </ul>
+        </li>
     )
   })
 
@@ -36,7 +37,7 @@ export function TelaDeCastro () {
 
   // 3
 
-  const url = 'https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/'
+  const url = 'https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users'
 
   const serviceHeaders = {
         headers: {
@@ -45,16 +46,22 @@ export function TelaDeCastro () {
     }
 
      //4
-    const body = {
-        "name": nomeCadastro,
-        "email": emailCadastro,
-    }
+    
 
     const getAllUsers = () =>{
         axios.get(url, serviceHeaders)
-        .then((response) => { setUseres(response.data.result.list) })
-        .catch((error)=> {console.log(error.response)})
+        .then((response) => {
+            setUseres(response.data.result.list)
+        }).catch((error)=> {
+            console.log(error.response)
+        })
+    }
 
+    const body = {
+        
+            "name": nomeCadastro,
+            "email": emailCadastro,
+        
     }
 
 
@@ -84,9 +91,11 @@ export function TelaDeCastro () {
     return (
 
         <div>
-            <ul>
+            <lu>
                 {mapeaUseres}
-            </ul>
+            </lu>
+                
+            
             <form>
                 
                 <input
