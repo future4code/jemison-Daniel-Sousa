@@ -1,100 +1,76 @@
-import axios, { Axios } from "axios";
-import { useState, useEffect} from "react";
+import axios from "axios";
+import React, { useState, useEffect} from "react";
 
 
 export function TelaDeCastro () {
-  const [nomeCadastro, setNomeCadastro] = useState("")
-  const [emailCadastro, setEmailCadastro] = useState("")
+    const [listaUsuarios, setListaUsuarios] = useState([])
 
-  const [users, setUseres] = useState([ 
-]) // 1
+    const [nomeCadastro, setNomeCadastro] = useState("")
+    const [emailCadastro, setEmailCadastro] = useState("")
 
+    //handleNomeCadastro
 
-  //NomeCadastro
-  const handleNomeCadastro = (e) =>{
-    setNomeCadastro(e.target.value)
-  }
-
-  //emailCadastro
-
-  const handleEmailCadastro = (e) =>{
-    setEmailCadastro(e.target.value)
-  }
-
-  // 2
-  const mapeaUseres = users.map((item, index) => {
-    return(
-        <li key={index}>
-            {item.name}
-        </li>
-    )
-  })
-
-
-  useEffect(() => {
-    getAllUsers()
-}, [])
-
-  // 3
-
-  const url = 'https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users'
-
-  const serviceHeaders = {
-        headers: {
-            Authorization: 'daniel-sousa-jemison'
-        }
+    const handleNomeCadastro = (e) =>{
+        setNomeCadastro(e.target.value)
     }
 
-     //4
-    
+    const handleEmailCadastro = (e) =>{
+        setEmailCadastro(e.target.value)
+    }
+
+
+    const allListaDeUsuarios = listaUsuarios.map ((usuarios, index) =>{
+        return (
+            <li>
+                {usuarios.name}
+            </li>
+        )
+    })
+
+    useEffect(() =>{
+        getAllUsers()
+    })
+
+    const url = 'https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users'
+    const serviceHeaders = {
+            headers: {
+                Authorization: 'daniel-sousa-jemison'
+            }
+        }
 
     const getAllUsers = () =>{
-        axios.get(url, serviceHeaders)
-        .then((response) => {
-            setUseres(response.data.result.list)
-        }).catch((error)=> {
-            console.log(error.response)
-        })
+        axios.get(url , serviceHeaders)
+        .then((response) => { setListaUsuarios(response.data) })
+        .catch((error) => { console.log(error.response)})
     }
 
     const body = {
-        
-            "name": nomeCadastro,
-            "email": emailCadastro,
-        
+        "name": nomeCadastro,
+        "email": emailCadastro,
     }
 
-
-    // Requisição POST CreateUser
-
-    const postCreateUser = (e) =>{
+    const postCadastroUsuarios = (e) =>{
         e.preventDefault();
 
         axios.post(url, body, serviceHeaders)
         .then((response) =>{
-            alert("Usuario Cadastrado com Sucesso!")
+            alert("Usuario Cadastrado com sucesso")
             getAllUsers()
-        }).catch((error)=>{
-            alert("Tente novamente :(")
+        }).catch((error) =>{
+            alert(" Erro ao cadastrar! Tente novamete")
         })
 
-        setNomeCadastro("");
+        setNomeCadastro("")
         setEmailCadastro("")
-
     }
-
-
-
-
 
 
     return (
 
         <div>
-            <lu>
-                {mapeaUseres}
-            </lu>
-                
+            <ul>
+                {allListaDeUsuarios}
+            </ul>
             
             <form>
                 
@@ -114,8 +90,10 @@ export function TelaDeCastro () {
                     onChange ={handleEmailCadastro}
                 />
 
-                <button onClick={postCreateUser}> Cadastrar Usuario</button>
+                <button onClick={postCadastroUsuarios}> Cadastrar Usuario</button>
             </form>
+
+           
         </div>
         
     )
