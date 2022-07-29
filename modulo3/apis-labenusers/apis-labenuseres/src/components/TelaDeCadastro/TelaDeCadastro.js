@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useState, useEffect} from "react";
 
+import {ConteinerUsuarios, ConteinerPrincipal, FormularioCadastro } from './StyleDeCadastro'
+
 
 export function TelaDeCastro () {
     const [listaUsuarios, setListaUsuarios] = useState([])
@@ -20,10 +22,17 @@ export function TelaDeCastro () {
 
 
     const allListaDeUsuarios = listaUsuarios.map ((usuarios, index) =>{
+        
         return (
-            <li>
-                {usuarios.name}
-            </li>
+            
+                <div key={index}>
+                    <li>
+                        {usuarios.name}
+                    </li>
+                    
+                </div>
+                
+            
         )
     })
 
@@ -64,15 +73,33 @@ export function TelaDeCastro () {
         setEmailCadastro("")
     }
 
+    const deletarUsuarios = (e) => {
+
+        e.preventDefault();
+
+       const deletarUsuario = listaUsuarios.filter((usuarios) => usuarios.id === nomeCadastro)
+
+       axios.delete(url + "/" + deletarUsuario[0].id, serviceHeaders)
+
+       .then((response)=>{
+            alert("Usuario Deletado com sucesso")
+            getAllUsers();
+       }).catch((error)=>{
+            alert("Algo Deu errado. Tende novamente")
+       })
+      
+    } 
+       
+
 
     return (
 
-        <div>
-            <ul>
-                {allListaDeUsuarios}
-            </ul>
-            
-            <form>
+        <ConteinerPrincipal>
+            <ConteinerUsuarios>
+                {allListaDeUsuarios}  
+            </ConteinerUsuarios>
+
+            <FormularioCadastro>
                 
                 <input
                     
@@ -91,10 +118,12 @@ export function TelaDeCastro () {
                 />
 
                 <button onClick={postCadastroUsuarios}> Cadastrar Usuario</button>
-            </form>
+
+                
+            </FormularioCadastro>
 
            
-        </div>
+        </ConteinerPrincipal>
         
     )
 
