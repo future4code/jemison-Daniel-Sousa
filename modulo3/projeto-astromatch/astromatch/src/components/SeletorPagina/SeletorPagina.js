@@ -1,0 +1,14 @@
+
+
+
+export function SeletorPagina () {
+
+    return (
+        <>
+            
+        </>
+    )
+
+
+
+}

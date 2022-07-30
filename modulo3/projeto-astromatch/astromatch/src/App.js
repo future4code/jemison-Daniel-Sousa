@@ -1,3 +1,4 @@
+import { SeletorPagina } from "./components/SeletorPagina/SeletorPagina";
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
   
   return (
     <> 
-      <p>Olá mundo!</p>
+       <SeletorPagina/>
     </>
   );
 }
