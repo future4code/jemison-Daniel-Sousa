@@ -1,4 +1,5 @@
 import { SeletorPagina } from "./components/SeletorPagina/SeletorPagina";
+import { GlobalStyle } from "./GlobalStyle";
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   
   return (
     <> 
+      <GlobalStyle/>
        <SeletorPagina/>
     </>
   );

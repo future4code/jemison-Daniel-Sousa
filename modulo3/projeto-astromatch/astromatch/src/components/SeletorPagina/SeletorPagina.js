@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Home } from '../HomeInicial/Home'
 
 
 
@@ -24,7 +25,7 @@ export function SeletorPagina () {
 
     return (
         <>
-            
+            <Home/>
         </>
     )
 
