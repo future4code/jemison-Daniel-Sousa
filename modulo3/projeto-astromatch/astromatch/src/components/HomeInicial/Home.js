@@ -1,4 +1,3 @@
-import {getProfile, getMatches, postChoose, putClear} from '../../constants/Constants'
 
 import { UserSwitch, Alien, HeartStraight, XCircle } from "phosphor-react";
 
