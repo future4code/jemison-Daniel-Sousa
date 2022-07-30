@@ -3,7 +3,7 @@ import { UserSwitch, ArrowClockwise } from "phosphor-react";
 import { MainContainer, MainFooter, MainHeader, MainPrincipal } from './Styled'
 
 
-export function HomeMatches() {
+export function HomeMatches(props) {
     return(
         
         
@@ -11,7 +11,9 @@ export function HomeMatches() {
                 <MainHeader> 
                     <ArrowClockwise size={40} color="#f80d0d" weight="bold" />
                     <h1> AstroMacth</h1>
-                    <UserSwitch size={40} color ="red" />
+                    <button> 
+                        <UserSwitch size={40} color ="red" />
+                    </button>
 
                 </MainHeader>
 
@@ -26,7 +28,9 @@ export function HomeMatches() {
 
 
                 <MainFooter> 
-                    <butto> Voltar a tela MainPrincipal</butto>
+                    <butto 
+                        onClick={props.TrocaDeTela}> Voltar a tela MainPrincipal
+                    </butto>
                 </MainFooter>
             </MainContainer>
         

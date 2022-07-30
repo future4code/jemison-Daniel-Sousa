@@ -9,13 +9,36 @@ export function SeletorPagina () {
     const  [changeScreen, setChangeScreen] = useState(true) // Estado para troca de tela  usando renderização condicional 
     const [initialList, setInitialList] = useState([]) //Estado para a lista incial da api
 
+    
+    const TrocaDeTela = ()  => {
+        setChangeScreen(!changeScreen)
+    }
+
+
+
     //Funcção Troca de Tela - Renderização condicional
     const ScreenChange = () =>{
         if(changeScreen) {
-          return  
+          return  (
+                <Home
+                    TrocaDeTela ={TrocaDeTela}
+                
+                />
+          )
         } else if(!changeScreen){
-            return
+            return (
+                <HomeMatches
+                    TrocaDeTela ={TrocaDeTela}
+                
+                />
+            )
         }else{
+            (
+                <Home
+                    TrocaDeTela ={TrocaDeTela}
+                
+                />
+            )
 
         }
     }
@@ -26,7 +49,7 @@ export function SeletorPagina () {
 
     return (
         <div>
-            <HomeMatches/>
+           {ScreenChange()}
         </div>
     )
 

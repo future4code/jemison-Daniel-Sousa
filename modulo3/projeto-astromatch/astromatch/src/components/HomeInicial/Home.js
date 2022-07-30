@@ -4,7 +4,7 @@ import { UserSwitch, Alien, HeartStraight, XCircle } from "phosphor-react";
 
 import { MainContainer, MainFooter, MainHeader, MainPrincipal } from './Styled'
 
-export function Home() {
+export function Home(props) {
 
 
 
@@ -15,7 +15,9 @@ export function Home() {
                 <MainHeader> 
                     <Alien size={40} color ="red"  />
                     <h1> AstroMacth</h1>
-                    <UserSwitch size={40} color ="red" />
+                    <button onClick={props.TrocaDeTela}> 
+                        <UserSwitch size={40} color ="red" />
+                    </button>
 
                 </MainHeader>
 
