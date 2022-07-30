@@ -20,7 +20,10 @@ export function Home() {
                 </MainHeader>
 
 
-                <MainPrincipal> Aqui  é main
+                <MainPrincipal>
+                    
+                 Lista de Pessoas Inicial
+
                     <img></img>
                     <p></p>
 

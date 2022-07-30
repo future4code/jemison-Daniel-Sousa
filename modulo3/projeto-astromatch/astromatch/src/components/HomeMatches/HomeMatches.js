@@ -16,7 +16,8 @@ export function HomeMatches() {
                 </MainHeader>
 
 
-                <MainPrincipal> Aqui  é main
+                <MainPrincipal> 
+                    Lista de Pessoas com Match
                     <img></img>
                     <p></p>
 
