@@ -4,6 +4,22 @@ import { MainContainer, MainFooter, MainHeader, MainPrincipal } from './Styled'
 
 
 export function HomeMatches(props) {
+
+    const MappedList = props.profileList.map((profile, index) =>{
+        return (
+           <div key={index}>
+                <img src={profile.photo}   />
+                <p>{profile.name}</p>
+
+           </div>
+
+        )
+    })
+
+
+
+
+
     return(
         
         
@@ -19,9 +35,7 @@ export function HomeMatches(props) {
 
 
                 <MainPrincipal> 
-                    Lista de Pessoas com Match
-                    <img></img>
-                    <p></p>
+                    {MappedList}
 
                 </MainPrincipal>
 

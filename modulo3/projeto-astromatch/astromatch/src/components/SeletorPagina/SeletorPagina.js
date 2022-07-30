@@ -37,6 +37,7 @@ export function SeletorPagina () {
                 <HomeMatches
                     TrocaDeTela ={TrocaDeTela}
                     profileList = {profileList}
+                    initialList = {initialList}
                     PUTClear  = {PUTClear }
                 />
             )
@@ -62,7 +63,7 @@ export function SeletorPagina () {
     const GetMatches = () =>{
         axios.get(getMatches)
         .then((response) =>{
-            setProfileList(response.data.profile)
+            setProfileList(response.data.matches)
             setChangeScreen(false)
         }).catch((error) =>{
             alert("Tente novamente")
