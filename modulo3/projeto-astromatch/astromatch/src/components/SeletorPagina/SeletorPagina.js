@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Home } from '../HomeInicial/Home'
+import { HomeMatches } from '../HomeMatches/HomeMatches'
 
 
 
@@ -25,7 +26,7 @@ export function SeletorPagina () {
 
     return (
         <div>
-            <Home/>
+            <HomeMatches/>
         </div>
     )
 
