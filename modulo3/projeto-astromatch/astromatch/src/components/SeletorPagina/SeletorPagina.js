@@ -8,7 +8,7 @@ import {getProfile, getMatches, postChoose, putClear} from '../../constants/Cons
 
 
 export function SeletorPagina () {
-    const [profileList, setProfileList] = useState([]) // lista de perfis
+    const [profileList, setProfileList] = useState([{}]) // lista de perfis
     const  [changeScreen, setChangeScreen] = useState(true) // Estado para troca de tela  usando renderização condicional 
     const [initialList, setInitialList] = useState([]) //Estado para a lista incial da api
 
@@ -25,14 +25,19 @@ export function SeletorPagina () {
           return  (
                 <Home
                     TrocaDeTela ={TrocaDeTela}
-                
+                    GetMatches = {GetMatches}
+                    initialList = {initialList}
+                    LikeButton = {LikeButton}
+                    DislikeButton = {DislikeButton}
+                    PUTClear  = {PUTClear }
                 />
           )
         } else if(!changeScreen){
             return (
                 <HomeMatches
                     TrocaDeTela ={TrocaDeTela}
-                
+                    profileList = {profileList}
+                    PUTClear  = {PUTClear }
                 />
             )
         }else {
@@ -65,13 +70,25 @@ export function SeletorPagina () {
     }
 
     const PUTClear = () =>{
-        axios.put(PUTClear)
+        axios.put(putClear)
         .then((response) =>{
-            GETProfile()
+            GetMatches()
         }).catch((error) =>
             alert("Tente novamente")
         )
 
+    }
+
+    const POSTChoose = () =>{
+        axios.post(postChoose, {
+            "id": profileList.id,
+	        "choice": true
+        })
+        .then((response) =>{
+            GETProfile()
+        }).catch((error) =>{
+            alert("Tente novamente")
+        })
     }
 
     useEffect(() =>{
@@ -79,8 +96,16 @@ export function SeletorPagina () {
         //Teste entender como funciona
     }, [])
 
-    
 
+
+
+    const LikeButton = () =>{
+        POSTChoose()
+    }
+
+    const DislikeButton = () =>{
+        GETProfile()
+    }
 
     return (
         <div>

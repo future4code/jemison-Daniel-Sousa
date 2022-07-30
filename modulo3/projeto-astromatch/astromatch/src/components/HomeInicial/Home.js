@@ -12,8 +12,12 @@ export function Home(props) {
         
             <MainContainer>
                 <MainHeader> 
-                    <Alien size={40} color ="red"  />
+
+                    <button onClick={props.PUTClear}> <Alien size={40} color ="red"  /></button>
+                     {/* Aqui deve ser o botão de limpar*/}
+
                     <h1> AstroMacth</h1>
+
                     <button onClick={props.TrocaDeTela}> 
                         <UserSwitch size={40} color ="red" />
                     </button>
@@ -25,17 +29,23 @@ export function Home(props) {
                     
                  Lista de Pessoas Inicial
 
-                    <img></img>
-                    <p></p>
-
+                    <img src={props.initialList.photo}></img>
+                    <p> {props.initialList.name}, {props.initialList.age}</p>
+                    <div> {props.initialList.bio}</div>
                 </MainPrincipal>
 
 
 
                 <MainFooter> 
+                    <button onClick={props.LikeButton}>
+                        <HeartStraight size={70}  color ="red" weight="bold" />
+                    </button>
+
+                    <button onClick={props.DislikeButton}>
+                        <XCircle size={50} color ="red" weight="bold" />
+                    </button>
+                
                     
-                    <HeartStraight size={70}  color ="red" weight="bold" />
-                    <XCircle size={50} color ="red" weight="bold" />
                 </MainFooter>
             </MainContainer>
         
