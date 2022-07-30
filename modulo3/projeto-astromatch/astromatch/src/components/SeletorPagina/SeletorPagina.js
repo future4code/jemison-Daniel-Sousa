@@ -8,7 +8,7 @@ import {getProfile, getMatches, postChoose, putClear} from '../../constants/Cons
 
 
 export function SeletorPagina () {
-    const [profileList, setProfileList] = useState([{}]) // lista de perfis
+    const [profileList, setProfileList] = useState([]) // lista de perfis
     const  [changeScreen, setChangeScreen] = useState(true) // Estado para troca de tela  usando renderização condicional 
     const [initialList, setInitialList] = useState([]) //Estado para a lista incial da api
 
@@ -81,7 +81,7 @@ export function SeletorPagina () {
 
     const POSTChoose = () =>{
         axios.post(postChoose, {
-            "id": profileList.id,
+            "id": initialList.id,
 	        "choice": true
         })
         .then((response) =>{
