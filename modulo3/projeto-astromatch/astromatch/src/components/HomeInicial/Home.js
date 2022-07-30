@@ -1,6 +1,8 @@
 import {getProfile, getMatches, postChoose, putClear} from '../../constants/Constants'
 
-import {} from './Styled'
+import { UserSwitch, Alien, HeartStraight, XCircle } from "phosphor-react";
+
+import { MainContainer, MainFooter, MainHeader, MainPrincipal } from './Styled'
 
 export function Home() {
 
@@ -8,10 +10,30 @@ export function Home() {
 
 
     return(
-        <div>
-            <header> Aqui  é o Header</header>
-            <main> Aqui  é main</main>
-            <footer> Aqui é o footer</footer>
-        </div>
+        
+            <MainContainer>
+                <MainHeader> 
+                    <Alien size={40} color ="red"  />
+                    <h1> AstroMacth</h1>
+                    <UserSwitch size={40} color ="red" />
+
+                </MainHeader>
+
+
+                <MainPrincipal> Aqui  é main
+                    <img></img>
+                    <p></p>
+
+                </MainPrincipal>
+
+
+
+                <MainFooter> 
+                    
+                    <HeartStraight size={70}  color ="red" weight="bold" />
+                    <XCircle size={50} color ="red" weight="bold" />
+                </MainFooter>
+            </MainContainer>
+        
     )
 }

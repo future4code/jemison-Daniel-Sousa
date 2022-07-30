@@ -24,9 +24,9 @@ export function SeletorPagina () {
 
 
     return (
-        <>
+        <div>
             <Home/>
-        </>
+        </div>
     )
 
 
