@@ -73,6 +73,7 @@ export function SeletorPagina () {
     const PUTClear = () =>{
         axios.put(putClear)
         .then((response) =>{
+            alert("Foi resetado")
             GetMatches()
         }).catch((error) =>
             alert("Tente novamente")
@@ -81,12 +82,15 @@ export function SeletorPagina () {
     }
 
     const POSTChoose = () =>{
-        axios.post(postChoose, {
-            "id": initialList.id,
-	        "choice": true
-        })
+        axios.post(postChoose,
+             {
+                "id": initialList.id,
+                "choice": true
+            }
+        )
         .then((response) =>{
             GETProfile()
+            alert(" Deu like")
         }).catch((error) =>{
             alert("Tente novamente")
         })

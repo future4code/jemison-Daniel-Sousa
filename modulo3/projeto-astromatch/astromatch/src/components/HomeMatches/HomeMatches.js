@@ -5,9 +5,9 @@ import { MainContainer, MainFooter, MainHeader, MainPrincipal } from './Styled'
 
 export function HomeMatches(props) {
 
-    const MappedList = props.profileList.map((profile, index) =>{
+    const MappedList = props.profileList.map((profile) =>{
         return (
-           <div key={index}>
+           <div>
                 <img src={profile.photo}   />
                 <p>{profile.name}</p>
 
