@@ -29,6 +29,11 @@ export const MainPrincipal = styled.main `
     padding: 1rem;
     margin-top: 1rem;
     border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 
 export const MainFooter = styled.div`
@@ -44,3 +49,15 @@ export const MainFooter = styled.div`
     border-radius: 1rem;
 `
 
+export const SecaoUserPhoto = styled.section`
+    width: 100%;
+   
+
+
+`
+
+export const PhotoUser = styled.img `
+    width:100%;
+   
+   
+`
