@@ -8,9 +8,10 @@ import {getProfile, getMatches, postChoose, putClear} from '../../constants/Cons
 
 
 export function SeletorPagina () {
-    const [profileList, setProfileList] = useState([]) // lista de perfis
     const  [changeScreen, setChangeScreen] = useState(true) // Estado para troca de tela  usando renderização condicional 
-    const [initialList, setInitialList] = useState([]) //Estado para a lista incial da api
+
+
+    
 
     
     const TrocaDeTela = ()  => {
@@ -25,20 +26,16 @@ export function SeletorPagina () {
           return  (
                 <Home
                     TrocaDeTela ={TrocaDeTela}
-                    GetMatches = {GetMatches}
-                    initialList = {initialList}
-                    LikeButton = {LikeButton}
-                    DislikeButton = {DislikeButton}
-                    PUTClear  = {PUTClear }
+                   
+                    
+                    
                 />
           )
         } else if(!changeScreen){
             return (
                 <HomeMatches
                     TrocaDeTela ={TrocaDeTela}
-                    profileList = {profileList}
-                    initialList = {initialList}
-                    PUTClear  = {PUTClear }
+                    
                 />
             )
         }else {
@@ -50,67 +47,7 @@ export function SeletorPagina () {
             )}
     }
 
-     //Funcção que busca os perfis na api
-    const GETProfile = () => {
-        axios.get(getProfile) // Esse parametro está foi importado da pasta constants
-        .then((response) =>{
-            setInitialList(response.data.profile)
-        }).catch((error) =>{
-            alert("Tente novamente")
-        })
-    }
-
-    const GetMatches = () =>{
-        axios.get(getMatches)
-        .then((response) =>{
-            setProfileList(response.data.matches)
-            setChangeScreen(false)
-        }).catch((error) =>{
-            alert("Tente novamente")
-        })
-    }
-
-    const PUTClear = () =>{
-        axios.put(putClear)
-        .then((response) =>{
-            alert("Foi resetado")
-            GetMatches()
-        }).catch((error) =>
-            alert("Tente novamente")
-        )
-
-    }
-
-    const POSTChoose = () =>{
-        axios.post(postChoose,
-             {
-                "id": initialList.id,
-                "choice": true
-            }
-        )
-        .then((response) =>{
-            GETProfile()
-            alert(" Deu like")
-        }).catch((error) =>{
-            alert("Tente novamente")
-        })
-    }
-
-    useEffect(() =>{
-        GETProfile()
-        //Teste entender como funciona
-    }, [])
-
-
-
-
-    const LikeButton = () =>{
-        POSTChoose()
-    }
-
-    const DislikeButton = () =>{
-        GETProfile()
-    }
+     
 
     return (
         <div>

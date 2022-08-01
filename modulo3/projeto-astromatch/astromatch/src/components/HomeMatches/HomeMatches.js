@@ -5,16 +5,7 @@ import { MainContainer, MainFooter, MainHeader, MainPrincipal } from './Styled'
 
 export function HomeMatches(props) {
 
-    const MappedList = props.profileList.map((profile) =>{
-        return (
-           <div>
-                <img src={profile.photo}   />
-                <p>{profile.name}</p>
-
-           </div>
-
-        )
-    })
+    
 
 
 
@@ -25,7 +16,8 @@ export function HomeMatches(props) {
         
             <MainContainer>
                 <MainHeader> 
-                    <ArrowClockwise size={40} color="#f80d0d" weight="bold" />
+                    <ArrowClockwise size={40} color="#f80d0d" weight="bold"  />
+                     
                     <h1> AstroMacth</h1>
                     <button> 
                         <UserSwitch size={40} color ="red" />
@@ -35,7 +27,7 @@ export function HomeMatches(props) {
 
 
                 <MainPrincipal> 
-                    {MappedList}
+                    
 
                 </MainPrincipal>
 
