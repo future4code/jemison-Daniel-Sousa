@@ -5,7 +5,17 @@ import { MainContainer, MainFooter, MainHeader, MainPrincipal } from './Styled'
 
 export function HomeMatches(props) {
 
-    
+    const matchesMapping = props.listaMacthes.map((profiles, index) =>{
+
+        return(
+            <div>
+                <img img src={profiles.photo}/>
+                <p>{profiles.name}</p>
+
+            </div>
+        )
+
+    })
 
 
 
@@ -16,7 +26,10 @@ export function HomeMatches(props) {
         
             <MainContainer>
                 <MainHeader> 
-                    <ArrowClockwise size={40} color="#f80d0d" weight="bold"  />
+                    <button onClick={props.clearMatches} >
+                        <ArrowClockwise size={40} color="#f80d0d" weight="bold"  />
+                    </button>
+                    
                      
                     <h1> AstroMacth</h1>
                     <button> 
@@ -27,7 +40,8 @@ export function HomeMatches(props) {
 
 
                 <MainPrincipal> 
-                    
+                    <li>  {matchesMapping}</li>
+                   
 
                 </MainPrincipal>
 

@@ -12,7 +12,7 @@ export function SeletorPagina () {
 
     const [listaInicial, setListaInicial] = useState([])
 
-    
+    const [listaMacthes, setlistaMacthes] = useState([])
 
     
     const TrocaDeTela = ()  => {
@@ -27,16 +27,20 @@ export function SeletorPagina () {
           return  (
                 <Home
                     TrocaDeTela ={TrocaDeTela}
-                    listaInicial = {listaInicial}
-                    
-                    
+                    listaInicial ={listaInicial}
+                    matchesList = {matchesList}
+                    likebutton = {likebutton}
+                    dislikeButton = {dislikeButton}
+                    setChangeScreen = {setChangeScreen}
                 />
           )
         } else if(!changeScreen){
             return (
                 <HomeMatches
                     TrocaDeTela ={TrocaDeTela}
-                    
+                    listaMacthes ={listaMacthes}
+                    clearMatches = {clearMatches}
+                    setChangeScreen = {setChangeScreen}
                 />
             )
         }else {
@@ -48,25 +52,76 @@ export function SeletorPagina () {
             )}
     }
 
-     // Pega perfil na api
-    const GetProfile  = () =>{
-        axios.get(getProfile).then((reponse) =>{
-            setListaInicial(reponse.data.profile)
-        }).catch((error) => {
+    //Função busca perfis
+
+    const searchProfiles = () =>{
+        axios.get(getProfile)
+        .then((response) =>{
+            setListaInicial(response.data.profile)
+
+        })
+        .catch((error) =>{
+            alert("Error")
+        })
+    }
+
+
+
+
+
+
+    //Função lista os matches nos perfis
+    const likeMatches = () =>{
+        axios.post(postChoose, 
+            {
+                    "id": listaInicial.id,
+                    "choice": true
+            }
+        )
+        .then((response)=>{
+            searchProfiles()
+        })
+        .catch((error) =>{
+            alert("Error")
+        })
+    }
+
+    const matchesList =() =>{
+        axios.get(getMatches)
+        .then((response) =>{
+            setlistaMacthes(response.data.matches)
+            setChangeScreen(false)
+            
+        })
+        .catch((error) =>{
             alert("Erro!")
         })
     }
 
-    // Mostra os perfis que deram like
-    const PostChoose = () =>{
-        axios.post(postChoose, {
-            "id": listaInicial.id,
-            "choice": true
-        }).then((reponse)=>{
-            GetProfile ()
-        }).catch((error) =>{
-            alert("Error")
+    const clearMatches = () =>{
+        axios.put(putClear)
+        .then((response)=>{
+            alert("Lista limpa!")
+            matchesList()
         })
+
+        .catch((error) =>{
+            alert("Erro tente novamente")
+        })
+    }
+    
+
+    useEffect(() =>{
+        searchProfiles()
+    }, [])
+
+
+    const likebutton = () =>{
+        likeMatches()
+    }
+    
+    const dislikeButton = () =>{
+        searchProfiles()
     }
 
 

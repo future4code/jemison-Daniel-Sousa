@@ -4,12 +4,12 @@ export const getProfile = 'https://us-central1-missao-newton.cloudfunctions.net/
 
 //GETGet Matches
 
-export const getMatches = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/matches"
+export const getMatches = 'https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/matches'
 
 //POSTChoose Person
 
-export const postChoose = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/choose-person"
+export const postChoose = 'https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/choose-person'
 
 //PUTClear
 
-export const putClear = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/clear"
+export const putClear =  'https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/clear'

@@ -18,7 +18,7 @@ export function Home(props) {
 
                     <h1> AstroMacth</h1>
 
-                    <button onClick={props.TrocaDeTela}> 
+                    <button onClick={props.matchesList}> 
                         <UserSwitch size={40} color ="red" />
                     </button>
 
@@ -27,22 +27,24 @@ export function Home(props) {
 
                 <MainPrincipal>
                     
-                        <img src= {props.listaInicial.photo}></img>
-                        <span> {props.listaInicial.name}</span>
-                    
-                 Lista de Pessoas Inicial
-                    
+                       <h2>Aqui lista de pessoas</h2>
+                        <img src={props.listaInicial.photo}/>
+                        <span>
+                            {props.listaInicial.name}
+                            {props.listaInicial.age}
+                            {props.listaInicial.bio}
+                        </span>
                    
                 </MainPrincipal>
 
 
 
                 <MainFooter> 
-                    <button >
+                    <button onClick={props.likebutton}>
                         <HeartStraight size={70}  color ="red" weight="bold" />
                     </button>
 
-                    <button >
+                    <button onClick={props.dislikeButton}>
                         <XCircle size={50} color ="red" weight="bold" />
                     </button>
                 
