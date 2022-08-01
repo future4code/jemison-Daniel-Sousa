@@ -12,7 +12,7 @@ export const MainHeader = styled.header `
    flex-direction: row;
    justify-content:space-between;
    align-items: center;
-   padding: 1rem;
+   padding: 0.5rem;
    width:100%; 
    
 
@@ -20,6 +20,12 @@ export const MainHeader = styled.header `
    border-radius: 1rem;
 
 
+   button{
+        background: transparent;
+        border:none;
+        cursor: pointer;
+        
+   }
 `
 
 export const MainPrincipal = styled.main `
@@ -28,7 +34,7 @@ export const MainPrincipal = styled.main `
     gap: 0.3rem;
 
     padding: 1rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     border-radius: 1rem;
 
     display: flex;
@@ -44,10 +50,18 @@ export const MainFooter = styled.div`
     gap: 2rem;
     width: 100%;
 
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 
     border: 1px solid black;
     border-radius: 1rem;
+
+
+    button{
+        background: transparent;
+        border:none;
+        cursor: pointer;
+        
+   }
 `
 
 export const SecaoPhotouser = styled.div `

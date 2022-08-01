@@ -20,6 +20,14 @@ export const MainHeader = styled.header `
    border-radius: 1rem;
 
 
+   button{
+        background: transparent;
+        border:none;
+        cursor: pointer;
+        
+   }
+
+
 `
 
 export const MainPrincipal = styled.main `
