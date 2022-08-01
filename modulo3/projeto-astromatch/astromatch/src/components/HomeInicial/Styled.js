@@ -41,6 +41,8 @@ export const MainPrincipal = styled.main `
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+   
 `
 
 export const MainFooter = styled.div`
@@ -54,6 +56,7 @@ export const MainFooter = styled.div`
 
     border: 1px solid black;
     border-radius: 1rem;
+
 
 
     button{
@@ -83,7 +86,7 @@ export const PhotoUser = styled.img `
    
 `
 
-export const SecaoDescricaoUser = styled.div `
+export const SecaoDescricaoUser = styled.section `
     display: flex;
     flex-direction: row;
 
@@ -92,5 +95,10 @@ export const SecaoDescricaoUser = styled.div `
         gap: 5px;
     }
 
+`
+
+export const SecaoBioUser = styled.section `
+
+    
 `
 
