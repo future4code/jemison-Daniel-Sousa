@@ -1,7 +1,7 @@
 
 import { UserSwitch, Alien, HeartStraight, XCircle } from "phosphor-react";
 
-import { MainContainer, MainFooter, MainHeader, MainPrincipal, PhotoUser} from './Styled'
+import { MainContainer, MainFooter, MainHeader, MainPrincipal, PhotoUser, SecaoPhotouser, SecaoDescricaoUser} from './Styled'
 
 export function Home(props) {
 
@@ -26,16 +26,24 @@ export function Home(props) {
 
 
                 <MainPrincipal>
+                    <SecaoPhotouser>
+                        <PhotoUser src={props.listaInicial.photo}/>
+                    </SecaoPhotouser>
                     
-                       
-                            <PhotoUser src={props.listaInicial.photo}/>
-                       
+                    <SecaoDescricaoUser>
+                        <h3> 
+                            {props.listaInicial.name}  
+                                  <span> 
+                                    {props.listaInicial.age}  anos
+                                </span>
+                        </h3> 
+                    </SecaoDescricaoUser>
+                           
                         
                         <span>
-                            {props.listaInicial.name}
-                            {props.listaInicial.age}
                             {props.listaInicial.bio}
                         </span>
+                        
                    
                 </MainPrincipal>
 

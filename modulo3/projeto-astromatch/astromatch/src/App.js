@@ -7,14 +7,16 @@ function App() {
 
  const PaideTodos = styled.div `
   border: 1px solid black;
+  border-radius: 8px;
+
 
   display: flex;
  
  
-  width: 30vw;
-  height: 90vh;
+  width: 25vw;
+  height: auto;
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 1rem;
   flex-direction: column;
  
  

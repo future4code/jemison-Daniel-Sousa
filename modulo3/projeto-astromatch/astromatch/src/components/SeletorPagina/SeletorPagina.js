@@ -61,7 +61,7 @@ export function SeletorPagina () {
 
         })
         .catch((error) =>{
-            alert("Error")
+            alert("Tente novamente")
         })
     }
 

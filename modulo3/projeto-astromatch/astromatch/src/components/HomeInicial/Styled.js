@@ -24,7 +24,8 @@ export const MainHeader = styled.header `
 
 export const MainPrincipal = styled.main `
     border: 1px solid black;
-    height: 25vw;
+    height: 30vw;
+    gap: 0.3rem;
 
     padding: 1rem;
     margin-top: 1rem;
@@ -49,15 +50,33 @@ export const MainFooter = styled.div`
     border-radius: 1rem;
 `
 
-export const SecaoUserPhoto = styled.section`
+export const SecaoPhotouser = styled.div `
+    object-fit: cover;
+    padding:0.375rem;
     width: 100%;
-   
-
+    height: auto;
+    border: 1px solid;
+    border-radius: 8px;
+    background-color: red;
 
 `
 
 export const PhotoUser = styled.img `
     width:100%;
-   
+    
+    height: 300px;
+
    
 `
+
+export const SecaoDescricaoUser = styled.div `
+    display: flex;
+    flex-direction: row;
+
+    h3{
+        display:flex;
+        gap: 5px;
+    }
+
+`
+
