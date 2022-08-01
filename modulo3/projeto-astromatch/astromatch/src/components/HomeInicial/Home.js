@@ -27,9 +27,12 @@ export function Home(props) {
 
                 <MainPrincipal>
                     
-                 Lista de Pessoas Inicial
-
+                        <img src= {props.listaInicial.photo}></img>
+                        <span> {props.listaInicial.name}</span>
                     
+                 Lista de Pessoas Inicial
+                    
+                   
                 </MainPrincipal>
 
 

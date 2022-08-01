@@ -1,6 +1,6 @@
 //GETGet Profile To Choose
 
-export const getProfile = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/person"
+export const getProfile = 'https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/person'
 
 //GETGet Matches
 

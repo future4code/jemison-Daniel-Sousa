@@ -10,6 +10,7 @@ import {getProfile, getMatches, postChoose, putClear} from '../../constants/Cons
 export function SeletorPagina () {
     const  [changeScreen, setChangeScreen] = useState(true) // Estado para troca de tela  usando renderização condicional 
 
+    const [listaInicial, setListaInicial] = useState([])
 
     
 
@@ -26,7 +27,7 @@ export function SeletorPagina () {
           return  (
                 <Home
                     TrocaDeTela ={TrocaDeTela}
-                   
+                    listaInicial = {listaInicial}
                     
                     
                 />
@@ -47,7 +48,27 @@ export function SeletorPagina () {
             )}
     }
 
-     
+     // Pega perfil na api
+    const GetProfile  = () =>{
+        axios.get(getProfile).then((reponse) =>{
+            setListaInicial(reponse.data.profile)
+        }).catch((error) => {
+            alert("Erro!")
+        })
+    }
+
+    // Mostra os perfis que deram like
+    const PostChoose = () =>{
+        axios.post(postChoose, {
+            "id": listaInicial.id,
+            "choice": true
+        }).then((reponse)=>{
+            GetProfile ()
+        }).catch((error) =>{
+            alert("Error")
+        })
+    }
+
 
     return (
         <div>
