@@ -4,11 +4,14 @@ import { HomeMatches } from '../HomeMatches/HomeMatches'
 import axios from 'axios'
 
 //Importação das urls
-import {getProfile, getMatches, postChoose, putClear} from '../../constants/Constants'
+import {getProfile, getMatches, postChoose, putClear, } from '../../constants/Constants'
 
 
 export function SeletorPagina () {
     const  [changeScreen, setChangeScreen] = useState(true) // Estado para troca de tela  usando renderização condicional 
+
+    //Curtidas
+    
 
     const [listaInicial, setListaInicial] = useState([])
 

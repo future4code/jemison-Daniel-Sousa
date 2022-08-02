@@ -81,16 +81,21 @@ export const ConteinerPai = styled.div `
 `
 
 export const BackButton = styled.button `
-        font-size: 0.8rem;
+        font-size: 1.2rem;
         font-weight: bold;
         background: #ffce75;
         border:none;
         cursor: pointer;
 
-        width: 50%;
+        width: 70%;
         height: 8vh;
         padding:1.2rem;
         border: 1px solid;
         border-radius: 10px;
 
+        display: flex;
+        align-items: center;
+        gap:5px;
+
+        
 `

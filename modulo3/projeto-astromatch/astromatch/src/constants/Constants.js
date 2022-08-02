@@ -13,3 +13,8 @@ export const postChoose = 'https://us-central1-missao-newton.cloudfunctions.net/
 //PUTClear
 
 export const putClear =  'https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/clear'
+
+
+
+// Icone coração vermelho
+

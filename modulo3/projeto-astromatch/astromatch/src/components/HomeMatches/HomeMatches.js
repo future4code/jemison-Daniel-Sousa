@@ -2,7 +2,7 @@ import { UserSwitch, ArrowClockwise } from "phosphor-react";
 
 import { MainContainer, MainFooter, MainHeader, MainPrincipal, ConteinerPai, BackButton } from './Styled'
 
-
+import { House  } from "phosphor-react";
 export function HomeMatches(props) {
 
     const matchesMapping = props.listaMacthes.map((profiles, index) =>{
@@ -27,13 +27,13 @@ export function HomeMatches(props) {
             <MainContainer>
                 <MainHeader> 
                     <button onClick={props.clearMatches} >
-                        <ArrowClockwise size={40} color="#f80d0d" weight="bold"  />
+                        <ArrowClockwise size={40} color="#000000" weight="bold"  />
                     </button>
                     
                      
                     <h1> AstroMacth</h1>
                     <button> 
-                        <UserSwitch size={40} color ="red" />
+                        <UserSwitch size={40} ccolor="#000000" />
                     </button>
 
                 </MainHeader>
@@ -48,6 +48,7 @@ export function HomeMatches(props) {
 
                 <MainFooter> 
                     <BackButton onClick={props.TrocaDeTela}> 
+                        <House size={30} color="#1a1919" weight="bold" />
                         Voltar a Home
                     </BackButton>
                 </MainFooter>

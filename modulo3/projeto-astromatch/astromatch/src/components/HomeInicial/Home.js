@@ -1,5 +1,5 @@
 
-import { UserSwitch, Alien, HeartStraight, XCircle } from "phosphor-react";
+import { UserSwitch, Fire, HeartStraight, XCircle } from "phosphor-react";
 
 import { MainContainer, MainFooter, MainHeader, MainPrincipal, PhotoUser, SecaoPhotouser, SecaoDescricaoUser, SecaoBioUser} from './Styled'
 
@@ -13,13 +13,13 @@ export function Home(props) {
             <MainContainer>
                 <MainHeader> 
 
-                    <button > <Alien size={40} color ="red"  /></button>
+                    <button > <Fire size={50} color="#000000" weight="bold" /></button>
                      {/* Aqui deve ser o botão de limpar*/}
 
                     <h1> AstroMacth</h1>
 
                     <button onClick={props.matchesList}> 
-                        <UserSwitch size={40} color ="red" />
+                        <UserSwitch size={50} color="#000000" />
                     </button>
 
                 </MainHeader>
