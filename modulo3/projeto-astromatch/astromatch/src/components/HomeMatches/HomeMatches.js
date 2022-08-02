@@ -1,6 +1,6 @@
 import { UserSwitch, ArrowClockwise } from "phosphor-react";
 
-import { MainContainer, MainFooter, MainHeader, MainPrincipal } from './Styled'
+import { MainContainer, MainFooter, MainHeader, MainPrincipal, ConteinerPai, BackButton } from './Styled'
 
 
 export function HomeMatches(props) {
@@ -8,11 +8,11 @@ export function HomeMatches(props) {
     const matchesMapping = props.listaMacthes.map((profiles, index) =>{
 
         return(
-            <div>
-                <img img src={profiles.photo}/>
+            <ConteinerPai>
+                <img src={profiles.photo}/>
                 <p>{profiles.name}</p>
 
-            </div>
+            </ConteinerPai>
         )
 
     })
@@ -40,17 +40,16 @@ export function HomeMatches(props) {
 
 
                 <MainPrincipal> 
-                    <li>  {matchesMapping}</li>
+                    <div>  {matchesMapping}</div>
                    
-
                 </MainPrincipal>
 
 
 
                 <MainFooter> 
-                    <butto 
-                        onClick={props.TrocaDeTela}> Voltar a tela MainPrincipal
-                    </butto>
+                    <BackButton onClick={props.TrocaDeTela}> 
+                        Voltar a Home
+                    </BackButton>
                 </MainFooter>
             </MainContainer>
         

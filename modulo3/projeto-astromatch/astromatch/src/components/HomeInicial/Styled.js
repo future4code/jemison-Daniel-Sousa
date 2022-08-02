@@ -2,8 +2,10 @@ import styled from "styled-components";
 
 export const MainContainer = styled.div `
    display: flex;
-   flex-direction: column;
-   padding: 1rem;
+    flex-direction: column;
+    padding: 0.7rem;
+    
+
 
 `
 
@@ -14,9 +16,9 @@ export const MainHeader = styled.header `
    align-items: center;
    padding: 0.5rem;
    width:100%; 
-   
+   background: #ffce75;
 
-   border: 1px solid #7c7672;
+   border: 1px solid black;
    border-radius: 1rem;
 
 
@@ -30,10 +32,11 @@ export const MainHeader = styled.header `
 
 export const MainPrincipal = styled.main `
     border: 1px solid black;
+    background: #F5FFFA;
     height: 30vw;
     gap: 0.3rem;
 
-    padding: 1rem;
+    padding: 0.2rem;
     margin-top: 0.5rem;
     border-radius: 1rem;
 
@@ -41,7 +44,7 @@ export const MainPrincipal = styled.main `
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    text-align: center;
    
 `
 
@@ -54,9 +57,10 @@ export const MainFooter = styled.div`
 
     margin-top: 0.5rem;
 
-    border: 1px solid black;
-    border-radius: 1rem;
-
+    
+   background: #ffce75;
+   border: 1px solid black;
+   border-radius: 1rem;
 
 
     button{
@@ -69,12 +73,11 @@ export const MainFooter = styled.div`
 
 export const SecaoPhotouser = styled.div `
     object-fit: cover;
-    padding:0.375rem;
+    padding:0.275rem;
     width: 100%;
     height: auto;
-    border: 1px solid;
-    border-radius: 8px;
-    background-color: red;
+    
+    
 
 `
 
@@ -82,13 +85,13 @@ export const PhotoUser = styled.img `
     width:100%;
     
     height: 300px;
-
+   
    
 `
 
 export const SecaoDescricaoUser = styled.section `
     display: flex;
-    flex-direction: row;
+    
 
     h3{
         display:flex;

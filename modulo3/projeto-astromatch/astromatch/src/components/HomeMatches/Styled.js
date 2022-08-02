@@ -16,7 +16,8 @@ export const MainHeader = styled.header `
    width:100%; 
    
 
-   border: 1px solid #7c7672;
+   background: #ffce75;
+   border: 1px solid black;
    border-radius: 1rem;
 
 
@@ -32,11 +33,15 @@ export const MainHeader = styled.header `
 
 export const MainPrincipal = styled.main `
     border: 1px solid black;
-    height: 25vw;
+    height: 30vw;
 
     padding: 1rem;
     margin-top: 1rem;
     border-radius: 1rem;
+    
+    overflow-y: scroll ;
+    scrollbar-color: red;
+    
 `
 
 export const MainFooter = styled.div`
@@ -44,11 +49,48 @@ export const MainFooter = styled.div`
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    width: 100%;
+    
 
     margin-top: 1rem;
 
-    border: 1px solid black;
+    
     border-radius: 1rem;
 `
 
+////
+
+export const ConteinerPai = styled.div `
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+
+    gap:10px;
+    padding: 0.5rem;
+    border-bottom: 1px solid;
+
+    img{
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 10px;
+    }
+
+    p{
+        font-size: 1.4rem;
+    }
+`
+
+export const BackButton = styled.button `
+        font-size: 0.8rem;
+        font-weight: bold;
+        background: #ffce75;
+        border:none;
+        cursor: pointer;
+
+        width: 50%;
+        height: 8vh;
+        padding:1.2rem;
+        border: 1px solid;
+        border-radius: 10px;
+
+`
