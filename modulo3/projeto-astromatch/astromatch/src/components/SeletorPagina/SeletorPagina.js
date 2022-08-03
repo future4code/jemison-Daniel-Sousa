@@ -10,7 +10,7 @@ import {getProfile, getMatches, postChoose, putClear, } from '../../constants/Co
 export function SeletorPagina () {
     const  [changeScreen, setChangeScreen] = useState(true) // Estado para troca de tela  usando renderização condicional 
 
-    const [listaInicial, setListaInicial] = useState([])
+    const [listaInicial, setListaInicial] = useState({})
 
     const [listaMacthes, setlistaMacthes] = useState([])
 
