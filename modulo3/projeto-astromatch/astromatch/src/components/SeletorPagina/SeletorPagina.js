@@ -20,7 +20,6 @@ export function SeletorPagina () {
     }
 
 
-
     //Funcção Troca de Tela - Renderização condicional
     const ScreenChange = () =>{
         if(changeScreen) {
@@ -66,10 +65,6 @@ export function SeletorPagina () {
     }
 
 
-
-
-
-
     //Função lista os matches nos perfis
     const likeMatches = () =>{
         axios.post(postChoose, 
@@ -86,6 +81,7 @@ export function SeletorPagina () {
         })
     }
 
+    //Função lista os perfis com matches
     const matchesList =() =>{
         axios.get(getMatches)
         .then((response) =>{
@@ -98,6 +94,7 @@ export function SeletorPagina () {
         })
     }
 
+    //Funcao que limpa a lista de matches
     const clearMatches = () =>{
         axios.put(putClear)
         .then((response)=>{
@@ -115,11 +112,12 @@ export function SeletorPagina () {
         searchProfiles()
     }, [])
 
-
+    //Função botão like
     const likebutton = () =>{
         likeMatches()
     }
-    
+
+    //Função botão deslike
     const dislikeButton = () =>{
         searchProfiles()
     }
