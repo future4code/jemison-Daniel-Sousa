@@ -10,9 +10,6 @@ import {getProfile, getMatches, postChoose, putClear, } from '../../constants/Co
 export function SeletorPagina () {
     const  [changeScreen, setChangeScreen] = useState(true) // Estado para troca de tela  usando renderização condicional 
 
-    //Curtidas
-    
-
     const [listaInicial, setListaInicial] = useState([])
 
     const [listaMacthes, setlistaMacthes] = useState([])
@@ -126,6 +123,8 @@ export function SeletorPagina () {
     const dislikeButton = () =>{
         searchProfiles()
     }
+
+    
 
 
     return (
