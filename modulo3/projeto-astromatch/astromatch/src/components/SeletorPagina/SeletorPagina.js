@@ -53,8 +53,10 @@ export function SeletorPagina () {
 
     //Função busca perfis
 
+    //Obs: Decedi usar variveis no lugar dos link´s de cada metodo da api. Por exemplo, getProfile é  uma variavle que está sendo importada do arquivo constants. Assim segue os demais. Acredito que isso deixou o codigo mais limpo! 
+
     const searchProfiles = () =>{
-        axios.get(getProfile)
+        axios.get(getProfile) 
         .then((response) =>{
             setListaInicial(response.data.profile)
 
