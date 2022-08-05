@@ -57,7 +57,7 @@ export function Home(props) {
                     </button>
 
                     <button onClick={props.dislikeButton}>
-                        <XCircle size={50} color ="red" weight="bold" />
+                        <XCircle size={50} color ="#000000" weight="bold" />
                     </button>
                 
                     

@@ -1,4 +1,4 @@
-import { UserSwitch, ArrowClockwise } from "phosphor-react";
+import { UserList, ArrowClockwise } from "phosphor-react";
 
 import { MainContainer, MainFooter, MainHeader, MainPrincipal, ConteinerPai, BackButton } from './Styled'
 
@@ -33,7 +33,7 @@ export function HomeMatches(props) {
                      
                     <h1> AstroMacth</h1>
                     <button> 
-                        <UserSwitch size={40} ccolor="#000000" />
+                        <UserList size={40} color="#000000" weight="bold" />
                     </button>
 
                 </MainHeader>
