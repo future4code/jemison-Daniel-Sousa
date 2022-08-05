@@ -66,9 +66,9 @@ export const MainFooter = styled.div`
     button{
         background: transparent;
         border:none;
-        cursor: pointer;
-        
+        cursor: pointer;  
    }
+
 `
 
 export const SecaoPhotouser = styled.div `
