@@ -8,13 +8,17 @@ export function Header () {
 
 
     return (
-        <ContainderPai>
-            <header>
+        <>
+            <ContainderPai>
+               
+                    <h1> Ola</h1>
                 
-            </header>
 
 
-        </ContainderPai>
+            </ContainderPai>
+        
+        </>
+        
     )
 
 
