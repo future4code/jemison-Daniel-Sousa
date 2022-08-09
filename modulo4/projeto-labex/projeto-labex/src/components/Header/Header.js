@@ -8,7 +8,7 @@ export function Header () {
 
 
     return (
-        <>
+        
             <ContainderPai>
                
                     <h1> Ola</h1>
@@ -17,7 +17,7 @@ export function Header () {
 
             </ContainderPai>
         
-        </>
+        
         
     )
 
