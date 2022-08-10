@@ -4,7 +4,7 @@
 export function LoginPage () {
     return (
         <>
-            <p> LoginPage</p>
+            <p> Login Page</p>
         </>
     )
 

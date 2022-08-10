@@ -4,7 +4,7 @@ export function CreateTripPage () {
 
     return (
         <>
-            <p> CreateTripPage</p>
+            <p> Create Trip Page</p>
         
         </>
     )

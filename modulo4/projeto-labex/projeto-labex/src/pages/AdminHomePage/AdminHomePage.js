@@ -1,10 +1,10 @@
-import {} from './Styled'
+
 
 export function AdminHomePag () {
 
     return(
         <>
-            <p> AdminHomePage</p>
+            <p> Admin Home Page</p>
         </>
     )
 

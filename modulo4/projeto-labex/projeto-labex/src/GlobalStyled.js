@@ -11,6 +11,7 @@ import { createGlobalStyle } from 'styled-components'
 
       body{
           background-color: #000000;
+          color: white;
       }
   
   `

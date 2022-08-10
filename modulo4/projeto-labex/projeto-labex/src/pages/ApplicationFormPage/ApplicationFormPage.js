@@ -4,7 +4,7 @@ export function ApplicationFormPage () {
 
     return (
         <>
-            <p> ApplicationFormPage</p>
+            <p> Application Form Page</p>
         </>
     )
 }

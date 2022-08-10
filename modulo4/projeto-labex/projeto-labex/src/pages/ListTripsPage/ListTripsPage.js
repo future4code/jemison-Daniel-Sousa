@@ -2,7 +2,7 @@
 export function ListTripsPage () {
     return (
         <>
-            <p> ListTripsPage</p>
+            <p> List Trips Page</p>
         </>
     )
 }
