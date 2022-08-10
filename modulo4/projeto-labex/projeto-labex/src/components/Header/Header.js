@@ -1,25 +1,16 @@
 import React from "react";
-import { ContainderPai } from "./Styled";
+import { BoxMaster } from "./Styled";
+
 
 
 
 export function Header () {
 
-
-
-    return (
-        
-            <ContainderPai>
-               
-                    <h1> Ola</h1>
-                
-
-
-            </ContainderPai>
-        
-        
-        
-    )
+        return (
+                <BoxMaster>
+                        <p> ola ola </p>
+                </BoxMaster>
+        )
 
 
 
