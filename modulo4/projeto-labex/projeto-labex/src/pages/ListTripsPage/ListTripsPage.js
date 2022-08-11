@@ -7,7 +7,7 @@ export function ListTripsPage () {
     const navigate = useNavigate()
 
     const tripsList = tripsData.trips && tripsData.trips.map((trip) => {
-        return <div key={trip.nome} trip={trip} />
+        return <p key={trip.id} trip={trip} />
     })
     
     return (
@@ -15,7 +15,8 @@ export function ListTripsPage () {
             <p> Lista aqui</p>
 
             <div>
-            {tripsList && tripsList.length > 0 ? tripsList : <p>Carregando...</p>}
+            {tripsList && tripsList.length > 0 ? tripsList : <p>Carregando...</p>} 
+            
               
                
             </div>

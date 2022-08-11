@@ -15,17 +15,17 @@ export function Router (){
             <Routes>
                 <Route index element = {<HomePage/>}/>
 
-                <Route path="/ListTripsPage" element ={<ListTripsPage />} />
+                <Route path="/trips/list" element ={<ListTripsPage />} />
 
-                <Route path="/ApplicationFormPage" element= {<ApplicationFormPage />} />
+                <Route path="/trips/application" element= {<ApplicationFormPage />} />
 
-                <Route  path ="/LoginPage" element={<LoginPage/>}/>
+                <Route  path ="/login" element={<LoginPage/>}/>
 
-                <Route path="/AdminHomePag" element={<AdminHomePag />} />
+                <Route path="/admin/trips/list" element={<AdminHomePag />} />
 
-                <Route path="/CreateTripPage" element={<CreateTripPage/>} />
+                <Route path="/admin/trips/create" element={<CreateTripPage/>} />
 
-                <Route path="/TripDetailsPage" element={<TripDetailsPage/>} />
+                <Route path="/admin/trips/:id" element={<TripDetailsPage/>} />
 
                 <Route path="*" element={<PageError/>} />
 

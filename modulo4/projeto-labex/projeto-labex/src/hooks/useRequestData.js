@@ -6,18 +6,15 @@ import axios from "axios";
 
 
 export const useRequestsData = (endpoint, initialState) =>{
+   
+
     const [data, setData] = useState(initialState)
 
     const getData = () => {
-        axios.get(`${BASE_URL}${endpoint}`, {
-            headers: {
-                auth: localStorage.getItem("token")
-            }
-        })
-        .then((res) => setData(res.data))
-        .catch((err) => alert(err.response.data.message))
-    }// o endpoint é a url que vai mudar! ao chamar a requisição 
-    // da pra usar o useEffect direto logo
+        axios.get(`${BASE_URL}${endpoint}`)
+        .then((response) => setData(response.data))
+        .catch((error) => alert(error))
+    }
 
     useEffect(() => {
         getData()
