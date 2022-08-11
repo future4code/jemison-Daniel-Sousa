@@ -5,20 +5,23 @@ import axios from "axios";
 
 
 
-export const useRequestsData = (endpoint, initialState) =>{
+export const useRequestsData = (endpoint) =>{
    
+    const [data, setData] = useState([]) // testar undefined
+    const [isLoading, setIsLoading] = useState (false)
+    const [error, setError]=useState("")
 
-    const [data, setData] = useState(initialState)
-
-    const getData = () => {
+    useEffect(()=>{
+        setIsLoading(true);
         axios.get(`${BASE_URL}${endpoint}`)
-        .then((response) => setData(response.data))
-        .catch((error) => alert(error))
-    }
+        .then((response)=>{
+            setIsLoading(true)
+            setData(response.data.trips)
+        }).catch((error)=>{
+            setIsLoading(false);
+            setError(error.data)
+        })
+    },[data])
 
-    useEffect(() => {
-        getData()
-    }, [endpoint])
-
-    return [data, getData]
+    return [data, isLoading, error]
 }//endpoit é a chamadata para cada url que desejo usar

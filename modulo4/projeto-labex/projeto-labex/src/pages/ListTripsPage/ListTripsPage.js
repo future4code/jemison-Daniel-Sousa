@@ -1,24 +1,32 @@
 import { useNavigate } from "react-router-dom"
-import {BASE_URL} from "../../constants/urls"
 import { useRequestsData } from "../../hooks/useRequestData"
 
 export function ListTripsPage () {
-    const [tripsData] = useRequestsData("/trips", {})
     const navigate = useNavigate()
+    const [data, isLoading, error] = useRequestsData("/trips")
 
-    const tripsList = tripsData.trips && tripsData.trips.map((trip) => {
-        return <p key={trip.id} trip={trip} />
+    const listTrips = data && data.map((trip)=>{
+        return (     
+            <div key={trip.id}>
+                 <div>
+                     <p> {trip.name}</p>
+                     <p> {trip.planet}</p>
+                     <p> {trip.date}</p>
+               </div>
+            </div>      
+        )
     })
-    
+
     return (
         <>
             <p> Lista aqui</p>
 
             <div>
-            {tripsList && tripsList.length > 0 ? tripsList : <p>Carregando...</p>} 
             
-              
-               
+                {!isLoading  && <p> Carreango viagens</p>}
+                {!isLoading && error && (<p>Ocorreu um erro</p>)}
+                {isLoading && data && data.length > 0 && (listTrips)}
+                
             </div>
         </>
     )
