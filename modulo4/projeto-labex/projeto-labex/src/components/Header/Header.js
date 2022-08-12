@@ -14,11 +14,11 @@ export function Header () {
                 <BoxMaster>
                           <MainHeader>
                                 <section>
-                                        <h1> Aqui logo</h1>
+                                        <h1> Labex</h1>
                                 </section>
                                 <SectionMenu>
-                                        <HeaderButton 
-                                                onClick={()=>goToLoginPage(navigate)}> 
+                                <HeaderButton 
+                                         onClick={()=>goToLoginPage(navigate)}> 
                                                  login
                                         </HeaderButton>
                                         

@@ -6,7 +6,7 @@ export const BoxMaster = styled.section `
     
     width: 100vw;
     height: 10vh;
-    background: #121214;
+    background:  #000000;
     color: #ffa267;
 
 `
