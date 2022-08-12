@@ -15,11 +15,11 @@ export const useRequestsData = (endpoint) =>{
         setIsLoading(true);
         axios.get(`${BASE_URL}${endpoint}`)
         .then((response)=>{
-            setIsLoading(true)
+            setIsLoading(true);
             setData(response.data.trips)
         }).catch((error)=>{
             setIsLoading(false);
-            setError(error.data)
+            setError(error.data);
         })
     },[data])
 

@@ -1,7 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import { Header } from "../../components/Header/Header";
 import {MasterBox, PresentationBox, ButtonBox} from "./Styled"
+import {goToLoginPage, goToListTripsPage} from "../../routes/coordinator"
 
 export function HomePage () {
+    const navigate = useNavigate()
+
+
 
     return (
         <>
@@ -19,8 +24,14 @@ export function HomePage () {
                 
 
                 <ButtonBox>
-                    <button>Viagens Diponiveis</button>
-                    <button>Viagens Diponiveis</button>
+                    <button 
+                        onClick={()=>goToListTripsPage(navigate)}>
+                            Viagens disponiveis 
+                    </button >
+                    <button 
+                        onClick={()=>goToLoginPage(navigate)}>
+                            Faça Login
+                    </button >
                 </ButtonBox>
                 
             </MasterBox>
