@@ -1,5 +1,10 @@
 import { useNavigate } from "react-router-dom"
+import { Header } from "../../components/Header/Header"
 import { useRequestsData } from "../../hooks/useRequestData"
+
+import {MasterBox, MainCard, Card } from "./Styled"
+
+
 
 export function ListTripsPage () {
     const navigate = useNavigate()
@@ -7,27 +12,28 @@ export function ListTripsPage () {
 
     const listTrips = data && data.map((trip)=>{
         return (     
-            <div key={trip.id}>
+            <Card  key={trip.id}>
                  <div>
                      <p> {trip.name}</p>
                      <p> {trip.planet}</p>
                      <p> {trip.date}</p>
                </div>
-            </div>      
+            </Card>      
         )
     })
 
     return (
-        <>
+        <MasterBox>
+            <Header/>
             <p> Lista aqui</p>
 
-            <div>
+            <MainCard>
             
                 {!isLoading  && <p> Carreango viagens</p>}
                 {!isLoading && error && (<p>Ocorreu um erro</p>)}
                 {isLoading && data && data.length > 0 && (listTrips)}
                 
-            </div>
-        </>
+            </MainCard>
+        </MasterBox>
     )
 }
