@@ -1,5 +1,5 @@
 import React from "react";
-import { BoxMaster } from "./Styled";
+import { BoxMaster, MainHeader } from "./Styled";
 
 
 
@@ -8,7 +8,18 @@ export function Header () {
 
         return (
                 <BoxMaster>
-                        <p> ola ola </p>
+                        
+
+                        <MainHeader>
+                                <section>
+                                        <h1> Aqui logo</h1>
+                                </section>
+                                <section>
+                                        <button> Inscrever-se</button>
+                                        <button> Sobre</button>
+                                </section>
+                                
+                        </MainHeader>
                 </BoxMaster>
         )
 
