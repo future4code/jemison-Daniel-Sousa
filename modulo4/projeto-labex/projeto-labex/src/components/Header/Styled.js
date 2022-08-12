@@ -34,7 +34,7 @@ export const HeaderButton = styled.button `
     background-color: #ffa267;
     border: 1px solid white;
     font-size: 0.8rem;
-
+    font-weight: bold;
 
     cursor: pointer;
 
