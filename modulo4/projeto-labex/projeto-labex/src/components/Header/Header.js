@@ -1,5 +1,5 @@
 import React from "react";
-import { BoxMaster, MainHeader } from "./Styled";
+import { BoxMaster, MainHeader, HeaderButton, SectionMenu } from "./Styled";
 
 
 
@@ -14,10 +14,14 @@ export function Header () {
                                 <section>
                                         <h1> Aqui logo</h1>
                                 </section>
-                                <section>
-                                        <button> Inscrever-se</button>
-                                        <button> Sobre</button>
-                                </section>
+                                <SectionMenu>
+                                        <HeaderButton> 
+                                            Inscrever-se
+                                        </HeaderButton>
+                                        <HeaderButton>
+                                             Sobre
+                                        </HeaderButton>
+                                </SectionMenu>
                                 
                         </MainHeader>
                 </BoxMaster>
