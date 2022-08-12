@@ -1,27 +1,27 @@
 
 
 export const goToListTripsPage = (navigate) => {
-    navigate("/ListTripsPage")
+    navigate("/trips/list")
 }
 
 export const gotoApplicationFormPage = (navigate) =>{
-    navigate("/ApplicationFormPage")
+    navigate("/trips/application")
 }
 
 export const goToLoginPage = (navigate) => {
-    navigate("/LoginPage")
+    navigate("/login")
 }
 
 export const goToAdminHomePag = (navigate) =>{
-    navigate("/AdminHomePag")
+    navigate("/admin/trips/list")
 }
 
 export const goToCreateTripPage = (navigate) =>{
-    navigate("/CreateTripPage")
+    navigate("/admin/trips/create")
 }
 
 export const goToTripDetailsPage = (navigate) =>{
-    navigate("/TripDetailsPage")
+    navigate("/admin/trips/:id")
 }
 
 

@@ -1,8 +1,8 @@
 import React from "react";
+
 import {useNavigate } from "react-router-dom";
 import { BoxMaster, MainHeader, HeaderButton, SectionMenu } from "./Styled";
-
-import {goToAdminHomePag} from "../../routes/coordinator"
+import {goToLoginPage} from "../../routes/coordinator"
 
 
 
@@ -12,16 +12,16 @@ export function Header () {
 
         return (
                 <BoxMaster>
-                        
-
-                        <MainHeader>
+                          <MainHeader>
                                 <section>
                                         <h1> Aqui logo</h1>
                                 </section>
                                 <SectionMenu>
-                                        <HeaderButton onClick={()=>goToAdminHomePag(navigate)}> 
-                                            Inscrever-se
+                                        <HeaderButton 
+                                                onClick={()=>goToLoginPage(navigate)}> 
+                                                 login
                                         </HeaderButton>
+                                        
                                         <HeaderButton>
                                              Sobre
                                         </HeaderButton>
