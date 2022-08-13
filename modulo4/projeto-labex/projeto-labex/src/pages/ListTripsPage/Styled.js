@@ -6,6 +6,7 @@ export const MasterBox = styled.div `
     justify-content: center;
     align-items:center;
 
+    width: 100vw;
     
 
 `
@@ -13,10 +14,10 @@ export const MasterBox = styled.div `
 export const MainCard = styled.div `
     display:grid;
     
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
 
-    margin-top: 1rem;
+    margin-top: 2rem;
 
 
 `
@@ -27,6 +28,7 @@ export const Card = styled.div `
     display: flex;
     
 
-    padding: 1rem;
-
+    padding: 0.5rem;
+    width: 20rem;
+    height: 25vh;
 `

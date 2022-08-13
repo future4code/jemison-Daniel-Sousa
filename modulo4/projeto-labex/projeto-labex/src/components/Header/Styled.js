@@ -16,7 +16,7 @@ export const MainHeader = styled.header `
     justify-content: space-between;
 
     width: 100vw;
-    padding: 5rem;
+    padding: 2rem;
 
 `
 

@@ -15,7 +15,9 @@ export function ListTripsPage () {
             <Card  key={trip.id}>
                  <div>
                      <p> {trip.name}</p>
+                     <p> {trip.description}</p>
                      <p> {trip.planet}</p>
+                     <p> {trip.durationInDays}</p>
                      <p> {trip.date}</p>
                </div>
             </Card>      
@@ -25,10 +27,8 @@ export function ListTripsPage () {
     return (
         <MasterBox>
             <Header/>
-            <p> Lista aqui</p>
-
+            <h1> Lista aqui</h1>
             <MainCard>
-            
                 {!isLoading  && <p> Carreango viagens</p>}
                 {!isLoading && error && (<p>Ocorreu um erro</p>)}
                 {isLoading && data && data.length > 0 && (listTrips)}
