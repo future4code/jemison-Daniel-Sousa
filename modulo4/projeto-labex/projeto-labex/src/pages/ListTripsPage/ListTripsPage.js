@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom"
 import { Header } from "../../components/Header/Header"
 import { useRequestsData } from "../../hooks/useRequestData"
+import {goToHome, gotoApplicationFormPage} from "../../routes/coordinator"
 
-import {MasterBox, MainCard, Card } from "./Styled"
+
+import {MasterBox, MainCard, Card , ButtonsSection } from "./Styled"
 
 
 
@@ -28,6 +30,11 @@ export function ListTripsPage () {
         <MasterBox>
             <Header/>
             <h1> Lista aqui</h1>
+            <ButtonsSection>
+                <button onClick={()=>goToHome(navigate)}> Voltar</button>
+                <button onClick={()=> gotoApplicationFormPage(navigate)}>        Inscrever-se
+                </button>
+            </ButtonsSection>
             <MainCard>
                 {!isLoading  && <p> Carreango viagens</p>}
                 {!isLoading && error && (<p>Ocorreu um erro</p>)}

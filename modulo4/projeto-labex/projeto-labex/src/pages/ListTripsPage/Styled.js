@@ -14,11 +14,19 @@ export const MasterBox = styled.div `
 export const MainCard = styled.div `
     display:grid;
     
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
 
     margin-top: 2rem;
 
+
+`
+
+export const ButtonsSection = styled.section `
+    display: flex;
+    gap: 0.8rem;
+
+    margin-top: 1rem;
 
 `
 
@@ -29,6 +37,6 @@ export const Card = styled.div `
     
 
     padding: 0.5rem;
-    width: 20rem;
-    height: 25vh;
+    width: 30rem;
+    height: 30vh;
 `

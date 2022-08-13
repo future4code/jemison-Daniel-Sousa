@@ -8,12 +8,13 @@ export const BoxMaster = styled.section `
     height: 10vh;
     background:  #000000;
     color: #ffa267;
+    
 
 `
 
 export const MainHeader = styled.header `
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     width: 100vw;
     padding: 2rem;
@@ -33,12 +34,10 @@ export const HeaderButton = styled.button `
     padding: 0.3rem;
     background-color: #ffa267;
     border: 1px solid white;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: bold;
 
     cursor: pointer;
 
-    :hover{
-        font-size: 0.9rem;
-    }
+   
 `
