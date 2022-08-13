@@ -4,7 +4,7 @@ import { useRequestsData } from "../../hooks/useRequestData"
 import {ApplicationForm, MasterBox, ButtonsSection} from "./Styled"
 
 import { Header } from "../../components/Header/Header";
-import {goToHome} from "../../routes/coordinator"
+import {goUut} from "../../routes/coordinator"
 
 
 export function ApplicationFormPage () {
@@ -55,7 +55,7 @@ export function ApplicationFormPage () {
                         </form>
                 </ApplicationForm>
                 <ButtonsSection>
-                    <button onClick={()=>goToHome(navigate)}> Voltar</button>
+                    <button onClick={()=>goUut(navigate)}> Voltar</button>
                     <button >  Inscrever-se</button>
                 </ButtonsSection>
             </MasterBox>
