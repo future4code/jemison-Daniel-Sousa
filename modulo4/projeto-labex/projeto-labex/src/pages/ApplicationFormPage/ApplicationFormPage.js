@@ -69,7 +69,7 @@ export function ApplicationFormPage () {
                 </ApplicationForm>
                 <ButtonsSection>
                     <button onClick={()=>goUut(navigate)}> Voltar</button>
-                    <button >  Inscrever-se</button>
+                    <button type="submit">  Inscrever-se</button>
                 </ButtonsSection>
             </MasterBox>
             
