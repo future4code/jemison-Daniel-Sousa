@@ -1,11 +1,19 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import React from "react";
+import {useState } from "react";
 
-import {BASE_URL} from "../constants/urls"
 
-export function useForm (endpoint, body, token) {
+export function useForm (initialState) {
+    const [form, setForm] = useState(initialState) // usando a desestruturação
+    
+    const onChange = (event) =>{
+        const {name, value} = event.target
+        setForm({...form, [name]:value})
+    }
 
-   
+    const clearForm = () =>{
+        setForm("")
+    }
 
-    return[]
+
+    return {form, onChange, clearForm}
 }
