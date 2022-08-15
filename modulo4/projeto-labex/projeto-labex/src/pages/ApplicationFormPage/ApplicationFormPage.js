@@ -1,8 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useRequestsData } from "../../hooks/useRequestData"
+import { useForm } from "../../hooks/useForm"
 import {ApplicationForm, MasterBox, ButtonsSection} from "./Styled"
 import {Country} from "../../constants/country"
+
 
 import { Header } from "../../components/Header/Header";
 import {goUut} from "../../routes/coordinator"
@@ -11,7 +13,15 @@ import {goUut} from "../../routes/coordinator"
 export function ApplicationFormPage () {
      const navigate = useNavigate()   
      const [data] = useRequestsData("/trips")
-    
+     const [form, onChange, clearForm] = useForm({
+        name: "",
+        age: "",
+        ApplicationForm: "",
+        profession: "",
+        coutry: ""
+     })
+
+
 
      const travelList = data && data.map((travel)=>{
         return (
@@ -44,23 +54,28 @@ export function ApplicationFormPage () {
 
                         <input 
                             placeholder={"Nome"}
-                        
+                            onChange ={onChange}
+                            value ={form.name}
                         />
                         <input 
                             placeholder={"Idade"}
-                        
+                            onChange ={onChange}
+                            value ={form.age}
                         />
                         <input 
                             placeholder={"Candidatura"}
-                        
+                            onChange ={onChange}
+                            value ={form.ApplicationForm}
                         />
                         <input 
                             placeholder={"Profissão"}
-                        
+                            onChange ={onChange}
+                            value = {form.profession}
                         />
                         <select 
                             placeholder={"País"}
-                            
+                            onChange ={onChange}
+                            value = {form.coutry}
                         >
                             <option> escolha um pais</option>
                             {listOfCountries}
