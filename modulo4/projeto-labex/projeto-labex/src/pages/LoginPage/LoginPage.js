@@ -17,19 +17,21 @@ export function LoginPage () {
                         <label> Email</label>
                         <input
                             placeholder={"seuemail@.com"}
-                        
+                            required
+                            pattern=""// esta faltando a regra do email
                         />
 
                         <label> PASSAWORD  </label>
                         <input
                             placeholder={"********"}
-                        
+                            required
+                            pattern="^.{3}"
                         />
                 </FormSection>
 
                 <ButtonsSection>
                         <button onClick={()=>goUut(navigate)}> Voltar</button>
-                        <button >  Enviar</button>
+                        <button >  Enviar</button> {/* fazer a função para mandar para o banco de dados ou  colocar esse botão no form*/}
                 </ButtonsSection>
             </MasterBox>
             
