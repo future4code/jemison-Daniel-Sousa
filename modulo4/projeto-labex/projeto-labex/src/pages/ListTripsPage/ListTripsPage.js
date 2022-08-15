@@ -16,11 +16,11 @@ export function ListTripsPage () {
         return (     
             <Card  key={trip.id}>
                  <div>
-                     <p> {trip.name}</p>
-                     <p> {trip.description}</p>
-                     <p> {trip.planet}</p>
-                     <p> {trip.durationInDays}</p>
-                     <p> {trip.date}</p>
+                     <p> Nome: {trip.name}</p>
+                     <p> Descrição: {trip.description}</p>
+                     <p> Planeta:{trip.planet}</p>
+                     <p> Duração: {trip.durationInDays}</p>
+                     <p> Data: {trip.date}</p>
                </div>
             </Card>      
         )
