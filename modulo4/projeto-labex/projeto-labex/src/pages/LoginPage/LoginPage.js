@@ -14,14 +14,15 @@ export function LoginPage () {
             <MasterBox>
                 <h1> Faça login</h1>
                 <FormSection>
-                        <label> Email</label>
+                        <label htmlFor="email"> Email</label>
                         <input
+                            
                             placeholder={"seuemail@.com"}
                             required
                             pattern=""// esta faltando a regra do email
                         />
 
-                        <label> PASSAWORD  </label>
+                        <label htmlFor="PASSAWORD"> PASSAWORD  </label>
                         <input
                             placeholder={"********"}
                             required
