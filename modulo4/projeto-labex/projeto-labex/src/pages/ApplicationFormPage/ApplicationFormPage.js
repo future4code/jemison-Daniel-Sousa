@@ -53,27 +53,32 @@ export function ApplicationFormPage () {
                         </select>
 
                         <input 
+                            required
                             placeholder={"Nome"}
                             onChange ={onChange}
                             value ={form.name}
                         />
                         <input 
+                            required
                             placeholder={"Idade"}
                             onChange ={onChange}
                             value ={form.age}
                         />
                         <input 
+                            required
                             placeholder={"Candidatura"}
                             onChange ={onChange}
                             value ={form.ApplicationForm}
                         />
                         <input 
+                            required
                             placeholder={"Profissão"}
                             onChange ={onChange}
                             value = {form.profession}
                         />
                         <select 
-                            placeholder={"País"}
+                            required
+                            placeholder={"Paises"}
                             onChange ={onChange}
                             value = {form.coutry}
                         >
