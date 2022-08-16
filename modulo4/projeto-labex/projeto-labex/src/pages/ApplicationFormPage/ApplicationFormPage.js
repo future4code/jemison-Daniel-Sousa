@@ -13,7 +13,7 @@ import {goUut} from "../../routes/coordinator"
 export function ApplicationFormPage () {
      const navigate = useNavigate()   
      const [data] = useRequestsData("/trips")
-     const [form, onChange, clearForm] = useForm({
+     const {form, onChange, clearForm} = useForm({
         name: "",
         age: "",
         ApplicationForm: "",

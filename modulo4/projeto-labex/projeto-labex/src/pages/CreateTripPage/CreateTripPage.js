@@ -2,14 +2,14 @@ import React from "react"
 import { useNavigate } from "react-router-dom"
 import { useRequestsData } from "../../hooks/useRequestData"
 import { useForm } from "../../hooks/useForm"
-import {Country} from "../../constants/country"
+import {planets} from "../../constants/planet"
 
 
 export function CreateTripPage () {
 
     const navigate = useNavigate()
     const [data] = useRequestsData("/trips")
-    const [form, onChange, clearForm] = useForm({
+    const {form, onChange, clearForm} = useForm({
         name: "",
         planet: "",
         date: "",
@@ -19,10 +19,10 @@ export function CreateTripPage () {
 
     const dateToday =  new Date().toISOString().split('T')[0]
 
-    const listOfPlanets = data && data.map((planet)=>{
+    const listOfPlanets = planets.map((planet)=>{
         return (
             <option key={planet.id} value={planet.id}>
-                {planet.name}
+                {planet}
             </option>
         )
      })
@@ -34,12 +34,14 @@ export function CreateTripPage () {
                 <input 
                     placeholder={"Nome"}
                     name="name"
+                    value={form.name}
                     required
                 />
 
                 <input 
                     placeholder={"Descrição"}
                     name="description"
+                    value={form.description}
                     required
                 />
 
@@ -47,6 +49,7 @@ export function CreateTripPage () {
                     placeholder={"Duração em dias"}
                     type={"number"}
                     name={"durationInDays"}
+                    value={form.durationInDays}
                     required
                 />
             </form>
@@ -54,10 +57,20 @@ export function CreateTripPage () {
                 <select
                     placeholder={"Planeta"}
                     name={"planet"}
+                    value={form.planet}
                 >
                     <option value={""}>Escolha um planeta</option>
                     {listOfPlanets}
                 </select>
+                <input
+                    placeholder={"Data"}
+                    type={"date"}
+                    name = {"date"}
+                    value ={form.date}
+                    required
+                    min={dateToday}
+                
+                />
             </section>
         </>
     )
