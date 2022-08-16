@@ -11,7 +11,7 @@ export const MasterBox = styled.div `
 
 `
 
-export const FormSection = styled.section `
+export const FormSection = styled.form `
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
