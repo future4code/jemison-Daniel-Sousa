@@ -55,37 +55,28 @@ export function ApplicationFormPage () {
                         <input 
                             
                             placeholder={"Nome"}
-                            onChange ={onChange}
-                            value ={form.name}
-                            pattern={"^.{5,}$"}
-                            title = {"Nome deve ter no minimo 5 letras"}
-                            required
+                            
                         />
                         <input 
                             
                             placeholder={"Idade"}
-                            onChange ={onChange}
-                            value ={form.age}
-
-                            required
+                            
                         />
                         <input 
-                            required
+                            
                             placeholder={"Candidatura"}
-                            onChange ={onChange}
-                            value ={form.ApplicationForm}
+                            
                         />
                         <input 
-                            required
+                            
                             placeholder={"Profissão"}
-                            onChange ={onChange}
-                            value = {form.profession}
+                           
                         />
                         <select 
                             required
                             placeholder={"Paises"}
-                            onChange ={onChange}
-                            value = {form.coutry}
+                            
+                            
                         >
                             <option> escolha um pais</option>
                             {listOfCountries}
@@ -94,7 +85,7 @@ export function ApplicationFormPage () {
                 </ApplicationForm>
                 <ButtonsSection>
                     <button onClick={()=>goUut(navigate)}> Voltar</button>
-                    <button type="submit">  Inscrever-se</button>
+                    <button >  Inscrever-se</button>
                 </ButtonsSection>
             </MasterBox>
             
