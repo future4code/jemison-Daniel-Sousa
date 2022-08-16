@@ -53,16 +53,21 @@ export function ApplicationFormPage () {
                         </select>
 
                         <input 
-                            required
+                            
                             placeholder={"Nome"}
                             onChange ={onChange}
                             value ={form.name}
+                            pattern={"^.{5,}$"}
+                            title = {"Nome deve ter no minimo 5 letras"}
+                            required
                         />
                         <input 
-                            required
+                            
                             placeholder={"Idade"}
                             onChange ={onChange}
                             value ={form.age}
+
+                            required
                         />
                         <input 
                             required
