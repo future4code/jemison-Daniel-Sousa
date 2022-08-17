@@ -1,14 +1,13 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
-import { useRequestsData } from "../../hooks/useRequestData"
 import { useForm } from "../../hooks/useForm"
 import {planets} from "../../constants/planet"
-
+import {goToAdminHomePag} from "../../routes/coordinator" 
 
 export function CreateTripPage () {
 
     const navigate = useNavigate()
-    const [data] = useRequestsData("/trips")
+    
     const {form, onChange, clearForm} = useForm({
         name: "",
         planet: "",
@@ -35,6 +34,9 @@ export function CreateTripPage () {
                     placeholder={"Nome"}
                     name="name"
                     value={form.name}
+                    onChange ={onChange}
+                    pattern ={"^.{5,}$"}
+                    title = {"O nome da viagem deve ter no mínimo 5 caracteres"}
                     required
                 />
 
@@ -42,7 +44,11 @@ export function CreateTripPage () {
                     placeholder={"Descrição"}
                     name="description"
                     value={form.description}
+                    onChange ={onChange}
                     required
+                    pattern ={"^.{30,}$"}
+                    title = {"A descrição deve ter no mínimo 30 caracteres"}
+                    
                 />
 
                 <input 
@@ -50,28 +56,37 @@ export function CreateTripPage () {
                     type={"number"}
                     name={"durationInDays"}
                     value={form.durationInDays}
+                    onChange ={onChange}
                     required
+                    min={50}
                 />
-            </form>
-            <section>
-                <select
-                    placeholder={"Planeta"}
-                    name={"planet"}
-                    value={form.planet}
-                >
+
+                 <section>
+                    <select
+                         placeholder={"Planeta"}
+                         name={"planet"}
+                         defaultValue ={""}
+                         onChange ={onChange}
+                     >
                     <option value={""}>Escolha um planeta</option>
-                    {listOfPlanets}
-                </select>
-                <input
-                    placeholder={"Data"}
-                    type={"date"}
-                    name = {"date"}
-                    value ={form.date}
-                    required
-                    min={dateToday}
-                
-                />
-            </section>
+                         {listOfPlanets}
+                    </select>
+                        <input
+                            placeholder={"Data"}
+                            type={"date"}
+                            name = {"date"}
+                            value ={form.date}
+                            onChange ={onChange}
+                            required
+                            min={dateToday}
+                        />
+                    </section>
+                    <section>
+                        <button onClick={() =>goToAdminHomePag(navigate)}> Voltar</button>
+                        <button type={"submit"}> Criar</button>
+                    </section>
+            </form>
+            
         </>
     )
 
