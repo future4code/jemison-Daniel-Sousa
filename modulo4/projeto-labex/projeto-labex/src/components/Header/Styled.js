@@ -5,7 +5,7 @@ export const BoxMaster = styled.section `
     align-items: center;
     
     width: 100vw;
-    height: 10vh;
+    height: 8vh;
     background:  #000000;
     color: #ffa267;
     

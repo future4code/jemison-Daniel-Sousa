@@ -2,16 +2,14 @@ import styled from "styled-components";
 
 export const MasterBox = styled.div `
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 15rem;
+    gap: 1rem;
+
     
-
-    border: 1px solid black;
-    
-`
-
-export const MainSection = styled.section `
-    padding: 2rem;
-    margin: 0 auto;
-
 `
 
 export const PresentationBox = styled.section `
