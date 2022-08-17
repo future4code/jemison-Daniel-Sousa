@@ -10,8 +10,9 @@ import { createGlobalStyle } from 'styled-components'
       }
 
       body{
-          background-color: white;
-          color: black;
+          
+          color:#000000;
+          background-color: #e1e1e6;
           
       }
   

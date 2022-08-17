@@ -1,31 +1,28 @@
 import styled from "styled-components";
 
-export const MasterBox = styled.section `
+export const MasterBox = styled.div `
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
 
-    padding: 0rem 6rem 0rem 6rem;
-    margin-top: 10rem;
+    border: 1px solid black;
+    
+`
 
+export const MainSection = styled.section `
+    padding: 2rem;
+    margin: 0 auto;
 
 `
 
 export const PresentationBox = styled.section `
-    display: flex;
-    flex-direction: column;
-    width:50%;
-    
-    padding: 1rem;
-    gap: 2rem;
+   
 
 
 `
 
-export const ButtonBox = styled.section `
-    display: flex;
-    gap: 0.8rem;
 
+
+export const ButtonBox = styled.section `
+  
 
 `
