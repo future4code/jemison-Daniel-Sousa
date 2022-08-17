@@ -1,6 +1,7 @@
 import axios from "axios"
 
 import {BASE_URL} from "../constants/urls"
+import { goToLoginPage } from "../routes/coordinator"
 
 
 
@@ -22,3 +23,8 @@ export const login = (body, navigate) =>{
         alert(error.response.data.message)
     })
 }
+
+export const lagout = (navigate) =>{
+    localStorage.removeItem("token")
+    goToLoginPage(navigate)
+}// função desloga usuario
