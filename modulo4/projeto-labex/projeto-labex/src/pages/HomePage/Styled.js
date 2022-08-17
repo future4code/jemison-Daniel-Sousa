@@ -9,8 +9,6 @@ export const MasterBox = styled.section `
     padding: 0rem 6rem 0rem 6rem;
     margin-top: 10rem;
 
-   
-    
 
 `
 

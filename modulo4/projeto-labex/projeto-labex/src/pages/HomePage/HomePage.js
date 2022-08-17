@@ -10,9 +10,9 @@ export function HomePage () {
 
     return (
         <>
-            
+            <Header/>
             <MasterBox>
-                
+               
                 <PresentationBox>
                     <di>
                         <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
