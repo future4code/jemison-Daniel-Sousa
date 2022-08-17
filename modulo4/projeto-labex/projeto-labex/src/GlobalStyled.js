@@ -12,7 +12,7 @@ import { createGlobalStyle } from 'styled-components'
       body{
           background-color: white;
           color: black;
-          justify-content: center;
+          
       }
   
   `

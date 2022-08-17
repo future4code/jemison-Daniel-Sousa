@@ -42,7 +42,7 @@ export function ApplicationFormPage () {
 
     return (
         <>
-            <Header/>
+            
             <MasterBox>
                 <h1> Inscreva-se para uma das viagens</h1>
                 <ApplicationForm>

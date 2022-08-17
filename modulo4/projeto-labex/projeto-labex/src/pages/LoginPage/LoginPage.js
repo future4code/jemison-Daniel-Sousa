@@ -16,7 +16,7 @@ export function LoginPage () {
 
     return (
         <>
-            <Header />
+            
             <MasterBox>
                 <h1> Faça login</h1>
                 <FormSection>

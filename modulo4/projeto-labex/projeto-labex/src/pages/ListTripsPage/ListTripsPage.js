@@ -28,7 +28,7 @@ export function ListTripsPage () {
 
     return (
         <MasterBox>
-            <Header/>
+            
             <h1> Lista aqui</h1>
             <ButtonsSection>
                 <button onClick={()=>goToHome(navigate)}> Voltar</button>
