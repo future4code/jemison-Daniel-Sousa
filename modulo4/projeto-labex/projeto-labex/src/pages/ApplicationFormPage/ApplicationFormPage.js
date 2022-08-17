@@ -55,21 +55,43 @@ export function ApplicationFormPage () {
                         <input 
                             
                             placeholder={"Nome"}
+                            name = "name"
+                            value={form.name}
+                            onChange ={onChange}
+                            pattern ={"^.{5,}$"}
+                            title={"O nome deve ter no mínimo 5 caracteres"}
+                            required
                             
                         />
                         <input 
                             
                             placeholder={"Idade"}
-                            
+                            type={"number"}
+                            name= {"age"}
+                            value={form.age}
+                            onChange={onChange}
+                            required
+                            min={18}
                         />
                         <input 
                             
                             placeholder={"Candidatura"}
+                            name ={"ApplicationForm"}
+                            value={form.ApplicationForm}
+                            onChange ={onChange}
+                            pattern ={"^.{30,}$"}
+                            title = {"A descrição deve ter no mínimo 30 caracteres"}
+                            required
                             
                         />
                         <input 
                             
                             placeholder={"Profissão"}
+                            name={"profession"}
+                            value ={form.profession}
+                            onChange ={onChange}
+                            pattern ={"^.{10,}$"}
+                            title = {"Profissão no mínimo 30 caracteres"}
                            
                         />
                         <select 
