@@ -18,7 +18,7 @@ export const login = (body, navigate) =>{
     axios.post(`${BASE_URL}/login`, body)
     .then((response) =>{
         localStorage.setItem("token", response.data.token)
-        //chamar função navigate
+        goToLoginPage(navigate)
     }).catch((error) =>{
         alert(error.response.data.message)
     })

@@ -13,3 +13,5 @@ export function useProtectedPage () {
     },[navigate])
     
 }
+
+// Para usarmos nas paginas com autenticação 
