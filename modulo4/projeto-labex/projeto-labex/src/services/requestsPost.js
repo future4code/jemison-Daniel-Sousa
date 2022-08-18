@@ -24,7 +24,15 @@ export const login = (body, navigate) =>{
     })
 }
 
-expor
+export const postCreatTrip = (navigate) =>{
+    axios.post(`${BASE_URL}/trips`, body, {
+        headers: {
+            auth: localStorage.getItem('token')
+        }
+    }).then((response) =>{
+        alert("Viagem adicionada")
+    }).catch((error)=> alert("Tente novamente"))
+}
 
 
 export const lagout = (navigate) =>{
