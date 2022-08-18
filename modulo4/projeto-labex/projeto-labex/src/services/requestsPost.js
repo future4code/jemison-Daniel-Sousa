@@ -24,6 +24,9 @@ export const login = (body, navigate) =>{
     })
 }
 
+expor
+
+
 export const lagout = (navigate) =>{
     localStorage.removeItem("token")
     goToLoginPage(navigate)

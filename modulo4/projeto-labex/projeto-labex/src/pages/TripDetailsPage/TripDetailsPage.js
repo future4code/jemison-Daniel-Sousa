@@ -4,15 +4,22 @@ import { useProtectedPage } from "../../hooks/useProtectedPage"
 import {useRequestsData} from "../../hooks/useRequestData"
 
 export function TripDetailsPage () {
-    useProtectedPage()
+    // useProtectedPage()
     const navigate = useNavigate()
-    const [id] =useParams()
+    const {id} = useParams()
 
-    const [getTripDetail, seGgetTripDetail] = useRequestsData(`/trips${id}`)
+     const [getTripDetail, setGetTripDetail] = useRequestsData(`/trips/${id}`)
+
+     const lisTripDetail = getTripDetail && getTripDetail.map((item)=>{
+        return (
+            <h1>{item.name}</h1>
+        )
+     })
 
     return (
         <>
             <p> TripDetailsPage</p>
+            {lisTripDetail}
         </>
     )
 }
