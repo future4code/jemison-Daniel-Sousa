@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Header } from "../../components/Header/Header";
-import {MasterBox, PresentationBox, ButtonBox} from "./Styled"
+import {MasterBox, PresentationBox, ButtonBox, Container} from "./Styled"
 import {goToLoginPage, goToListTripsPage} from "../../routes/coordinator"
 
 export function HomePage () {
@@ -9,18 +9,18 @@ export function HomePage () {
 
 
     return (
-        <>
-            <Header/>
-            <MasterBox>
-                <PresentationBox>
-                    <di>
+        <MasterBox>
+            
+            <Container>
+              
+                    <div>
                         <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    </di>
-                    <di>
+                    </div>
+                    <div>
                         <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    </di>
+                    </div>
 
-                </PresentationBox>
+                
                 
 
                 <ButtonBox>
@@ -34,7 +34,7 @@ export function HomePage () {
                     </button >
                 </ButtonBox>
                 
-            </MasterBox>
-        </>
+            </Container>
+        </MasterBox>
     )
 }
