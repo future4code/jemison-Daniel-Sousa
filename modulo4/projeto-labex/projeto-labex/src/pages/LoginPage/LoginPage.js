@@ -4,8 +4,10 @@ import { useForm } from "../../hooks/useForm"
 import { Header } from "../../components/Header/Header";
 import {goUut} from "../../routes/coordinator"
 import {MasterBox, ButtonsSection, FormSection} from "./Styled"
+import { login } from "../../services/requestsPost";
 
 export function LoginPage () {
+    
 
     const navigate = useNavigate() 
 
@@ -13,6 +15,12 @@ export function LoginPage () {
         email: "", 
         password: ""
     })
+
+
+    const clickLogin = (event) =>{
+        event.preventDefault()
+        login(form, navigate)
+    }
 
     return (
         <>
@@ -46,7 +54,7 @@ export function LoginPage () {
                 </FormSection>
                 <ButtonsSection>
                      <button onClick={()=>goUut(navigate)}> Voltar</button>
-                     <button type="submit" >  Enviar</button> {/* fazer a função para mandar para o banco de dados ou  colocar esse botão no form*/}
+                     <button>  Enviar</button> {/* fazer a função para mandar para o banco de dados ou  colocar esse botão no form*/}
                 </ButtonsSection>
                 
             </MasterBox>
