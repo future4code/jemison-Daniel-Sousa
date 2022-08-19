@@ -36,13 +36,12 @@ export function LoginPage () {
                         <label> Email</label>
                             <input
                             
-                                placeholder={"seuemail@gmail.com"}
-                                type={"email"}
-                                name={"email"}
-                                value ={form.email}
-                                onChange ={onChange}
-                                required
-                                pattern=""// esta faltando a regra do email
+                            placeholder={"seuemail@gmail.com"}
+                            type={"email"}
+                            name={"email"}
+                            value={form.email}
+                            onChange={onChange}
+                            required
                         />
 
                         <label htmlFor="PASSAWORD"> PASSAWORD  </label>
@@ -50,10 +49,9 @@ export function LoginPage () {
                                 placeholder={"********"}
                                 type={"password"}
                                 name={"password"}
-                                value ={form.password}
-                                onChange ={onChange}
+                                value={form.password}
+                                onChange={onChange}
                                 required
-                                pattern="^.{3}"
                         />
                         
                         
