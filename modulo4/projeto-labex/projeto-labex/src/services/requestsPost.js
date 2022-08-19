@@ -1,7 +1,7 @@
 import axios from "axios"
 
 import {BASE_URL} from "../constants/urls"
-import { goToLoginPage } from "../routes/coordinator"
+import { goToAdminHomePag, goToLoginPage } from "../routes/coordinator"
 
 
 
@@ -18,7 +18,7 @@ export const login = (body, navigate) =>{
     axios.post(`${BASE_URL}/login`, body)
     .then((response) =>{
         localStorage.setItem("token", response.data.token)
-        goToLoginPage(navigate)
+        goToAdminHomePag(navigate)
     }).catch((error) =>{
         alert(error.response.data.message)
     })
