@@ -5,12 +5,13 @@ import { goToAdminHomePag, goToLoginPage } from "../routes/coordinator"
 
 
 
-export const applyToTrip = (body, id) =>{
+export const applyToTrip = (body, id, functionClear) =>{
     axios.post(`${BASE_URL}/trips/${id}/apply`, body)
     .then((response) =>{
-        alert("Sucesso!")
+        alert("Sucesso! Aplicação enviada com sucesso")
+        functionClear()
     }).catch((error) =>{
-        alert(error.response.message)
+        alert("Error! Tente novamente")
     })
 }
 
@@ -25,7 +26,18 @@ export const login = (body, navigate) =>{
 }
 
 
-
+export const createTrip = (body, functionClear) =>{
+    axios.post(`${BASE_URL}/trips`, body, {
+        headers: {
+            auth: localStorage.getItem("token")
+        }
+    }).then((response) =>{
+        alert("Sucesso! Sua viagem foi adcionada")
+        functionClear()
+    }).catch((error) =>{
+        alert("Erro! Tente novamente")
+    })
+}
 
 export const lagout = (navigate) =>{
     localStorage.removeItem("token")

@@ -2,19 +2,23 @@ import axios from "axios"
 
 import {BASE_URL} from "../constants/urls"
 
-export const decideCandidadte = (tripId, candidateId, decision ) =>{
+export const decideCandidate = (idCandidate, idTrip, booleano, functionGetTrips) =>
+{
     const body ={
-        approve: decision
+        approve: booleano
     }
 
-    axios.put(`${BASE_URL}/trips/${tripId}/candidates/${candidateId}/decide`, body, {
-        headers: {
-            auth: localStorage.getItem("token")
+    axios.put(`${BASE_URL}/trips/${idTrip}/candidates/${idCandidate}/decide`, body, {
+        headers:{
+            auth: localStorage.getItem('token')
         }
-    }).then((response) =>{
-        alert("Aprovado")
+    }).then((response)=>{
+        alert("Sucesso! Decisão registrada")
+        functionGetTrips()
     }).catch((error) =>{
-        alert("Algo deu errado")
+        alert("Error! Tente novamente")
     })
-    
-};
+
+
+
+}
