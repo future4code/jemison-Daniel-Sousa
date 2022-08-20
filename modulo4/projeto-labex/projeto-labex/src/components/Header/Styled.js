@@ -1,43 +1,15 @@
 import styled from "styled-components";
 
-export const BoxMaster = styled.section `
-    display: flex;
-    align-items: center;
-    
-    width: 100vw;
-    height: 8vh;
-    background:  #000000;
-    color: #ffa267;
-    
+export const MainHeader = styled.section `
+border-bottom: 1px solid;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 0.2rem;
 
-`
-
-export const MainHeader = styled.header `
-    display: flex;
-    justify-content: space-around;
-
-    width: 100vw;
-    padding: 2rem;
-
-`
-
-export const SectionMenu = styled.section`
-    display: flex;
-    gap: 0.58rem;
+width: 95%;
+padding: 0.1rem;
 
 
-`
 
-
-export const HeaderButton = styled.button `
-
-    padding: 0.3rem;
-    background-color: #ffa267;
-    border: 1px solid white;
-    font-size: 0.9rem;
-    font-weight: bold;
-
-    cursor: pointer;
-
-   
 `

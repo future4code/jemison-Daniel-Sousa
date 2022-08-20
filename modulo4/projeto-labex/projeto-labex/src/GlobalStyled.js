@@ -13,7 +13,7 @@ import { createGlobalStyle } from 'styled-components'
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #29292e;
+    background-color:  #e1e1e6;
   }
 
   body, input, textarea, button {

@@ -1,39 +1,36 @@
 import { useNavigate } from "react-router-dom";
-import { IoIosStats, IoMdBatteryCharging } from "react-icons/io";
-import { Header } from "../../components/Header/Header";
-import {MasterBox, IconsHeader, ButtonBox, Container, ContainerItens, MainBox} from "./Styled"
+import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,Button} from "./Styled"
 import {goToLoginPage, goToListTripsPage} from "../../routes/coordinator"
+import logo from "../../assets/img/logo.png"
+import {Header} from "../../components/Header/Header"
+import {Footer} from "../../components/Footer/Footer"
 
 export function HomePage () {
     const navigate = useNavigate()
-
-
 
     return (
         <MasterBox>
                
             <Container>
                 <ContainerItens >
-                    <IconsHeader >
-                        <IoMdBatteryCharging/>
-                        <IoIosStats size={20} color= "red"/>
-                    </IconsHeader>
-
+                    <Header />
                     <MainBox>
-                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-
+                       <img src={logo}/>
+                        
                         <ButtonBox>
-                            <button 
+                            <Button 
                                 onClick={()=>goToListTripsPage(navigate)}>
                                     Viagens disponiveis 
-                            </button >
-                            <button 
+                            </Button >
+                            <Button 
                                 onClick={()=>goToLoginPage(navigate)}>
                                     Faça Login
-                            </button >
+                            </Button >
                         </ButtonBox>
-                    </MainBox>
+                    </MainBox> 
+                    <Footer/>
                 </ContainerItens>
+               
             </Container>
         </MasterBox>
     )

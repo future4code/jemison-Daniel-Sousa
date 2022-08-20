@@ -1,34 +1,27 @@
 import React from "react";
-
-import {useNavigate } from "react-router-dom";
-import { BoxMaster, MainHeader, HeaderButton, SectionMenu } from "./Styled";
-import {goToLoginPage} from "../../routes/coordinator"
+import { IoIosStats, IoMdBatteryCharging, IoIosVolumeHigh } from "react-icons/io";
+import { IoBluetoothSharp, IoMusicalNotes, IoWifiSharp } from "react-icons/io5";
+import {MainHeader, } from "./Styled"
 
 
 
 export function Header () {
 
-        const navigate = useNavigate()
-
         return (
-                <BoxMaster>
-                          <MainHeader>
-                                <section>
-                                        <h1> Labex</h1>
-                                </section>
-                                <SectionMenu>
-                                <HeaderButton 
-                                         onClick={()=>goToLoginPage(navigate)}> 
-                                                 login
-                                        </HeaderButton>
-                                        
-                                        <HeaderButton>
-                                             Sobre
-                                        </HeaderButton>
-                                </SectionMenu>
-                                
-                        </MainHeader>
-                </BoxMaster>
+                <MainHeader>
+                        <section>
+                            <span>10:40 AM</span>
+                        </section>
+                        <section>
+                            <IoWifiSharp size={15}/>
+                            <IoMusicalNotes />
+                            <IoBluetoothSharp size={13} />
+                            <IoIosVolumeHigh size={15}/>
+                            <IoIosStats size={15}/>
+                            <IoMdBatteryCharging size={15}/>
+                        </section>
+                        
+                </MainHeader>
         )
 
 
