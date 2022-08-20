@@ -1,6 +1,5 @@
 import axios from "axios"
 import React from "react"
-import {CandidateBox} from "./CandidateBox/CandidateBox"
 import { useNavigate, useParams} from "react-router-dom"
 import { useProtectedPage } from "../../hooks/useProtectedPage"
 import {useRequestsData} from "../../hooks/useRequestData"

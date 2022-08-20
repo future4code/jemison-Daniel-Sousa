@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
+import { IoIosStats, IoMdBatteryCharging } from "react-icons/io";
 import { Header } from "../../components/Header/Header";
-import {MasterBox, PresentationBox, ButtonBox, Container} from "./Styled"
+import {MasterBox, IconsHeader, ButtonBox, Container, ContainerItens, MainBox} from "./Styled"
 import {goToLoginPage, goToListTripsPage} from "../../routes/coordinator"
 
 export function HomePage () {
@@ -10,30 +11,29 @@ export function HomePage () {
 
     return (
         <MasterBox>
-            
+               
             <Container>
-              
-                    <div>
-                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    </div>
-                    <div>
-                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    </div>
+                <ContainerItens >
+                    <IconsHeader >
+                        <IoMdBatteryCharging/>
+                        <IoIosStats size={20} color= "red"/>
+                    </IconsHeader>
 
-                
-                
+                    <MainBox>
+                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
 
-                <ButtonBox>
-                    <button 
-                        onClick={()=>goToListTripsPage(navigate)}>
-                            Viagens disponiveis 
-                    </button >
-                    <button 
-                        onClick={()=>goToLoginPage(navigate)}>
-                            Faça Login
-                    </button >
-                </ButtonBox>
-                
+                        <ButtonBox>
+                            <button 
+                                onClick={()=>goToListTripsPage(navigate)}>
+                                    Viagens disponiveis 
+                            </button >
+                            <button 
+                                onClick={()=>goToLoginPage(navigate)}>
+                                    Faça Login
+                            </button >
+                        </ButtonBox>
+                    </MainBox>
+                </ContainerItens>
             </Container>
         </MasterBox>
     )
