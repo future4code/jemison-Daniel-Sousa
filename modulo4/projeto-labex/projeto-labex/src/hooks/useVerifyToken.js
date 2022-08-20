@@ -2,17 +2,17 @@ import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import {goToAdminHomePag} from '../routes/coordinator'
 
-export const useUnprotectedPage = () =>{
+export const useVerifyToken = () =>{
     const navigate = useNavigate()
-    
+    const token = window.localStorage.getItem('token')
     
     useEffect(() =>{
-        const token = localStorage.getItem('token')
-        if(token) {
+        
+        if(token != null) {
             goToAdminHomePag(navigate)
         }
     
     
-    }, [navigate])
+    }, [])
 
 }

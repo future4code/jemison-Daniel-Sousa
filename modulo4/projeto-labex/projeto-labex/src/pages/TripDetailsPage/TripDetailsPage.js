@@ -1,15 +1,14 @@
 import axios from "axios"
-import React, { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
-import { BASE_URL } from "../../constants/urls"
+import React from "react"
+import {CandidateBox} from "./CandidateBox/CandidateBox"
+import { useNavigate, useParams} from "react-router-dom"
 import { useProtectedPage } from "../../hooks/useProtectedPage"
 import {useRequestsData} from "../../hooks/useRequestData"
 
 
 export function TripDetailsPage () {
-    useProtectedPage()
+     useProtectedPage()
     
-
 
 
     return (

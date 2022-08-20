@@ -17,7 +17,7 @@ export const applyToTrip = (body, id, functionClear) =>{
 
 export const login = (body, navigate) =>{
     axios.post(`${BASE_URL}/login`, body)
-    .then((response) =>{
+    .then((response) => {
         localStorage.setItem("token", response.data.token)
         goToAdminHomePag(navigate)
     }).catch((error) =>{

@@ -1,8 +1,9 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
 import { useRequestsData } from "../../hooks/useRequestData"
-
+import { useProtectedPage } from "../../hooks/useProtectedPage"
 export function AdminHomePag () {
+    useProtectedPage()
     const navigate = useNavigate()
     const [data, isLoading, error] = useRequestsData("/trips")
 
