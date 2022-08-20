@@ -5,23 +5,29 @@ import axios from "axios";
 
 
 
-export const useRequestsData = (endpoint) =>{
+export const useRequestsData = (endpoint, initialState) =>{
    
-    const [data, setData] = useState([]) // testar undefined
-    const [isLoading, setIsLoading] = useState (false)
-    const [error, setError]=useState("")
-
-    useEffect(()=>{
-        setIsLoading(true);
-        axios.get(`${BASE_URL}${endpoint}`)
-        .then((response)=>{
-            setIsLoading(true);
-            setData(response.data.trips)
-        }).catch((error)=>{
-            setIsLoading(false);
-            setError(error.data);
+    const [data, setData] = useState(initialState) // testar undefined
+    
+    const getRequestsData = () =>{
+        const header = {
+            headers: {
+                auth: localStorage.getItem("token")
+            }
+        };
+        axios.get(`${BASE_URL}/${endpoint}`, header)
+        .then((response) =>{
+            setData(response.data)
         })
-    },[data])
+        .catch((error) =>{
+            alert("Error! Verifique sua conexão")
+        })
+    }
 
-    return [data, isLoading, error]
+    useEffect(() =>{
+        getRequestsData()
+    }, [endpoint])
+
+    return [data, getRequestsData]
+
 }//endpoit é a chamadata para cada url que desejo usar

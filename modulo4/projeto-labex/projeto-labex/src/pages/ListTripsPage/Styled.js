@@ -48,17 +48,52 @@ export const MainBox = styled.div `
   margin-bottom: 1rem;
   border: 1px solid;
   border-radius: 8px;
-  height: 50rem;
+  height: 26rem;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 1rem;
   
   img{
     width: 10rem;
   }
+`
+export const SectionTrip = styled.section `
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 75%;
+    padding: 0.4rem;
+
+    overflow-x: hidden;
+    overflow-y: scroll ;
+   
+
+`
+
+export const CarTrip = styled.section `
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  text-align:left;
+  gap: 0.2rem;
+  padding: 0.2rem;
+  width: 100%;
+
+  border: 1px solid black;
+  border-radius: 8px;
+
+
+  span{
+    font-weight: bold;
+    color: #00875f;
+    margin-right: 0.2rem;
+  }
+
 `
 
 export const ButtonBox = styled.section `
