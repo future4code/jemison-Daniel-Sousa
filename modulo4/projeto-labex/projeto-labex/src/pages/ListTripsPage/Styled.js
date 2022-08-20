@@ -1,42 +1,81 @@
 import styled from "styled-components";
 
 export const MasterBox = styled.div `
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
+  display: flex;
+  justify-content: center;
+ 
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box; 
 
-    width: 100vw;
+
     
+`
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  
+  height: 100vh;
+  width: 23rem;
+  background-color: white;
+  border: solid 3px #323238;
+  border-radius: 10px;
+  padding: 0.5rem;
+
+  
 
 `
 
-export const MainCard = styled.div `
-    display:grid;
-    
-    grid-template-columns: 1fr;
-    gap: 1rem;
+export const ContainerItens = styled.div `
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  
+  height: 100%;
+  
+  border: 1px solid black;
+  border-radius: 8px;
+  text-align: center;
 
-    margin-top: 2rem;
-
-
+  padding: 0.5rem;
+  
 `
 
-export const ButtonsSection = styled.section `
-    display: flex;
-    gap: 0.8rem;
-
-    margin-top: 1rem;
-
+export const MainBox = styled.div `
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid;
+  border-radius: 8px;
+  height: 50rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  
+  img{
+    width: 10rem;
+  }
 `
 
-export const Card = styled.div `
-    border: 1px solid black;
+export const ButtonBox = styled.section `
+  display: flex;
+  gap: 1rem;
 
-    display: flex;
-    
+`
+export const Button = styled.button `
+    padding: 0.3rem;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #000000;
+    cursor: pointer;
 
-    padding: 0.5rem;
-    width: 30rem;
-    height: 30vh;
+    :hover{
+      color: #ffffff;
+      font-weight: bolder;
+      background-color: #000000;
+    }
 `
