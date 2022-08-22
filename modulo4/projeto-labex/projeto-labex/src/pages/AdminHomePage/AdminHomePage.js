@@ -5,18 +5,8 @@ import { useProtectedPage } from "../../hooks/useProtectedPage"
 export function AdminHomePag () {
     useProtectedPage()
     const navigate = useNavigate()
-    const [data, isLoading, error] = useRequestsData("/trips")
+    
 
-    const listTrips = data && data.map((trip)=>{
-        return (     
-            <div  key={trip.id}>
-                 <div>
-                     <p> {trip.name}</p>
-                     
-               </div>
-            </div>      
-        )
-    })
 
     return(
         <>
@@ -29,9 +19,7 @@ export function AdminHomePag () {
             </section>
 
             <div>
-                {!isLoading  && <p> Carreango viagens</p>}
-                {!isLoading && error && (<p>Ocorreu um erro</p>)}
-                {isLoading && data && data.length > 0 && (listTrips)}
+               
             </div>
         </>
     )
