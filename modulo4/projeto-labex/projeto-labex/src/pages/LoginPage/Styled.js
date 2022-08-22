@@ -61,6 +61,48 @@ export const MainBox = styled.div `
   }
 `
 
+export const MainBoxIntns = styled.section `
+  display: flex;
+  flex-direction: column;
+
+
+
+ 
+`
+export const Title = styled.h1 `
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  border-bottom: 1px solid black;
+  font-weight: bolder;
+
+`
+export const FormLogin = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  label{
+    display: flex;
+    font-weight: bolder;
+    color: #00875f;
+    
+  }
+
+  input{
+    padding: 0.3rem;
+    border-radius: 8px;
+    text-align: start;
+    
+  }
+`
+
 export const ButtonBox = styled.section `
   display: flex;
   gap: 1rem;
@@ -74,7 +116,7 @@ export const Button = styled.button `
     cursor: pointer;
 
     :hover{
-      color: #ffffff;
+      color: #00875f;
       font-weight: bolder;
       background-color: #000000;
     }

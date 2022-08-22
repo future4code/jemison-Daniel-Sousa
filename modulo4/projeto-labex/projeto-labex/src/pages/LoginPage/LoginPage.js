@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,Button} from "./Styled"
+import { IoMdPlanet } from "react-icons/io";
+import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,Button, MainBoxIntns, Title, FormLogin } from "./Styled"
 
 import {Header} from "../../components/Header/Header"
 import {Footer} from "../../components/Footer/Footer"
@@ -29,13 +30,18 @@ export function LoginPage () {
                 <ContainerItens>
                     <Header/>
                     <MainBox>
-                        <div>
-                            <h1> Faça login</h1>
-                            <form>
-                            <h1> Login </h1>
-                                <h3> Conecte-se para continuar </h3>
+                        <Title> 
+                            <IoMdPlanet color="#00875f"/> 
+                                FAÇA LOGIN
+                            <IoMdPlanet color="#00875f"/>
+                        </Title>
+                        <MainBoxIntns>
+                            
+                            <FormLogin>
+                                <h1> Login </h1>
+                                <span> Conecte-se para continuar </span>
                                 <form onSubmit={onClickLogin}>
-                                <p>EMAIL</p>
+                                <label>EMAIL</label>
                                 <input 
                                     placeholder={"seuemail@gmail.com"}
                                     type={"email"}
@@ -44,7 +50,7 @@ export function LoginPage () {
                                     onChange={onChange}
                                     required
                                 />
-                                <p>PASSWORD</p>
+                                <label>PASSWORD</label>
                                 <input 
                                     placeholder={"********"}
                                     type={"password"}
@@ -53,11 +59,11 @@ export function LoginPage () {
                                     onChange={onChange}
                                     required
                                 />
-                                <button type={"submit"}>Login</button>
+                                <Button  type={"submit"}>Login</Button>
                                 </form>
-                                <button onClick={()=>goUut(navigate)}> Voltar</button>
-                            </form>  
-                        </div>
+                                <Button  onClick={()=>goUut(navigate)}> Voltar</Button>
+                            </FormLogin>  
+                        </MainBoxIntns>
                     </MainBox> 
                     <Footer/>    
                 </ContainerItens>
