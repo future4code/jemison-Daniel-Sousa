@@ -96,6 +96,17 @@ export const CarTrip = styled.section `
 
 `
 
+export const Title = styled.h1 `
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  border-bottom: 1px solid black;
+  font-weight: bolder;
+  color: #00875f;
+  margin-top: 0.1rem;
+
+`
+
 export const ButtonBox = styled.section `
   display: flex;
   gap: 1rem;

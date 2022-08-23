@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom"
+import { FcGlobe } from "react-icons/fc";
 import { useRequestsData } from "../../hooks/useRequestData"
 import {goToHome, gotoApplicationFormPage} from "../../routes/coordinator"
 
 import {Header} from "../../components/Header/Header"
 import {Footer} from "../../components/Footer/Footer"
 
-import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,Button , CarTrip,SectionTrip  } from "./Styled"
+import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,Button , CarTrip,SectionTrip, Title  } from "./Styled"
 
 
 
@@ -32,7 +33,11 @@ export function ListTripsPage () {
                 <ContainerItens>
                     <Header />
                     <MainBox>
-                        <h1> Viagens Disponiveis</h1>
+                        <Title> 
+                            
+                            Viagens Disponiveis
+                            <FcGlobe/>
+                        </Title>
                         <SectionTrip >
                             { listTrips}
                         </SectionTrip>
