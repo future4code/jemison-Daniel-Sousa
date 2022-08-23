@@ -6,28 +6,27 @@ import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,Button, MainBox
 import {Header} from "../../components/Header/Header"
 import {Footer} from "../../components/Footer/Footer"
 import {goToHome} from "../../routes/coordinator"
-import { login } from "../../services/requestsPost";
+import {BASE_URL} from "../../constants/urls"
+import {goToAdminHomePag} from "../../routes/coordinator"
+import axios from "axios";
 import {useForm} from "../../hooks/useForm"
-import {useVerifyToken} from "../../hooks/useVerifyToken"
+
 
 export function LoginPage () {
-   
+    const [form, onChange] = useForm({ email: "", password: "" })
     const navigate = useNavigate() 
 
-    const {form, onChange} = useForm({
-        email: "",
-        password: "",
-    })
-
-  
-
-      const onChangeLogin  = (event) =>{
-        event.preventDefault()
-
-        login(form,navigate)
-      }
-
-
+    const loginPage = (event) =>{
+        event.preventDefault() //evita que a página seja renderizada novamente ao enviar o formulário
+        axios.post(`${BASE_URL}/login`,form)
+            .then((response) => {
+                localStorage.setItem("token", response.data.token)
+                ;
+                goToAdminHomePag(navigate)
+            })
+            .catch((error) => console.log(error.message))
+    }
+    
     return (
         <MasterBox>
             <Container>
@@ -44,7 +43,7 @@ export function LoginPage () {
                             <FormLogin>
                                     <h1> Login </h1>
                                     <span> Conecte-se para continuar </span>
-                                    <form  onSubmit={onChangeLogin}>
+                                    <form onSubmit={loginPage}>
                                     <label>EMAIL</label>
                                     <input 
                                         placeholder={"seuemail@gmail.com"}
