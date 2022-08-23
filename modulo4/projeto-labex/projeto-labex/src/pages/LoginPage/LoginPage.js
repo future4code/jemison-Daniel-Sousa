@@ -7,7 +7,7 @@ import {Header} from "../../components/Header/Header"
 import {Footer} from "../../components/Footer/Footer"
 import {goToHome} from "../../routes/coordinator"
 import {BASE_URL} from "../../constants/urls"
-import {goToAdminHomePag} from "../../routes/coordinator"
+import {goToAdminHomePag, goUut} from "../../routes/coordinator"
 import axios from "axios";
 import {useForm} from "../../hooks/useForm"
 
@@ -17,7 +17,7 @@ export function LoginPage () {
     const navigate = useNavigate() 
 
     const loginPage = (event) =>{
-        event.preventDefault() //evita que a página seja renderizada novamente ao enviar o formulário
+        event.preventDefault() 
         axios.post(`${BASE_URL}/login`,form)
             .then((response) => {
                 localStorage.setItem("token", response.data.token)

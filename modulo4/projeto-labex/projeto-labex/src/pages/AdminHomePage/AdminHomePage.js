@@ -2,6 +2,7 @@ import React from "react"
 import { useNavigate } from "react-router-dom"
 import { useRequestsData } from "../../hooks/useRequestData"
 import {goUut, goToCreateTripPage, } from "../../routes/coordinator"
+import {lagout} from "../../services/requestsPost"
 import {Header} from "../../components/Header/Header"
 import {Footer} from "../../components/Footer/Footer"
 import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,Button , CarTrip,SectionTrip  } from "./Styled"
@@ -37,7 +38,7 @@ export function AdminHomePag () {
                             <Button onClick={() => goToCreateTripPage(navigate)}> Criar Viagem
                             </Button>
 
-                            <Button> Logout</Button>
+                            <Button onClick={()=> lagout(navigate)}> Logout</Button>
                         </ButtonBox>
 
                         <SectionTrip >
