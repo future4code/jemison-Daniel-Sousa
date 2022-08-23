@@ -77,7 +77,7 @@ export const Title = styled.h1 `
   font-weight: bolder;
 
 `
-export const FormLogin = styled.form`
+export const FormLogin = styled.section`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;

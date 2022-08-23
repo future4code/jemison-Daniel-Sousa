@@ -15,7 +15,8 @@ export const applyToTrip = (body, id, functionClear) =>{
     })
 }
 
-export const login = (email, password) =>{
+export const login = (email, password, navigate) =>{
+    console.log(email,password);
    const body = {
          email: email, 
          password: password
@@ -24,6 +25,7 @@ export const login = (email, password) =>{
    .then((response) =>{
         localStorage.setItem("token",response.data.token)
         alert("Login realizado com sucesso")
+        goToAdminHomePag(navigate)
         
    }).catch((error)=>{
         alert("Senha ou usuário inválido! ")

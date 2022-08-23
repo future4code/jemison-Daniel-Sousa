@@ -5,30 +5,26 @@ import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,Button, MainBox
 
 import {Header} from "../../components/Header/Header"
 import {Footer} from "../../components/Footer/Footer"
-import {goUut} from "../../routes/coordinator"
+import {goToHome} from "../../routes/coordinator"
 import { login } from "../../services/requestsPost";
 import {useForm} from "../../hooks/useForm"
 import {useVerifyToken} from "../../hooks/useVerifyToken"
 
 export function LoginPage () {
-    useVerifyToken()
+   
     const navigate = useNavigate() 
 
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const {form, onChange} = useForm({
+        email: "",
+        password: "",
+    })
 
-    const onChangePassword = (event) => {
-        setPassword(event.target.value);
-      };
-    
-      const onChangeEmail = (event) => {
-        setEmail(event.target.value);
-      };
+  
 
       const onChangeLogin  = (event) =>{
         event.preventDefault()
 
-        login(email,password)
+        login(form,navigate)
       }
 
 
@@ -53,23 +49,25 @@ export function LoginPage () {
                                     <input 
                                         placeholder={"seuemail@gmail.com"}
                                         type={"email"}
+                                        id={"email"}
                                         name={"email"}
-                                        value={email}
-                                        onChange={onChangeEmail}
+                                        value={form.email}
+                                        onChange={onChange}
                                         required
                                     />
                                     <label>PASSWORD</label>
                                     <input 
                                         placeholder={"********"}
                                         type={"password"}
+                                        id={"password"}
                                         name={"password"}
-                                        value={password}
-                                        onChange={onChangePassword}
+                                        value={form.password}
+                                        onChange={onChange}
                                         required
                                     />
                                     <Button>Login</Button>
                                 </form>
-                                <Button  onClick={()=>goUut(navigate)}> Voltar</Button>
+                                <Button  onClick={()=>goToHome(navigate)}> Voltar</Button>
                             </FormLogin>  
                         </MainBoxIntns>
                     </MainBox> 

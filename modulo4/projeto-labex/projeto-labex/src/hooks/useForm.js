@@ -2,7 +2,7 @@
 import {useState } from "react";
 
 
-export function useForm (initialState) {
+export const useForm = (initialState) => {
     const [form, setForm] = useState(initialState) // usando a desestruturação
     
     const onChange = (event) =>{
@@ -17,3 +17,5 @@ export function useForm (initialState) {
 
     return {form, onChange, clearForm}
 }
+
+// Aqui estou usando um função e não é uma função

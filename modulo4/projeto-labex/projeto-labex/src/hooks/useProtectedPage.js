@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { useEffect } from "react"
 import {goToLoginPage} from "../routes/coordinator"
 
-export function useProtectedPage () {
+export const useProtectedPage = () => {
     const navigate = useNavigate()
 
     useEffect(()=>{
