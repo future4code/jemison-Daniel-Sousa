@@ -1,7 +1,8 @@
 import React from "react"
+import { ImBin } from "react-icons/im";
 import { useNavigate } from "react-router-dom"
 import { useRequestsData } from "../../hooks/useRequestData"
-import {goUut, goToCreateTripPage, } from "../../routes/coordinator"
+import {goUut, goToCreateTripPage,goToTripDetailsPage } from "../../routes/coordinator"
 import {lagout} from "../../services/requestsPost"
 import {Header} from "../../components/Header/Header"
 import {Footer} from "../../components/Footer/Footer"
@@ -14,12 +15,9 @@ export function AdminHomePag () {
 
     const listTrips = data.trips ? data.trips.map((trip) =>{
         return (
-            <CarTrip >
-                <p><span>Nome:</span>{trip.name}</p>
-                <p><span>Descrição:</span>{trip.description}</p>
-                <p><span>Planeta:</span>{trip.planet}</p>
-                <p><span>Duração:</span>{trip.durationInDays}</p>
-                <p><span>Data:</span>{trip.date}</p>   
+            <CarTrip onClick={()=>goToTripDetailsPage(navigate)}>
+                <p><span>Viagem:</span>{trip.name}</p>
+                <ImBin size={20} color= "red" />
             </CarTrip>
         )
     }) : (<p>Carregando</p>);
@@ -42,6 +40,7 @@ export function AdminHomePag () {
                         </ButtonBox>
 
                         <SectionTrip >
+                            <h2>Lista de Viagens</h2>
                             { listTrips}
                         </SectionTrip>
                      

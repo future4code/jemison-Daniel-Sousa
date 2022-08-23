@@ -65,7 +65,7 @@ export const SectionTrip = styled.section `
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     height: 75%;
     padding: 0.4rem;
 
@@ -77,16 +77,15 @@ export const SectionTrip = styled.section `
 
 export const CarTrip = styled.section `
   display: flex;
-  flex-direction: column;
-  align-items:flex-start;
-  text-align:left;
-  gap: 0.2rem;
-  padding: 0.2rem;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.7rem;
   width: 100%;
 
   border: 1px solid black;
   border-radius: 8px;
-
+  cursor: pointer;
 
   span{
     font-weight: bold;
