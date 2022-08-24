@@ -115,11 +115,12 @@ export function ApplicationFormPage () {
                                     > escolha um pais</option>
                                     {listOfCountries}
                                 </select>
-                                <Button type={"submit"}>  Inscrever-se</Button>
+                                <ButtonBox>
+                                    <Button onClick={()=>goUut(navigate)}>      Voltar</Button>
+                                    <Button type={"submit"}> Finalizar</Button>
+                                </ButtonBox>
                             </form>
-                            <ButtonBox>
-                                <Button onClick={()=>goUut(navigate)}> Voltar</Button>
-                            </ButtonBox>
+                            
                         </FormLogin>
                     </MainBox> 
                     <Footer/> 
