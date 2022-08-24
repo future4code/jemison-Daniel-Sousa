@@ -8,8 +8,8 @@ import {Footer} from "../../components/Footer/Footer"
 
 
 export function TripDetailsPage () {
-    const navigate = useNavigate()
-    const id = useParams()
+    // const navigate = useNavigate()
+    // const id = useParams()
     // const [data, setGetTripsDetail] = useRequestsData ("trips/${id.tripId}", {})
 
 

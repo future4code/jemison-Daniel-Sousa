@@ -5,15 +5,20 @@ import { goToAdminHomePag, goToLoginPage } from "../routes/coordinator"
 
 
 
-export const applyToTrip = (body, id, functionClear) =>{
-    axios.post(`${BASE_URL}/trips/${id}/apply`, body)
-    .then((response) =>{
-        alert("Sucesso! Aplicação enviada com sucesso")
-        functionClear()
-    }).catch((error) =>{
-        alert("Error! Tente novamente")
-    })
-}
+export const sendApplication = (body, id, clear) => {
+
+    axios
+      .post(`${BASE_URL}/trips/${id}/apply`, body)
+      .then((response) => {
+        alert("Aplicação enviada com sucesso!");
+
+        clear();
+      })
+      .catch((err) => {
+        alert("Erro!");
+      });
+
+};
 
 
 export const lagout = (navigate) =>{

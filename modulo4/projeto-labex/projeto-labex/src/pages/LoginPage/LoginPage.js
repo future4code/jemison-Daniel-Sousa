@@ -13,7 +13,7 @@ import {useForm} from "../../hooks/useForm"
 
 
 export function LoginPage () {
-    const [form, onChange] = useForm({ email: "", password: "" })
+    const {form, onChange} = useForm({ email: "", password: "" })
     const navigate = useNavigate() 
 
     const loginPage = (event) =>{
