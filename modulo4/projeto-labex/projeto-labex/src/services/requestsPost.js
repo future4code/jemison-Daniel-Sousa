@@ -4,7 +4,6 @@ import {BASE_URL} from "../constants/urls"
 import { goToAdminHomePag, goToLoginPage } from "../routes/coordinator"
 
 
-
 export const sendApplication = (body, id, clear) => {
 
     axios
