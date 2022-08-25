@@ -6,12 +6,13 @@ import {goUut, goToCreateTripPage,goToTripDetailsPage } from "../../routes/coord
 import {lagout} from "../../services/requestsPost"
 import {Header} from "../../components/Header/Header"
 import {Footer} from "../../components/Footer/Footer"
-import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,Button , CarTrip,SectionTrip  } from "./Styled"
+import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,Button , CarTrip,SectionTrip, ButtonBoxCard, ButtonCard } from "./Styled"
 
 export function AdminHomePag () {
+    
     const navigate = useNavigate()
     
-    const pegarId = (id) =>{
+    const getId = (id) =>{
         navigate(`/admin/trips/${id}`)
     }
 
@@ -21,9 +22,13 @@ export function AdminHomePag () {
 
     const listTrips = data.trips ? data.trips.map((trip) =>{
         return (
-            <CarTrip onClick={()=>pegarId(trip.id)}>
+            <CarTrip onClick={()=>getId(trip.id)}>
                 <p><span>Viagem:</span>{trip.name}</p>
-                <ImBin size={20} color= "red" />
+                <ButtonBoxCard>
+                    <ButtonCard> Ver detalhes</ButtonCard>
+                    <ImBin size={25} color= "red" />
+                </ButtonBoxCard>
+                
             </CarTrip>
         )
     }) : (<p>Carregando</p>);

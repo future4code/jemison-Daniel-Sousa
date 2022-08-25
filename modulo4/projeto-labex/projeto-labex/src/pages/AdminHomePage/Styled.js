@@ -77,11 +77,12 @@ export const SectionTrip = styled.section `
 
 export const CarTrip = styled.section `
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   padding: 0.7rem;
   width: 100%;
+  box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
 
   border: 1px solid black;
   border-radius: 8px;
@@ -98,11 +99,36 @@ export const CarTrip = styled.section `
 export const ButtonBox = styled.section `
   display: flex;
   gap: 1rem;
-
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.2rem;
 `
 export const Button = styled.button `
     padding: 0.3rem;
     border-radius: 8px;
+    background-color: transparent;
+    color: #000000;
+    cursor: pointer;
+
+    :hover{
+      color: #ffffff;
+      font-weight: bolder;
+      background-color: #000000;
+    }
+`
+
+export const ButtonBoxCard = styled.section `
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+`
+export const ButtonCard = styled.button `
+    padding: 0.3rem;
+    border-radius: 8px;
+    margin-top: 0.3rem;
     background-color: transparent;
     color: #000000;
     cursor: pointer;

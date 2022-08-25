@@ -83,6 +83,7 @@ export const CarTrip = styled.section `
   gap: 0.2rem;
   padding: 0.2rem;
   width: 100%;
+  box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
 
   border: 1px solid black;
   border-radius: 8px;
