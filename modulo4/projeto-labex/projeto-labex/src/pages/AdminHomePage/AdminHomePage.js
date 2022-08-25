@@ -10,12 +10,18 @@ import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,Button , CarTri
 
 export function AdminHomePag () {
     const navigate = useNavigate()
-  
+    
+    const pegarId = (id) =>{
+        navigate(`/admin/trips/${id}`)
+    }
+
+
+
     const [data] = useRequestsData ("trips", {})
 
     const listTrips = data.trips ? data.trips.map((trip) =>{
         return (
-            <CarTrip onClick={()=>goToTripDetailsPage(navigate)}>
+            <CarTrip onClick={()=>pegarId(trip.id)}>
                 <p><span>Viagem:</span>{trip.name}</p>
                 <ImBin size={20} color= "red" />
             </CarTrip>

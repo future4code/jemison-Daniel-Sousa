@@ -11,7 +11,7 @@ export const useProtectedPage = () => {
             alert("Não está logado")
             goToLoginPage(navigate)
         }
-    },[navigate])
+    },[])
     
 }
 
