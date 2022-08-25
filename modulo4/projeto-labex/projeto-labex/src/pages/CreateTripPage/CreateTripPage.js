@@ -2,6 +2,7 @@ import React from "react"
 import { useNavigate } from "react-router-dom"
 import { IoMdGlobe } from "react-icons/io";
 import { useForm } from "../../hooks/useForm"
+import {useRequestsData} from "../../hooks/useRequestData"
 import {planets} from "../../constants/planet"
 import {goToAdminHomePag} from "../../routes/coordinator" 
 import {Header} from "../../components/Header/Header"
@@ -11,8 +12,9 @@ import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,Button, MainBox
 export function CreateTripPage () {
 
     const navigate = useNavigate()
+    const [data, getData] = useRequestsData ("trips", {})
+    const { form, onChange, clear } = useForm({ name: "", planet: "", date: "", description: "", durationInDays: "" })
     
-
     const dateToday =  new Date().toISOString().split('T')[0]
 
     const listOfPlanets = planets.map((planet)=>{
@@ -22,6 +24,8 @@ export function CreateTripPage () {
             </option>
         )
      })
+
+    
 
     return (
         <MasterBox>

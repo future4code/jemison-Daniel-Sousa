@@ -20,6 +20,25 @@ export const sendApplication = (body, id, clear) => {
 };
 
 
+
+export const createTrip = () =>{
+  const header = {
+    headers: {
+      auth: localStorage.getItem("token")
+    }
+  }
+
+
+
+
+}
+
+
+
+
+
+
+
 export const lagout = (navigate) =>{
     localStorage.removeItem("token")
     goToLoginPage(navigate)
