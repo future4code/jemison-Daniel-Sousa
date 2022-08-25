@@ -1,7 +1,6 @@
 import axios from "axios"
-
 import {BASE_URL} from "../constants/urls"
-import { goToAdminHomePag, goToLoginPage } from "../routes/coordinator"
+import { goToLoginPage } from "../routes/coordinator"
 
 
 export const sendApplication = (body, id, clear) => {
@@ -13,7 +12,7 @@ export const sendApplication = (body, id, clear) => {
 
         clear();
       })
-      .catch((err) => {
+      .catch((error) => {
         alert("Erro!");
       });
 
@@ -21,21 +20,25 @@ export const sendApplication = (body, id, clear) => {
 
 
 
-export const createTrip = () =>{
+export const createTrip = (body, functionClear, getTripsData) =>{
   const header = {
-    headers: {
-      auth: localStorage.getItem("token")
-    }
+      headers: {
+          auth: localStorage.getItem("token")
+      }
   }
 
-
-
+  axios
+  .post(`${BASE_URL}/trips`, body, header)
+  .then(() => {
+      alert("Viagem criada com sucesso!")
+      functionClear()
+      getTripsData()
+  })
+  .catch((err) =>{
+      alert("Erro na conexão! Tente novamente")
+  })
 
 }
-
-
-
-
 
 
 
