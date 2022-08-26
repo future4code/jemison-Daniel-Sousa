@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 
 export const Container = styled.div `
-    width: 100%;
-    height: 100vh;
-    
-    background: #011015;
-    color: #fff;
+    width: 8vw;
+    height: 15vh;
+    border: 0px solid #011015;
+    border-radius: 100%;
+    background: white;
+    color: #000000;
 
     display: flex;
     align-items: center;
@@ -15,11 +16,12 @@ export const Container = styled.div `
     position: relative;
 
     .ring {
-    width: 25rem;
-    height: 25rem;
+    width: 7rem;
+    height: 7rem;
 
-    border: 0px solid #011015;
+    border: 1px solid #000000;
     border-radius: 50%;
+
 
     position: absolute;
 }
@@ -47,6 +49,9 @@ export const Container = styled.div `
 
     span {
         letter-spacing: 1px;
+        font-size: 0.6rem;
+        font-weight: bolder;
+        
     }
 
     @keyframes rotate1 {

@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,Button, CarTrip, SectionTrip} from "./Styled"
 import {goToLoginPage, goToListTripsPage, goToHome} from "../../routes/coordinator"
 import { useRequestsData } from "../../hooks/useRequestData"
+import {CarLoading} from "../../components/CardLoading/CardLoading"
 import {decideCandidate} from "../../services/requestPut"
 import {Header} from "../../components/Header/Header"
 import {Footer} from "../../components/Footer/Footer"
@@ -16,7 +17,7 @@ export function TripDetailsPage () {
     const[detailsData, getTripsDetail] = useRequestsData(`trip/${id.id}`, {})
     
    
-    const candidatesList = detailsData && detailsData.trip && detailsData.trip.candidates.map((candidate) =>{
+    const candidatesList =  detailsData.trip ? detailsData.trip.candidates.map((candidate) =>{
         return(
             <CarTrip  key={candidate.id}>
                  <p><span>Nome:</span>{candidate.name}</p>
@@ -28,19 +29,19 @@ export function TripDetailsPage () {
                  <button onClick={() => decide(candidate.id,false)}>Reprovar</button>
             </CarTrip>
         )
-    })
+    }):  (<CarLoading/>);
 
     const decide = (candidateId, decision) => {  
         decideCandidate(id.id, candidateId, decision, getTripsDetail)
     }
     
-    const approvedList = detailsData && detailsData.trip && detailsData.trip.approved.map((candidate) =>{
+    const approvedList =  detailsData.trip ? detailsData.trip.approved.map((candidate) =>{
         return(
             <CarTrip  key={candidate.id}>
                  <p><span>Nome:</span>{candidate.name}</p>
             </CarTrip>
         )
-    })
+    }) : (<CarLoading/>);
 
     return (
         <MasterBox>

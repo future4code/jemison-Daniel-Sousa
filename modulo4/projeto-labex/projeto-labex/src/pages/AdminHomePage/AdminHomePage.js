@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom"
 import { useRequestsData } from "../../hooks/useRequestData"
 import {goUut, goToCreateTripPage,goToTripDetailsPage } from "../../routes/coordinator"
 import {useProtectedPage} from "../../hooks/useProtectedPage"
+import {CarLoading} from "../../components/CardLoading/CardLoading"
 import {lagout} from "../../services/requestsPost"
 import {Header} from "../../components/Header/Header"
 import {Footer} from "../../components/Footer/Footer"
@@ -32,7 +33,7 @@ export function AdminHomePag () {
                 
             </CarTrip>
         )
-    }) : (<p>Carregando</p>);
+    }) : (<CarLoading/>);
     
     
     return (
