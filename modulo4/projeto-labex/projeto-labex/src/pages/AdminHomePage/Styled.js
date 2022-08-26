@@ -79,7 +79,6 @@ export const CarTrip = styled.section `
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
   padding: 0.7rem;
   width: 100%;
   box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
@@ -87,6 +86,10 @@ export const CarTrip = styled.section `
   border: 1px solid black;
   border-radius: 8px;
   cursor: pointer;
+
+  p{
+    text-align: left;
+  }
 
   span{
     font-weight: bold;
