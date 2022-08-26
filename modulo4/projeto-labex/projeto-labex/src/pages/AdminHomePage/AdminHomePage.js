@@ -22,10 +22,10 @@ export function AdminHomePag () {
 
     const listTrips = data.trips ? data.trips.map((trip) =>{
         return (
-            <CarTrip onClick={()=>getId(trip.id)}>
+            <CarTrip>
                 <p><span>Viagem:</span>{trip.name}</p>
                 <ButtonBoxCard>
-                    <ButtonCard> Ver detalhes</ButtonCard>
+                    <ButtonCard  onClick={()=>getId(trip.id)}> Ver detalhes</ButtonCard>
                     <ImBin size={25} color= "red" />
                 </ButtonBoxCard>
                 
