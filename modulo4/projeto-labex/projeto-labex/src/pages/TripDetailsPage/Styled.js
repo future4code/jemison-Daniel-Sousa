@@ -104,13 +104,44 @@ export const CarTrip = styled.section `
 
 
 `
+export const CarTripAprove = styled.section `
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:flex-start;
+  text-align:left;
+  gap: 0.1rem;
+  padding: 0.5rem;
+  flex-wrap: nowrap;
+  width: 50%;
+  box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
+
+  border: 1px solid black;
+  border-radius: 8px;
+
+
+  span{
+    font-weight: bold;
+    color: #00875f;
+    margin-right: 0.1rem;
+    text-align:left;
+  }
+
+  p{
+    font-size: 0.8rem;
+  }
+
+
+`
 
 export const ButtonBox = styled.section `
   display: flex;
+  justify-content: center;
   gap: 1rem;
+  width: 100%;
 
 `
-export const Button = styled.button `
+export const ButtonApprove = styled.button `
     padding: 0.3rem;
     border-radius: 8px;
     background-color: transparent;
@@ -120,6 +151,20 @@ export const Button = styled.button `
     :hover{
       color: #ffffff;
       font-weight: bolder;
-      background-color: #000000;
+      background-color: #00875f;
+    }
+`
+
+export const ButtonRepprove = styled.button `
+    padding: 0.3rem;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #000000;
+    cursor: pointer;
+
+    :hover{
+      color: #ffffff;
+      font-weight: bolder;
+      background-color: red;
     }
 `

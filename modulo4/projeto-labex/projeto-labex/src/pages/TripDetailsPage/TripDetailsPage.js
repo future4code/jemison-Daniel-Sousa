@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,Button, CarTrip, SectionTrip} from "./Styled"
+import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,ButtonApprove,ButtonRepprove, CarTrip, SectionTrip,  CarTripAprove} from "./Styled"
 import {goToLoginPage, goToListTripsPage, goToHome} from "../../routes/coordinator"
 import { useRequestsData } from "../../hooks/useRequestData"
 import {CarLoading} from "../../components/CardLoading/CardLoading"
@@ -25,8 +25,10 @@ export function TripDetailsPage () {
                  <p><span>Idade:</span>{candidate.age}</p>
                  <p><span>País:</span>{candidate.country}</p>
                  <p><span>Candidatura:</span>{candidate.applicationText}</p>
-                 <button onClick={() => decide(candidate.id,true)}>Aprovar</button>
-                 <button onClick={() => decide(candidate.id,false)}>Reprovar</button>
+                 <ButtonBox>
+                    <ButtonApprove onClick={() => decide(candidate.id,true)}>Aprovar</ButtonApprove>
+                    <ButtonRepprove onClick={() => decide(candidate.id,false)}>Reprovar</ButtonRepprove>
+                 </ButtonBox>
             </CarTrip>
         )
     }):  (<CarLoading/>);
@@ -37,9 +39,9 @@ export function TripDetailsPage () {
     
     const approvedList =  detailsData.trip ? detailsData.trip.approved.map((candidate) =>{
         return(
-            <CarTrip  key={candidate.id}>
+            < CarTripAprove  key={candidate.id}>
                  <p><span>Nome:</span>{candidate.name}</p>
-            </CarTrip>
+            </ CarTripAprove>
         )
     }) : (<CarLoading/>);
 
