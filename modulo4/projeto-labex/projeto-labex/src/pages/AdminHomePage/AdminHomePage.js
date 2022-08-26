@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom"
 import { useRequestsData } from "../../hooks/useRequestData"
 import {goUut, goToCreateTripPage,goToTripDetailsPage } from "../../routes/coordinator"
 import {useProtectedPage} from "../../hooks/useProtectedPage"
+import {deleteTrip} from "../../services/requestDelete"
 import {CarLoading} from "../../components/CardLoading/CardLoading"
 import {lagout} from "../../services/requestsPost"
 import {Header} from "../../components/Header/Header"
@@ -18,9 +19,13 @@ export function AdminHomePag () {
         navigate(`/admin/trips/${id}`)
     }
 
+    const [data, getTripsData] = useRequestsData ("trips", {})
 
-
-    const [data] = useRequestsData ("trips", {})
+    const removeTrip = (tripId) => {
+        if (window.confirm("Tem certeza que deseja remover esta viagem?")) {
+          deleteTrip(tripId, getTripsData)
+        }
+      }
 
     const listTrips = data.trips ? data.trips.map((trip) =>{
         return (
@@ -28,7 +33,7 @@ export function AdminHomePag () {
                 <p><span>Viagem:</span>{trip.name}</p>
                 <ButtonBoxCard>
                     <ButtonCard  onClick={()=>getId(trip.id)}> Ver detalhes</ButtonCard>
-                    <ImBin size={25} color= "red" />
+                    <ImBin size={25} color= "red"  onClick={()=> removeTrip(trip.id)}/>
                 </ButtonBoxCard>
                 
             </CarTrip>
