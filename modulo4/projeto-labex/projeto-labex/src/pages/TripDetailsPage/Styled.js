@@ -113,7 +113,7 @@ export const CarTripAprove = styled.section `
   gap: 0.1rem;
   padding: 0.5rem;
   flex-wrap: nowrap;
-  width: 50%;
+  width: 100%;
   box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
 
   border: 1px solid black;
@@ -142,6 +142,9 @@ export const ButtonBox = styled.section `
 
 `
 export const ButtonApprove = styled.button `
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0.3rem;
     border-radius: 8px;
     background-color: transparent;
@@ -156,6 +159,9 @@ export const ButtonApprove = styled.button `
 `
 
 export const ButtonRepprove = styled.button `
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0.3rem;
     border-radius: 8px;
     background-color: transparent;

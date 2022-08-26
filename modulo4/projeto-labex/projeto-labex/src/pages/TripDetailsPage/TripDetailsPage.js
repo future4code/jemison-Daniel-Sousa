@@ -1,8 +1,8 @@
 import React from "react";
-import { useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import {useParams } from "react-router-dom";
+import { FcApproval } from "react-icons/fc";
+import { CgCloseO } from "react-icons/cg";
 import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,ButtonApprove,ButtonRepprove, CarTrip, SectionTrip,  CarTripAprove} from "./Styled"
-import {goToLoginPage, goToListTripsPage, goToHome} from "../../routes/coordinator"
 import { useRequestsData } from "../../hooks/useRequestData"
 import {CarLoading} from "../../components/CardLoading/CardLoading"
 import {decideCandidate} from "../../services/requestPut"
@@ -26,8 +26,16 @@ export function TripDetailsPage () {
                  <p><span>País:</span>{candidate.country}</p>
                  <p><span>Candidatura:</span>{candidate.applicationText}</p>
                  <ButtonBox>
-                    <ButtonApprove onClick={() => decide(candidate.id,true)}>Aprovar</ButtonApprove>
-                    <ButtonRepprove onClick={() => decide(candidate.id,false)}>Reprovar</ButtonRepprove>
+                    <ButtonApprove
+                        onClick={() => decide(candidate.id,true)}> 
+                        < FcApproval size={20}/>
+                        Aprovar
+                    </ButtonApprove>
+                    <ButtonRepprove 
+                        onClick={() => decide(candidate.id,false)}>
+                        <CgCloseO size={20} />
+                        Reprovar
+                    </ButtonRepprove>
                  </ButtonBox>
             </CarTrip>
         )

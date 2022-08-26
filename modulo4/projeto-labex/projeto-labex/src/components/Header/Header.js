@@ -17,6 +17,7 @@ export function Header () {
                             <IoMusicalNotes />
                             <IoBluetoothSharp size={13} />
                             <IoIosVolumeHigh size={15}/>
+                            
                             <IoIosStats size={15}/>
                             <IoMdBatteryCharging size={15}/>
                         </section>
