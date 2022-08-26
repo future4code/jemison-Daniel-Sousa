@@ -2,23 +2,30 @@ import axios from "axios"
 
 import {BASE_URL} from "../constants/urls"
 
-export const candidateDecision = (IdTrip, idCandidate, boolean, getTripDetail) =>{
-    const header ={
+export const decideCandidate = (id, candidateId, decision, getTripsDetail) => {
+    const header = {
         headers: {
             auth: localStorage.getItem("token")
         }
     };
 
     const body = {
-        approve: boolean
-    }
+        approve: decision
+    };
 
-    axios.put(`${BASE_URL}/trips/${IdTrip}/candidates/${idCandidate}/decide`, body, header)
-        .then((response) =>{
-            boolean ? alert("Candidado aceito na viagem") : alert("Candidato reprovado com sucesso!")
+    axios.put(`${BASE_URL}/trips/${id}/candidates/${candidateId}/decide`,
+        body,
+        header
+    )
+        .then(() => {
+         
+            decision ?
+            window.confirm("Deseja realmente Aprovar esse candidato?")
+            : window.confirm("Deseja realmente excluir esse candidato?")
 
-            getTripDetail()
-        }).catch((error) =>{
-            alert("Algo deu errado! Tente novamente mais tarde")
+            getTripsDetail();
         })
-}
+        .catch((err) => {
+            alert(err.message);
+        });
+};

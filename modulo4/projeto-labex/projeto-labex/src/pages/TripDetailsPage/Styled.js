@@ -66,7 +66,7 @@ export const SectionTrip = styled.section `
     align-items: center;
     gap: 0.7rem;
     width: 100%;
-    height: 75%;
+    max-height: 75%;
     padding: 0.5rem;
 
     overflow-x: hidden;
