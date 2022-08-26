@@ -3,6 +3,7 @@ import { ImBin } from "react-icons/im";
 import { useNavigate } from "react-router-dom"
 import { useRequestsData } from "../../hooks/useRequestData"
 import {goUut, goToCreateTripPage,goToTripDetailsPage } from "../../routes/coordinator"
+import {useProtectedPage} from "../../hooks/useProtectedPage"
 import {lagout} from "../../services/requestsPost"
 import {Header} from "../../components/Header/Header"
 import {Footer} from "../../components/Footer/Footer"

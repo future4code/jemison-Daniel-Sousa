@@ -7,7 +7,7 @@ export const useProtectedPage = () => {
 
     useEffect(()=>{
         const tokem = localStorage.getItem("tokem")
-        if(tokem === null){
+        if(tokem !== null){
             alert("Não está logado")
             goToLoginPage(navigate)
         }
