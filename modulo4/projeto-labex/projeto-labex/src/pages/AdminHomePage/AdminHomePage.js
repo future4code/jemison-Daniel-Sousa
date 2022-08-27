@@ -50,7 +50,7 @@ export function AdminHomePag () {
                 <ContainerItens>
                     <Header />
                     <MainBox>
-                        <h1> Painel Administrativo <AiOutlineTool/></h1>
+                        <h1> Painel Administrativo</h1>
                         <ButtonBox>
                             <Button onClick={() => goUut(navigate)}> Voltar</Button>
 

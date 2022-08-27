@@ -20,7 +20,7 @@ export const useRequestsData = (endpoint, initialState) =>{
             setData(response.data)
         })
         .catch((error) =>{
-            alert("Error! Verifique sua conexão")
+            alert("erro na requição")
         })
     }
 
