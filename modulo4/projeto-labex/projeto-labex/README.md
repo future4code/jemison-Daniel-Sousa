@@ -6,6 +6,10 @@ App que simula as funcionalidades de um app para viagens, com cadastro de usuari
 
 https://aware-drain.surge.sh/
 
+ #### Login
+    Us: Nieldev@gmail.com.br
+    Senha: 123456 
+
 ## Imagens do projeto
 
 ### Pagina Inicial
