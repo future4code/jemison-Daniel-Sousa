@@ -1,6 +1,6 @@
 # PROJETO LABEX
 
-App que simula as funcionalidades de um app para viagens, com cadastro de usuarios para viagens e um painel administrativo, onde  é possivel cadastrar novas viagens, fazer o controle de usuarios que inscritos em uma das viagens disponiveis, sendo possivel aprovar ou reprovar cada candidato
+App que simula as funcionalidades de um app para viagens, com cadastro de usuarios para viagens e um painel administrativo, onde  é possivel cadastrar novas viagens, fazer o controle de usuarios inscritos em uma das viagens disponiveis, sendo possivel aprovar ou reprovar cada candidato
 
 ## Link do projeto
 
