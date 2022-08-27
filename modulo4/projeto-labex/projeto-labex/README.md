@@ -5,11 +5,19 @@ App que simula as funcionalidades de um app para viagens, com cadastro de usuari
 ## Imagens do projeto
 
 ### Pagina Inicial
-![image](https://user-images.githubusercontent.com/94769388/183222473-dd275ddf-8c53-4d2e-8f84-cc0cbc87bb82.png)
+![image](https://user-images.githubusercontent.com/94769388/187045251-68378975-19e6-460c-b1a7-1306cb9337c7.png)
 
 
-### Pagina de Matches
-![image](https://user-images.githubusercontent.com/94769388/183222575-c0c27a95-aa1c-4164-a798-12ba7f807e5b.png)
+### Pagina de viagens disponiveis 
+![image](https://user-images.githubusercontent.com/94769388/187045338-c294940f-cefd-410c-a6f1-665cb5c5da8e.png)
+
+### Pagina de inscrição para viagens
+![image](https://user-images.githubusercontent.com/94769388/187045364-a1a7167c-514e-4d7b-b443-1bc08570cc6a.png)
+
+### Pagina de longin
+![image](https://user-images.githubusercontent.com/94769388/187045400-7fc2f848-6284-45cf-9670-c0b4144115fb.png)
+
+
 
 ## Link do projeto
 
