@@ -2,7 +2,7 @@ import axios from "axios"
 
 import {BASE_URL} from "../constants/urls"
 
-export const decideCandidate = (id, candidateId, decision, getTripsDetail) => {
+export const decideCandidate = (id, candidateId, booleano, getTripsDetail) => {
     const header = {
         headers: {
             auth: localStorage.getItem("token")
@@ -10,7 +10,7 @@ export const decideCandidate = (id, candidateId, decision, getTripsDetail) => {
     };
 
     const body = {
-        approve: decision
+        approve: booleano,
     };
 
     axios.put(`${BASE_URL}/trips/${id}/candidates/${candidateId}/decide`,
@@ -19,7 +19,7 @@ export const decideCandidate = (id, candidateId, decision, getTripsDetail) => {
     )
         .then(() => {
          
-            decision ?
+            booleano ?
             window.confirm("Deseja realmente Aprovar esse candidato?")
             : window.confirm("Deseja realmente excluir esse candidato?")
 

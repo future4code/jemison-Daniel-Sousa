@@ -35,7 +35,6 @@ export function ListTripsPage () {
                     <Header />
                     <MainBox>
                         <Title> 
-                            
                             Viagens Disponiveis
                             <FcGlobe/>
                         </Title>

@@ -65,9 +65,6 @@ export const MainBoxIntns = styled.section `
   display: flex;
   flex-direction: column;
 
-
-
- 
 `
 export const Title = styled.h1 `
   display: flex;
@@ -103,11 +100,6 @@ export const FormLogin = styled.section`
   }
 `
 
-export const ButtonBox = styled.section `
-  display: flex;
-  gap: 1rem;
-
-`
 export const Button = styled.button `
     padding: 0.3rem;
     border-radius: 8px;

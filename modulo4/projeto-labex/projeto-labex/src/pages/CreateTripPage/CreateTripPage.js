@@ -8,7 +8,7 @@ import {planets} from "../../constants/planet"
 import {goToAdminHomePag} from "../../routes/coordinator" 
 import {Header} from "../../components/Header/Header"
 import {Footer} from "../../components/Footer/Footer"
-import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,Button, MainBoxIntns, Title, FormLogin,  SecaoPlanet  } from "./Styled"
+import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,Button, Title, FormLogin,  SecaoPlanet  } from "./Styled"
 
 export function CreateTripPage () {
 
@@ -28,10 +28,8 @@ export function CreateTripPage () {
 
      const onClickCreate = (e) => {
         e.preventDefault();
-    
-    
         createTrip(form, functionClear, getTripsData)
-      }
+    }
 
     return (
         <MasterBox>

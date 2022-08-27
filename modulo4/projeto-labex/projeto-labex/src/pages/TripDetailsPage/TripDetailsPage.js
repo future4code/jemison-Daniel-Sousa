@@ -41,8 +41,8 @@ export function TripDetailsPage () {
         )
     }):  (<CarLoading/>);
 
-    const decide = (candidateId, decision) => {  
-        decideCandidate(id.id, candidateId, decision, getTripsDetail)
+    const decide = (candidateId, booleano) => {  
+        decideCandidate(id.id, candidateId, booleano, getTripsDetail)
     }
     
     const approvedList =  detailsData.trip ? detailsData.trip.approved.map((candidate) =>{

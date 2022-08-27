@@ -2,7 +2,7 @@ import React from "react"
 import { ImBin } from "react-icons/im";
 import { useNavigate } from "react-router-dom"
 import { useRequestsData } from "../../hooks/useRequestData"
-import {goUut, goToCreateTripPage,goToTripDetailsPage } from "../../routes/coordinator"
+import {goUut, goToCreateTripPage } from "../../routes/coordinator"
 import {useProtectedPage} from "../../hooks/useProtectedPage"
 import {deleteTrip} from "../../services/requestDelete"
 import {CarLoading} from "../../components/CardLoading/CardLoading"
@@ -54,11 +54,10 @@ export function AdminHomePag () {
                             <Button onClick={() => goToCreateTripPage(navigate)}> Criar Viagem
                             </Button>
 
-                            <Button onClick={()=> lagout(navigate)}> Logout</Button>
+                            <Button onClick={()=> lagout(navigate)}> Sair</Button>
                         </ButtonBox>
 
                         <SectionTrip >
-                            <h2>Lista de Viagens</h2>
                             { listTrips}
                         </SectionTrip>
                      

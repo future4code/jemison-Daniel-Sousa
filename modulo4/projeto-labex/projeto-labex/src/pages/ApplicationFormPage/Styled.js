@@ -65,9 +65,6 @@ export const MainBoxIntns = styled.section `
   display: flex;
   flex-direction: column;
 
-
-
- 
 `
 export const Title = styled.h1 `
   display: flex;

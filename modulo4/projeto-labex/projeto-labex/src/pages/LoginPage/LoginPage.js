@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { IoMdPlanet } from "react-icons/io";
-import {MasterBox, ButtonBox, Container, ContainerItens, MainBox,Button, MainBoxIntns, Title, FormLogin } from "./Styled"
+import {MasterBox, Container, ContainerItens, MainBox,Button, MainBoxIntns, Title, FormLogin } from "./Styled"
 
 import {Header} from "../../components/Header/Header"
 import {Footer} from "../../components/Footer/Footer"
 import {goToHome} from "../../routes/coordinator"
 import {BASE_URL} from "../../constants/urls"
-import {goToAdminHomePag, goUut} from "../../routes/coordinator"
+import {goToAdminHomePag} from "../../routes/coordinator"
 import axios from "axios";
 import {useForm} from "../../hooks/useForm"
 
@@ -75,7 +75,5 @@ export function LoginPage () {
             </Container>   
         </MasterBox>
     )
-
-
 
 }

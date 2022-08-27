@@ -9,7 +9,7 @@ export function CarLoading () {
             <div className="ring one"></div>
             <div className="ring two"></div>
             <div className="ring three"></div>
-            <span>Loading...</span>
+            <span>Carregando...</span>
         </Container>
     )
 

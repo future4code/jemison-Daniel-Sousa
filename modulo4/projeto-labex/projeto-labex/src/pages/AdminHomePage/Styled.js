@@ -132,13 +132,13 @@ export const ButtonCard = styled.button `
     padding: 0.3rem;
     border-radius: 8px;
     margin-top: 0.3rem;
-    background-color: transparent;
-    color: #000000;
+    background-color: #000000;
+    color: #ffffff;
     cursor: pointer;
 
     :hover{
-      color: #ffffff;
+      color: #000000;
       font-weight: bolder;
-      background-color: #000000;
+      background-color: #00875f;
     }
 `
