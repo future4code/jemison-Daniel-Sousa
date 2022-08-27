@@ -1,5 +1,6 @@
 import React from "react"
 import { ImBin } from "react-icons/im";
+import { AiOutlineTool } from "react-icons/ai";
 import { useNavigate } from "react-router-dom"
 import { useRequestsData } from "../../hooks/useRequestData"
 import {goUut, goToCreateTripPage } from "../../routes/coordinator"
@@ -32,7 +33,9 @@ export function AdminHomePag () {
             <CarTrip>
                 <p><span>Viagem:</span>{trip.name}</p>
                 <ButtonBoxCard>
-                    <ButtonCard  onClick={()=>getId(trip.id)}> Ver detalhes</ButtonCard>
+                    <ButtonCard 
+                        onClick={()=>getId(trip.id)}
+                     >Ver detalhes</ButtonCard>
                     <ImBin size={25} color= "red"  onClick={()=> removeTrip(trip.id)}/>
                 </ButtonBoxCard>
                 
@@ -47,7 +50,7 @@ export function AdminHomePag () {
                 <ContainerItens>
                     <Header />
                     <MainBox>
-                        <h1> Painel Administrativo</h1>
+                        <h1> Painel Administrativo <AiOutlineTool/></h1>
                         <ButtonBox>
                             <Button onClick={() => goUut(navigate)}> Voltar</Button>
 

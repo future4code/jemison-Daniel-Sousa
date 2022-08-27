@@ -33,8 +33,7 @@ export function LoginPage () {
                 <ContainerItens>
                     <Header/>
                     <MainBox>
-                        <Title> 
-                            <IoMdPlanet color="#00875f"/> 
+                        <Title>  
                                 FAÇA LOGIN
                             <IoMdPlanet color="#00875f"/>
                         </Title>

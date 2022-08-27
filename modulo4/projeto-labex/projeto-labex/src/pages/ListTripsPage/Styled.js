@@ -65,7 +65,7 @@ export const SectionTrip = styled.section `
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.6rem;
     height: 75%;
     padding: 0.4rem;
 
@@ -81,7 +81,7 @@ export const CarTrip = styled.section `
   align-items:flex-start;
   text-align:left;
   gap: 0.2rem;
-  padding: 0.2rem;
+  padding: 0.5rem;
   width: 100%;
   box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
 
@@ -101,10 +101,9 @@ export const Title = styled.h1 `
   display: flex;
   align-items: center;
   gap: 0.2rem;
-  border-bottom: 1px solid black;
   font-weight: bolder;
   color: #00875f;
-  margin-top: 0.1rem;
+  margin-top: 0.2rem;
 
 `
 

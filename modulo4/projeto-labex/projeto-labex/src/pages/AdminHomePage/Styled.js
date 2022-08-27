@@ -56,8 +56,12 @@ export const MainBox = styled.div `
   align-items: center;
   gap: 1rem;
   
-  img{
-    width: 10rem;
+  h1{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    display:flex;
+    align-items: center;
+    gap: 0.2rem;
   }
 `
 export const SectionTrip = styled.section `
@@ -65,21 +69,19 @@ export const SectionTrip = styled.section `
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    height: 75%;
+    
+    gap: 0.5rem;
+    height: 100%;
     padding: 0.4rem;
 
-    overflow-x: hidden;
     overflow-y: scroll ;
-   
-
 `
 
 export const CarTrip = styled.section `
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 0.7rem;
+  padding: 0.6rem;
   width: 100%;
   box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
 
@@ -89,6 +91,7 @@ export const CarTrip = styled.section `
 
   p{
     text-align: left;
+    font-weight: bold;
   }
 
   span{
@@ -104,7 +107,7 @@ export const ButtonBox = styled.section `
   gap: 1rem;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
 `
 export const Button = styled.button `
     padding: 0.3rem;
@@ -114,9 +117,9 @@ export const Button = styled.button `
     cursor: pointer;
 
     :hover{
-      color: #ffffff;
+      color: #000000;
       font-weight: bolder;
-      background-color: #000000;
+      background-color: #00875f;
     }
 `
 
@@ -129,6 +132,8 @@ export const ButtonBoxCard = styled.section `
 
 `
 export const ButtonCard = styled.button `
+    display: flex;
+    align-items: center;
     padding: 0.3rem;
     border-radius: 8px;
     margin-top: 0.3rem;

@@ -106,6 +106,7 @@ export const Button = styled.button `
     background-color: transparent;
     color: #000000;
     cursor: pointer;
+    font-weight: bolder;
 
     :hover{
       color: #00875f;
