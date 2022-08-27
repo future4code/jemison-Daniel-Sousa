@@ -94,9 +94,10 @@ A proposta do App é simular as funcionalidades da rede social Tinder, que lista
    <li>✅ HTML5 e CSS3</li>
    <li>✅ JavaScript </li>
    <li>✅ React  e consumo de Api</li>
+   <li>✅ Estilizaçõ aplicação usando styled-components </li>
  </ul>
      
   ## Referência
 
--   [Notion do Projeto](https://labenu.notion.site/Projeto-de-Fixa-o-Astromatch-7bdfc822034c4e7db23cc35291d05b79)
+-   [Notion do Projeto](https://labenu.notion.site/Labex-Viajando-no-Espa-o-3cea405060754a7598e4ccf7ad00e095))
 -   [Documentação React](https://pt-br.reactjs.org/)
