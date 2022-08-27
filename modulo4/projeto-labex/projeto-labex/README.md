@@ -36,30 +36,12 @@ https://aware-drain.surge.sh/
 O app faz o consumo de uma Api, que guarda dados de usuários fictícios  como: foto, idade e biografia.
 A proposta do App é simular as funcionalidades da rede social Tinder, que lista usuários em uma tela inicial onde é possível demostrar interatividade entre os usuários , ao curtir um perfil e assim iniciar   um "relacionamento". 
 
-### Home 🏠
-
--   O projeto uma tela inicial com simula a listagem de usuários; 
-    -   Foto do usuário;
-    -   Nome usuário;
-    -   Idade do usuário; 
-    -   Uma curta biografia do usuário;  
-  
--   Botões
-    -   Botão like:  Simbolizado pelo coração, com ele é possível curti( dá um matche) no perfil que está sendo exibido, o mesmo adicionado esse perfil, em uma lista que é visualizar todos os perfis que o usuário curtiu! 
-    -  Botão deslike:  Simbolizado pelo circulo com um x dentro, com ele é possível "rejeitar" o perfil que está sendo exibido no momento!
-    -   Botão lista matches: encontrado no margem superior a esquerda, com ele é possível visualizar em outra tela todos os perfis que o usuário curtiu!  
-
-### Home Matches💦
-
--   Tela inicial que lista todos os perfis que o usuário curtiu, listando apenas: 
-    -   Foto do perfil;
-    -   Nome do Perfil;
-   
--   Botões
-    -   Botão limpa lista:  Localizado na margem superior esquerda, com ele é possível limpar  toda a lista com os perfis que o usuário interagiu;
-    -  Botão Voltar:  Localizado na parte inferior do app, com ele é possível voltar a tela iniciar e assim inicial todo o processo novamente! 
-  
-
+- ✅ Ver a lista de todas as viagens com a possibilidade de deletá-las
+- ✅ Ter acesso a uma página com formulário para criar novas viagens
+- ✅ Ver os detalhes de uma viagem e, dentro desta página:
+    - ✅ Conseguir ver a lista de candidatos que se aplicaram para essa viagem e ainda estão pendentes
+    - ✅ Aprovar ou reprovar os candidatos para a viagem
+    - ✅ Ver lista atualizada de candidatos aprovados
 
 ## Aprendizados
 
@@ -99,5 +81,5 @@ A proposta do App é simular as funcionalidades da rede social Tinder, que lista
      
   ## Referência
 
--   [Notion do Projeto](https://labenu.notion.site/Labex-Viajando-no-Espa-o-3cea405060754a7598e4ccf7ad00e095))
+-   [Notion do Projeto](https://labenu.notion.site/Labex-Viajando-no-Espa-o-3cea405060754a7598e4ccf7ad00e095)
 -   [Documentação React](https://pt-br.reactjs.org/)
