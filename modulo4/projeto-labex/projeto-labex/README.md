@@ -10,6 +10,17 @@ https://aware-drain.surge.sh/
     Us: Nieldev@gmail.com.br
     Senha: 123456 
 
+## Funcionalidades
+O app faz o consumo de uma Api, que guarda dados de viagens e usuarios fictícios  como: nome, data, profissão e etc.
+A proposta do projeto é simular as funcionalidades gerencias de um app para viagens, possuindo as seguintes telas: Pagina Inicial, Pagina de viagens, Pagina de inscrição para viagens disponiveis, Pagina de longin , Pagina Painel administrativo, Pagina de cadastro de viagens, Pagina de detalhes de viagens. Que possui as seguintes funcionalidades:
+
+- ✅ Ver a lista de todas as viagens com a possibilidade de deletá-las
+- ✅ Ter acesso a uma página com formulário para criar novas viagens
+- ✅ Ver os detalhes de uma viagem e, dentro desta página:
+    - ✅ Conseguir ver a lista de candidatos que se aplicaram para essa viagem e ainda estão pendentes
+    - ✅ Aprovar ou reprovar os candidatos para a viagem
+    - ✅ Ver lista atualizada de candidatos aprovados
+
 ## Imagens do projeto
 
 ### Pagina Inicial
@@ -34,26 +45,18 @@ https://aware-drain.surge.sh/
 ### Pagina de detalhes de viagens
 ![image](https://user-images.githubusercontent.com/94769388/187045610-18f3fffc-126b-4a17-932f-de14997d55e9.png)
 
-
-
-## Funcionalidades
-O app faz o consumo de uma Api, que guarda dados de usuários fictícios  como: foto, idade e biografia.
-A proposta do App é simular as funcionalidades da rede social Tinder, que lista usuários em uma tela inicial onde é possível demostrar interatividade entre os usuários , ao curtir um perfil e assim iniciar   um "relacionamento". 
-
-- ✅ Ver a lista de todas as viagens com a possibilidade de deletá-las
-- ✅ Ter acesso a uma página com formulário para criar novas viagens
-- ✅ Ver os detalhes de uma viagem e, dentro desta página:
-    - ✅ Conseguir ver a lista de candidatos que se aplicaram para essa viagem e ainda estão pendentes
-    - ✅ Aprovar ou reprovar os candidatos para a viagem
-    - ✅ Ver lista atualizada de candidatos aprovados
-
 ## Aprendizados
 
 -   Componentes Funcionais e Props;
 -   Estados e Imutabilidade ;
 -   styled-components;
 -   Renderização de listas;
--  Consumo de Api
+-   Consumo de Api;
+-   HTTPS e Postman ;
+-   Custom Hooks  ;
+-   React Forms ;
+-   Autenticação em aplicações React ;
+-   Navegação com React Router ;
 
 ## Autores
 
