@@ -2,6 +2,10 @@
 
 App que simula as funcionalidades de um app para viagens, com cadastro de usuarios para viagens e um painel administrativo, onde  é possivel cadastrar novas viagens, fazer o controle de usuarios que inscritos em uma das viagens disponiveis, sendo possivel aprovar ou reprovar cada candidato
 
+## Link do projeto
+
+https://aware-drain.surge.sh/
+
 ## Imagens do projeto
 
 ### Pagina Inicial
@@ -27,17 +31,6 @@ App que simula as funcionalidades de um app para viagens, com cadastro de usuari
 ![image](https://user-images.githubusercontent.com/94769388/187045610-18f3fffc-126b-4a17-932f-de14997d55e9.png)
 
 
-
-
-
-## Link do projeto
-
-https://aware-drain.surge.sh/
-
-## Referência
-
--   [Notion do Projeto](https://labenu.notion.site/Projeto-de-Fixa-o-Astromatch-7bdfc822034c4e7db23cc35291d05b79)
--   [Documentação React](https://pt-br.reactjs.org/)
 
 ## Funcionalidades
 O app faz o consumo de uma Api, que guarda dados de usuários fictícios  como: foto, idade e biografia.
@@ -102,3 +95,8 @@ A proposta do App é simular as funcionalidades da rede social Tinder, que lista
    <li>✅ JavaScript </li>
    <li>✅ React  e consumo de Api</li>
  </ul>
+     
+  ## Referência
+
+-   [Notion do Projeto](https://labenu.notion.site/Projeto-de-Fixa-o-Astromatch-7bdfc822034c4e7db23cc35291d05b79)
+-   [Documentação React](https://pt-br.reactjs.org/)
