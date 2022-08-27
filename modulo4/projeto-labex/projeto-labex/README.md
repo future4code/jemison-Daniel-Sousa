@@ -1,6 +1,6 @@
 # PROJETO LABEX
 
-App que simula as funcionalidades de um app para viagens, com cadastro de usuarios para viagens e um painel administrativo, onde  é possivel cadastrar novas viagens, fazer o controle de usuarios inscritos em uma das viagens disponiveis, sendo possivel aprovar ou reprovar cada candidato
+App que simula as funcionalidades de um app para viagens, com cadastro de usuários para viagens e um painel administrativo, onde  é possível cadastrar novas viagens, fazer o controle de usuários inscritos em uma das viagens disponíveis, sendo possível aprovar ou reprovar cada candidato
 
 ## Link do projeto
 
@@ -11,8 +11,8 @@ https://aware-drain.surge.sh/
     Senha: 123456 
 
 ## Funcionalidades
-O app faz o consumo de uma Api, que guarda dados de viagens e usuarios fictícios  como: nome, data, profissão e etc.
-A proposta do projeto é simular as funcionalidades gerencias de um app para viagens, possuindo as seguintes telas: Pagina Inicial, Pagina de viagens, Pagina de inscrição para viagens disponiveis, Pagina de longin , Pagina Painel administrativo, Pagina de cadastro de viagens, Pagina de detalhes de viagens. Que possui as seguintes funcionalidades:
+O app faz o consumo de uma Api, que guarda dados de viagens e usuários fictícios  como: nome, data, profissão e etc.
+A proposta do projeto é simular as funcionalidades gerencias de um app para viagens, possuindo as seguintes telas: Pagina Inicial, Pagina de viagens, Pagina de inscrição para viagens disponíveis, Pagina de login , Pagina Painel administrativo, Pagina de cadastro de viagens, Pagina de detalhes de viagens. Que possui as seguintes funcionalidades:
 
 - ✅ Ver a lista de todas as viagens com a possibilidade de deletá-las
 - ✅ Ter acesso a uma página com formulário para criar novas viagens
@@ -27,13 +27,13 @@ A proposta do projeto é simular as funcionalidades gerencias de um app para via
 ![image](https://user-images.githubusercontent.com/94769388/187045251-68378975-19e6-460c-b1a7-1306cb9337c7.png)
 
 
-### Pagina de viagens disponiveis 
+### Pagina de viagens disponíveis 
 ![image](https://user-images.githubusercontent.com/94769388/187045338-c294940f-cefd-410c-a6f1-665cb5c5da8e.png)
 
 ### Pagina de inscrição para viagens
 ![image](https://user-images.githubusercontent.com/94769388/187045364-a1a7167c-514e-4d7b-b443-1bc08570cc6a.png)
 
-### Pagina de longin
+### Pagina de login
 ![image](https://user-images.githubusercontent.com/94769388/187045400-7fc2f848-6284-45cf-9670-c0b4144115fb.png)
 
 ### Pagina Painel administrativo
@@ -83,7 +83,7 @@ A proposta do projeto é simular as funcionalidades gerencias de um app para via
    <li>✅ HTML5 e CSS3</li>
    <li>✅ JavaScript </li>
    <li>✅ React  e consumo de Api</li>
-   <li>✅ Estilizaçõ aplicação usando styled-components </li>
+   <li>✅ Estilização aplicação usando styled-components </li>
  </ul>
      
   ## Referência
