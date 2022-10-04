@@ -1,0 +1,73 @@
+## Cadastro de cliente
+
+Crie um programa que insere um novo cliente no array de clientes.
+
+### Lista de clientes já cadastrados
+
+```jsx
+[
+	{ id: 1, nome: “Fulano” },
+	{ id: 2, nome: “Ciclano” },
+	{ id: 3, nome: “Beltrano” },
+	{ id: 4, nome: “Fulana” }
+]
+```
+
+### Entrada
+
+Um objeto de mesmo formato que os existentes na lista de clientes.
+
+### Saída
+
+A lista atualizada de clientes.
+
+### Validações
+
+Depois de finalizar a implementação básica, trate os valores de entrada. Um cliente deve sempre possuir uma id numérica única e um nome em string sem caracteres especiais.
+
+### Exemplos de implementação básica
+
+cadastraCliente({ id: 5, nome: “Fulano” }) retorna a lista com esse novo cliente
+
+### Exemplos de validações
+
+cadastraCliente({ id: 1, nome: “Ciclana” }) retorna “Erro. Parâmetro inválido (’id já existe’).”
+
+## Geração de tabuada
+
+Crie um gerador de tabuada.
+
+### Entrada
+
+Um número de 1 a 10.
+
+### Saída
+
+Uma lista onde cada item representa uma operação da tabuada.
+
+### Validações
+
+Depois de finalizar a implementação básica, trate os valores de entrada.
+
+O argumento deve ser um número entre 1 a 10.
+
+### Exemplos de implementação básica
+
+geraTabuada(5) retorna:
+
+```jsx
+[
+	"5 x 0 = 0",
+	"5 x 1 = 5",
+	"5 x 2 = 10",
+	"5 x 3 = 15",
+	"5 x 4 = 20",
+	... // e assim por diante até x 10
+]
+```
+
+### Exemplos de validações
+
+geraTabuada(”10”) retorna “Erro. Parâmetro inválido (’deve ser um número’).”
+
+geraTabuada(50) retorna “Erro. Parâmetro inválido (’número precisa valer entre 1 e 10’).”
