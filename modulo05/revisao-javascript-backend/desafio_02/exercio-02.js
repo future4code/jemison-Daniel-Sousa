@@ -6,10 +6,13 @@ const listaDeClientes = [
 ]
 
 
-const novoCliente = (id, nome) => {
-    const novo = [...listaDeClientes, {id , nome}]
 
-    return novo
+const novoCliente = (id, nome) => {
+
+   
+        const novo = [...listaDeClientes, {id , nome}]
+        return novo
+   
 }
 
-console.log(novoCliente(2, "Daniel"))
+console.log(novoCliente(3, "Daniel"))
