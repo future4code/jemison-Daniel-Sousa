@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# ASTROMATCH
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+App que simula as funcionalidades do Tinder, um rede social para relacionamentos 
 
-## Available Scripts
+## Imagens do projeto
 
-In the project directory, you can run:
+### Pagina Inicial
+![image](https://user-images.githubusercontent.com/94769388/183222473-dd275ddf-8c53-4d2e-8f84-cc0cbc87bb82.png)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Pagina de Matches
+![image](https://user-images.githubusercontent.com/94769388/183222575-c0c27a95-aa1c-4164-a798-12ba7f807e5b.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Link do projeto
 
-### `npm test`
+https://rich-slip.surge.sh/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Referência
 
-### `npm run build`
+-   [Notion do Projeto](https://labenu.notion.site/Projeto-de-Fixa-o-Astromatch-7bdfc822034c4e7db23cc35291d05b79)
+-   [Documentação React](https://pt-br.reactjs.org/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Funcionalidades
+O app faz o consumo de uma Api, que guarda dados de usuários fictícios  como: foto, idade e biografia.
+A proposta do App é simular as funcionalidades da rede social Tinder, que lista usuários em uma tela inicial onde é possível demostrar interatividade entre os usuários , ao curtir um perfil e assim iniciar   um "relacionamento". 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Home 🏠
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   O projeto uma tela inicial com simula a listagem de usuários; 
+    -   Foto do usuário;
+    -   Nome usuário;
+    -   Idade do usuário; 
+    -   Uma curta biografia do usuário;  
+  
+-   Botões
+    -   Botão like:  Simbolizado pelo coração, com ele é possível curti( dá um matche) no perfil que está sendo exibido, o mesmo adicionado esse perfil, em uma lista que é visualizar todos os perfis que o usuário curtiu! 
+    -  Botão deslike:  Simbolizado pelo circulo com um x dentro, com ele é possível "rejeitar" o perfil que está sendo exibido no momento!
+    -   Botão lista matches: encontrado no margem superior a esquerda, com ele é possível visualizar em outra tela todos os perfis que o usuário curtiu!  
 
-### `npm run eject`
+### Home Matches💦
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-   Tela inicial que lista todos os perfis que o usuário curtiu, listando apenas: 
+    -   Foto do perfil;
+    -   Nome do Perfil;
+   
+-   Botões
+    -   Botão limpa lista:  Localizado na margem superior esquerda, com ele é possível limpar  toda a lista com os perfis que o usuário interagiu;
+    -  Botão Voltar:  Localizado na parte inferior do app, com ele é possível voltar a tela iniciar e assim inicial todo o processo novamente! 
+  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Aprendizados
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+-   Componentes Funcionais e Props;
+-   Estados e Imutabilidade ;
+-   styled-components;
+-   Renderização de listas;
+-  Consumo de Api
 
-## Learn More
+## Autores
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<table>
+ <table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/DanielSiilva">
+        <img src="https://avatars.githubusercontent.com/u/94769388?v=4" width="100px;" alt="Foto do Daniel da Silva no GitHub"/><br>
+        <sub>
+          <b>@DanielSiilva</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  
 
-### Code Splitting
+## Stacks utilizadas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Frontend
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ <ul>
+   <li>✅ HTML5 e CSS3</li>
+   <li>✅ JavaScript </li>
+   <li>✅ React  e consumo de Api</li>
+ </ul>
