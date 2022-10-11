@@ -6,6 +6,7 @@ const todoList = [
     'Estudar matematica'
 ]
 
+
 function addNewTasks (tasksNew){
     const newToDoList = [...todoList, tasksNew]
     return newToDoList
