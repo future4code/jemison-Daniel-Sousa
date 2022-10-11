@@ -1,0 +1,29 @@
+## Conversor de temperatura
+
+Crie um conversor de temperaturas para as escalas em Fahrenheit e Kelvin. 
+
+### Entrada
+
+O valor numérico em grau Celsius e uma string. “F” para Fahrenheit e “K” para Kelvin.
+
+### Saída
+
+Saída: uma frase correspondente.
+
+### Validações
+
+Depois de finalizar a implementação básica, trate os valores de entrada. O primeiro parâmetro deve ser sempre um número e o segundo uma string “F” ou “K” maiúsculas.
+
+### Exemplos de implementação básica
+
+converteCelsius(30, “F”) retorna “30° Celsius é equivalente a 86° Farenheit.”
+
+converteCelsius(30, “K”) retorna “30° Celsius é equivalente a 303.15 Kelvin.”****
+
+### Exemplos de validações
+
+converteCelsius(”trinta”, “F”) retorna “Erro. Parâmetro inválido (’nome do parâmetro’).”
+
+converteCelsius(30, “G”) retorna “Erro. Parâmetro inválido (’nome do parâmetro’).”
+
+converteCelsius(30, “k”) retorna “Erro. Parâmetro inválido (’nome do parâmetro’).”
