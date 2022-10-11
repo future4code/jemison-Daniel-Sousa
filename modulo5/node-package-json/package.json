@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node ./index.js",
+    "exercicio01": "node ./exercicio01.js",
+    "exercicio02": "node ./exercicio02.js",
+    "exercicio03": "node ./exercicio03.js",
+    "exercicio04": "node ./exercicio04.js"
   },
   "keywords": [],
   "author": "Daniel da Silva De Sousa",
