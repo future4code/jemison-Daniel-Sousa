@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "echo Transpilando... && tsc && echo Rodando... && node ./build/test.js",
+    "exercicio01": "echo Transpilando... && tsc && echo Rodando... && node ./build/exercicio01.js",
+    "exercicio02": "echo Transpilando... && tsc && echo Rodando... && node ./build/exercicio02.js",
+    "exercicio03": "echo Transpilando... && tsc && echo Rodando... && node ./build/exercicio03.js",
+    "exercicio04": "echo Transpilando... && tsc && echo Rodando... && node ./build/exercicio04.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
