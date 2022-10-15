@@ -10,12 +10,20 @@
 
 //1° - Criar um const = array[]
 
+
+
+
+
 const cores: string[] = [] // declarando um array de string fazio ;
 
+let  cor01 = process.argv[2]
+let  cor02 = process.argv[3]
+let  cor03 = process.argv[4]
+
 function imprimeTresCoresFavoritas (cor1:string, cor2:string, cor3:string) {
-    const imprimeCores = [...cores, cor1, cor2, cor3]
+    const imprimeCores = [...cores, cor1, cor2, cor3] 
      
     return imprimeCores
 }
 
-console.log(imprimeTresCoresFavoritas("Azul", "Verda", "Vermelha"))
+console.log(imprimeTresCoresFavoritas(cor01,cor02, cor03))
