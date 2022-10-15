@@ -24,8 +24,8 @@ const useNum2 = Number(process.argv[3]);
 
 
 function comparaDoisNumeros (num1:number, num2:number) {
-    let maiorNumero;
-    let menorNumero;
+    let maiorNumero:number;
+    let menorNumero:number;
 
     if(num1 > num2){
         maiorNumero =num1;
@@ -35,7 +35,7 @@ function comparaDoisNumeros (num1:number, num2:number) {
         menorNumero = num1;
     }
 
-    const diferenca = maiorNumero - menorNumero
+    const diferenca:number = maiorNumero - menorNumero
 
     return diferenca
 

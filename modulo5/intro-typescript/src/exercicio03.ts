@@ -14,8 +14,8 @@
 const userAno = Number(process.argv[2]) ;
 
 function checaAnoBissexto (ano:number){
-    const cond1 = ano % 400 === 0
-    const cond2 = (ano % 4 === 0) && (ano % 100 !== 0)
+    const cond1:boolean = ano % 400 === 0
+    const cond2:boolean = (ano % 4 === 0) && (ano % 100 !== 0)
     
     return ` O ano: ${ano} é Bissexto? ${ cond1 ||  cond2 }`
 }
