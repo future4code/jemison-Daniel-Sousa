@@ -8,12 +8,6 @@
     console.log([cor1, cor2, cor3])
  } */
 
-//1° - Criar um const = array[]
-
-
-
-
-
 const cores: string[] = [] // declarando um array de string fazio ;
 
 let  cor01 = process.argv[2]
