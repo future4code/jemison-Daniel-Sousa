@@ -1,20 +1,16 @@
 {
-  "name": "intro-typescript",
+  "name": "aprofundamento-typescript",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  },
   "scripts": {
-    "exercicio01": "echo Transpilando... && tsc && echo Rodando... && node ./build/exercicio01.js",
+    "exercicio01": "tsc && node ./build/exercicio01.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^18.11.0",
-    "typescript": "^4.8.4"
-  },
-  "dependencies": {
-    "prompt": "^1.3.0"
-  }
+  "license": "ISC"
 }
