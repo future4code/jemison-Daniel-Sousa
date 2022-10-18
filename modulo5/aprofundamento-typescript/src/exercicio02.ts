@@ -61,8 +61,14 @@ console.log(obterEstatisticas(array))
     obterEstatisticas: (numeros) => {...}
 }*/
 
+type estatisticas ={
+    maior: number,
+    menor: number,
+    media: number 
+}
+
 type amostraDeIdades ={
     numeros: Array<number>,
-    obterEstatisticas:Function
+    obterEstatisticas:(numeros:number) => estatisticas
 }
 
