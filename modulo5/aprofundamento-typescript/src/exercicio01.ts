@@ -31,6 +31,40 @@ const pessoa01: { name: string, idade: number, corFavorita:string} = {
 type pessoa = {
     name: string,
     idade: number,
-    corFavorita: string
+    corFavorita: Cores
+}
+ 
+enum Cores{
+    VERMELHA = 'VERMELHA',
+    LARANJA = 'LARANJA',
+    AMARELA = 'AMARELA',
+    VERDE = 'VERDE',
+    AZUL = 'AZUL',
+    AZULESCURO = 'AZUL-ESCURO',
+    VIOLETA = 'VIOLETA'
+}
+// vermelha, laranja, amarela, verde, azul, azul-escuro e violeta
+
+// const astrodev: person = {
+//     name: "Astrodev",
+//     age: 30
+//     }
+
+const pessoa2:pessoa ={
+    name: "Daniel",
+    idade: 23,
+    corFavorita: Cores.AZUL
+}
+
+const pessoa3:pessoa ={
+    name: "Marcos",
+    idade: 22,
+    corFavorita: Cores.AZULESCURO
+}
+
+const pessoa4:pessoa ={
+    name: "Andreane",
+    idade: 22,
+    corFavorita: Cores.VERDE
 }
     
