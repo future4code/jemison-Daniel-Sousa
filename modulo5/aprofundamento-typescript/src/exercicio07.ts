@@ -7,18 +7,15 @@ type prato = {
     ingredientes: Array<string>
 }
 
-const produtosCadastrados:Array<prato> =[]
-console.log(produtosCadastrados)
+const produtosCadastrados:Array<object> =[]
+
 //a) Escreva uma função que permita cadastrar um produto. Salve os produtos em um array no escopo global.
 
 function cadastrasProdutos(nome:string,custo:number,valorVenda:number,ingredientes:Array<string>){
-    
-     const novoProduto:Array<prato> = [...produtosCadastrados, {nome, custo, valorVenda, ingredientes}]
-    
-   
 
-    return novoProduto
+   produtosCadastrados.push({nome, custo, valorVenda, ingredientes})
+    
+    return produtosCadastrados
 }
-
 console.log(cadastrasProdutos("Feijoada", 10, 20, ["Feijão, tomate,calabresa, carne de sol"]))
 
