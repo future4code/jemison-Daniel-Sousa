@@ -1,5 +1,8 @@
 import express, { request, response } from "express";
 import cors from "cors";
+import { posts } from "./data";
+
+
 
 const app = express();
 app.use(cors());
@@ -56,6 +59,13 @@ app.get("/users", (request, response) =>{
     return response.send(allUsers)
 })
 
+// 7 - Construa um endpoint que retorne os posts criados no exercício anterior.
+
+app.get("/posts", (request, response) => {
+    return response.send(posts)
+})
+
+//
 
 
 
