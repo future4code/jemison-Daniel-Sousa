@@ -65,9 +65,32 @@ app.get("/posts", (request, response) => {
     return response.send(posts)
 })
 
-//
+// 8 - Construa um endpoint que retorne os posts de um usuário em particular.Use o JSONPlaceholder como exemplo para a construção da rota.
 
+app.get("/posts/:id",(request, response)=>{
+    const id = request.params.id;
 
+    
+    const postUser = posts.filter((post) => {
+        return Number(id) === post.userId
+    })
+
+    response.send(postUser)
+})
+
+// 9 - Construa um endpoint para deletar um post.
+
+app.delete("/posts/:id", (request, response) => {
+
+    const id = request.params.id
+
+    const postFiltered = posts.find((post)=>{
+        return post.id === Number(id)
+    })
+
+    response.send(postFiltered)
+
+})
 
 
 
