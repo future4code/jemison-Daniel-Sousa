@@ -1,4 +1,4 @@
-import express from "express";
+import express, { request, response } from "express";
 import cors from "cors";
 
 const app = express();
@@ -50,7 +50,11 @@ const listaDeUsuarios:usuarios[] =[
 ]
 
 
+//4 - Construa um endpoint que retorne os usuários criados no exercício anterior.
 
+app.get("/usuarios", (request, response) =>{
+    return response.send(listaDeUsuarios)
+})
 
 
 
