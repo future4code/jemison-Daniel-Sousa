@@ -7,7 +7,7 @@ app.use(express.json());
 
 //2 - Acesse a API do JSONPlaceholder e observe os endpoints que buscam usuários. No seu projeto, crie uma variável de tipo para representar esse recurso. Eles devem possuir as seguintes propriedades:
 
-type usuarios = {
+type users = {
     id: number,
     name: string,
     phone:string,
@@ -17,7 +17,7 @@ type usuarios = {
 
 //3- Crie um array de usuários para servir como base de dados da nossa API. 
 
-const listaDeUsuarios:usuarios[] =[
+const allUsers:users[] =[
     {
         id: 1,
         name: "Daniel",
@@ -52,8 +52,8 @@ const listaDeUsuarios:usuarios[] =[
 
 //4 - Construa um endpoint que retorne os usuários criados no exercício anterior.
 
-app.get("/usuarios", (request, response) =>{
-    return response.send(listaDeUsuarios)
+app.get("/users", (request, response) =>{
+    return response.send(allUsers)
 })
 
 
