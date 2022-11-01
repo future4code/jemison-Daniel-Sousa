@@ -2,6 +2,7 @@
 import cors from "cors";
 import express, { request, response } from "express";
 import {ProductList} from './data'
+import {Product} from "./type"
 import { AddressInfo } from "net";
 
 
@@ -21,13 +22,29 @@ app.get("/test", (request,response) =>{
 app.post("/product/new", (request, response) =>{
     try{
         let name:string = request.body.name;
-        const id:string = Date.now().toString();
+        const id:string = Date.now().toString(); //Para Formação do id 
         let price:number = request.body.price
 
+        const productNew: Product = {
+            id: id,
+            name:name,
+            price:price
+        }
+
+        const newProductList = [...ProductList, productNew]//Uso do spreed para adcionar uma novo porduto e gerar um nova lista
+        response.send(newProductList)
+
+        if (!name){
+            //cofigurando erro
+            const erro=new Error("O nome do produto não foi informado!");
+            erro.name="dataProductNotFound";
+            //lanço erro
+            throw erro;
+        }
 
 
     }catch{
-        
+
     }
 
 })
