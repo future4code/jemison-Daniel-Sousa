@@ -1,7 +1,7 @@
 
 import cors from "cors";
 import express, { request, response } from "express";
-import {Product,ProductList} from './data'
+import {ProductList} from './data'
 import { AddressInfo } from "net";
 
 
