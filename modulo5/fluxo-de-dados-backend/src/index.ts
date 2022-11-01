@@ -16,6 +16,29 @@ app.get("/test", (request,response) =>{
 })
 
 
+//4- Desenvolva um endpoint que cria um novo produto e retorna a lista de produtos atualizada. A id do produto deve ser gerada automaticamente pela API.
+
+app.post("/product/new", (request, response) =>{
+    try{
+        let name:string = request.body.name;
+        const id:string = Date.now().toString();
+        let price:number = request.body.price
+
+
+
+    }catch{
+        
+    }
+
+})
+
+
+
+
+
+
+
+
 
 
 
