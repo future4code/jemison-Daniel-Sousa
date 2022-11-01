@@ -17,6 +17,12 @@ app.get("/test", (request,response) =>{
 })
 
 
+//5 ------------------- Endpoint LISTA DE PRODUTOS-------------
+app.get("/product/all", (request, response)=>{
+    response.send(ProductList)
+})
+
+
 //4- Desenvolva um endpoint que cria um novo produto e retorna a lista de produtos atualizada. A id do produto deve ser gerada automaticamente pela API.
 
 app.post("/product/new", (request, response) =>{
@@ -41,12 +47,22 @@ app.post("/product/new", (request, response) =>{
             //lanço erro
             throw erro;
         }
+        if(!price){
+            const erro=new Error("O preço do produto não foi informado!");
+            erro.name="dataPricetNotFound";
+            //lanço erro
+            throw erro;
+        }
 
 
-    }catch{
+
+    }catch(erro:any){
 
     }
+})
 
+app.get("/product/all", (request, response)=>{
+    response.send(ProductList)
 })
 
 
@@ -61,11 +77,9 @@ app.post("/product/new", (request, response) =>{
 
 
 
-const server = app.listen(process.env.PORT || 3003, () => {
-    if (server) {
-      const address = server.address() as AddressInfo;
-      console.log(`Servidor rodando na porta http://localhost:${address.port}`);
-    } else {
-      console.error(`Falha ao iniciar o servidor.`);
-    }
-  });;
+
+// -------------------PORTA PARA VERIFICAR O SERVIDOR-------------
+
+app.listen(3003,()=>{
+    console.log('Servidor executando na porta 3003')
+})
