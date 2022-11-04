@@ -1,5 +1,6 @@
 import express,{Request,Response} from 'express'
-
+import {users} from './data'
+import {UserType} from "./types"
 import cors from 'cors'
 
 
@@ -27,7 +28,17 @@ app.use(cors())
 
 
 //--------------------EXERCICIO 03-------------------
+//Faça agora um endpoint de busca que encontre um usuário buscando por nome.
 
+ app.get('/user', (req:Request, res:Response)=>{
+        let codeError = 400
+
+        try{
+
+        }catch(error:any){
+
+        }
+ })
 
 //--------------------EXERCICIO 04-------------------
 
