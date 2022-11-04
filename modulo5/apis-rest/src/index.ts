@@ -18,6 +18,11 @@ app.use(cors())
 // A entidade seria - '/user'
 
 //-------------------EXERCICIO 02--------------------
+//a. Como você passou os parâmetros de type para a requisição? Por quê?
+//Poderiamos antes de realizar a busca, restrigir o type através do ENUM, tendo assim apenas o tipos predefinidos . Dessa forma, os dados passariam a ser somente estes, e não qualquer string. Depois através do metodo ge, poderiamos buscar essa informação
+
+//b. Você consegue pensar em um jeito de garantir que apenas types válidos sejam utilizados? 
+//Sim, podemos realizar uma verificação com if, realizando uma comparação entre os dados recebidos com o "valor" do type no banco de dados
 
 
 
