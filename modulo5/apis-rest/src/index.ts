@@ -10,17 +10,21 @@ app.use(express.json())
 app.use(cors())
 
 
-//--------------------ENDPOINT 1 --------------------
+//--------------------EXERCICIO 01 --------------------
+//a. Qual método HTTP você deve utilizar para isso?
+// Método get, pois é necessario buscar as informçôes no banco de dados
+
+//b. Como você indicaria a entidade que está sendo manipulada?
+// A entidade seria - '/user'
+
+//-------------------EXERCICIO 02--------------------
 
 
-//--------------------ENDPOINT 2 --------------------
+
+//--------------------EXERCICIO 03-------------------
 
 
-
-//--------------------ENDPOINT 3 --------------------
-
-
-//--------------------ENDPOINT 4 --------------------
+//--------------------EXERCICIO 04-------------------
 
 
 
