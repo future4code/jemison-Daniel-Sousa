@@ -81,3 +81,30 @@ D) `````
 E) `````
     SELECT id, nome from Actor WHERE id = "002"
     ``````
+
+ ### Exercício 4
+        ``````
+            SELECT * FROM Actor
+            WHERE (name LIKE "A%" OR name LIKE "J%") AND salary > 300000
+        ``````
+A) Realiza uma busca em toda a tabela Actor, retornando somente os nomes que começam com A ou J e com os salarios maiores que 300000
+
+B) `````
+    SELECT * FROM Actor
+    WHERE (nome NOT LIKE "A%") AND salary > 350000
+``````
+C) Escreva uma query com os atores que possuam "G" ou "g" em qualquer parte do nome.
+    ´´´´´´
+        SELECT * FROM Actor
+        WHERE 
+            (nome LIKE "%g%" OR nome LIKE "%G%" )
+    ´´´´´´
+
+D)Escreva uma query com os atores que tenham a letra "a" ou "A" ou "g" ou "G" no nome e o salário entre R$350.000,00 e R$900.000,00
+
+        ````````
+            SELECT * FROM Actor
+            WHERE 
+            (nome LIKE "%g%" OR nome LIKE "%G%" OR nome LIKE "%a%" OR nome LIKE "%A%")
+            AND salary BETWEEN 350000 AND 900000;
+        ````````
