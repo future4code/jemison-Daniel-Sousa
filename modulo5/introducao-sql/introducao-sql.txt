@@ -62,4 +62,22 @@ Abaico a correção
     );
 ``````
 
- 
+ ### Exercício 3
+A) ``````
+    SELECT * FROM Actor WHERE gender = "male"
+    ``````
+
+B) `````
+     SELECT salary FROM Actor WHERE nome = "Tony Ramos"
+   `````
+
+C) `````
+     SELECT * FROM Actor WHERE gender = "invalid"
+    ``````
+
+D) `````
+    SELECT id,nome,salary FROM Actor WHERE salary = 500
+    ``````
+E) `````
+    SELECT id, nome from Actor WHERE id = "002"
+    ``````
