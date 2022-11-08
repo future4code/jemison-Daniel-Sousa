@@ -1,9 +1,17 @@
 ### Exercício 1
 a)
+    1. VARCHAR: Sequência de caracteres de tamanho variável,
+    2. DATE: Representa uma data,
+    3.PRIMARY KEY - Chave primaria dentro do banco de dados,
+    4.NOT NULL - comando que especifica que a coluna não pode ser nula
 b) 
+    1. SHOW DATABASES: Esse comando mostra as informações sobre o schema
+    2. SHOW TABLES: Esse comando mostra o nome da tabela, da entidade,
+    
+c) DESCRIBE Actor: esse comando trás toda a estrutura da tabela,  ou seja, tras os parametros de cada linha, os tipos de dados e se não obrigatorios.
+Ex: 
 ```
-;
+    gender	varchar(6)	NO		
 ```
-
 
 ### Exercício 2
