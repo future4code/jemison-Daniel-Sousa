@@ -15,3 +15,51 @@ Ex:
 ```
 
 ### Exercício 2
+
+b)Error Code: 1062. Duplicate entry '002' for key 'PRIMARY' 
+Este erro aponta que há duplicação de chave primaria,que no caso, não é permitido
+
+c) Error Code: 1136. Column count doesn't match value count at row
+A contagem de colunas não corresponde à contagem de valores na linha, ou seja, esta faltando alguns parametros para realmente funcionar.
+Abaico a correção
+
+``````
+    INSERT INTO Actor (id, nome, salary,birth_date,gender)
+        VALUES(
+        "003", 
+        "Fernanda Montenegro",
+        300000,
+        "1929-10-19", 
+        "female"
+        );
+``````
+
+D) Error Code: 1364. Field 'nome' doesn't have a default value - Ou seja, o campo nome não tem um valor padrão devemos passar essa valor. 
+Abaico a correção
+
+``````
+   INSERT INTO Actor (id, nome, salary, birth_date, gender)
+        VALUES(
+        "004",
+        "Daniel Sousa",
+        400000,
+        "1949-04-18", 
+        "male"
+        );
+``````
+
+E) Error Code: 1292. Incorrect date value: '1950' for column 'birth_date' - O formato da data está errado, sempre deve seguir : ano-mes-dia, sempre com um strig ""
+
+Abaico a correção
+
+``INSERT INTO Actor (id, nome, salary, birth_date, gender)
+    VALUES(
+    "005", 
+    "Juliana Paes",
+    719333.33,
+    '1979-12-26', 
+    "female"
+    );
+``````
+
+ 
