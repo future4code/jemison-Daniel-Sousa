@@ -1,0 +1,9 @@
+# Aprofundamento-sql
+
+## Exercico 01
+
+### A) 
+    ALTER TABLE: é usado para alterar as caracteristicas de uma tabela e de suas colunas, ou seja, podemos alterar as propriedades de uma tabela
+    DROP COLUMN: O comando DROP TABLE por si, remove, deleta ou tabela, porém esse comando, vai remover uma coluna da tabela, depois do comando COLUMN ele podemos especificar qual a coluna que iremos deleta
+### B) 
+    
